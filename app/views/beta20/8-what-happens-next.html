@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  What happens next - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form method="post" class="form">
+
+       <div class="govuk-box-highlight">
+        <h1 class="bold-large m-b-m">Your application has been received</h1>
+        <p><strong class="heading-medium">Your National Insurance number is your reference</strong></p>
+      </div>
+
+      <h2 class="heading-medium">What happens next</h2>
+
+      {# Prototype code for dynamically outputting 15 days time #}
+
+      <script src="/public/javascripts/moment.js"></script>
+      <p>You&rsquo;ll be told whether you've been offered a loan by <span id="date"></span>.</p>
+      <p>If you accept the offer, you&rsquo;ll receive the money within 5 working days of your acceptance being received.</p>
+      <p>The loan is paid into your bank, building society or credit union account.</p>
+      <script>
+      document.getElementById("date").innerHTML = moment().add(15, 'days').format('dddd D MMMM');
+      </script>
+
+      {# End of prototype code for dynamically outputting 15 days time #}
+
+
+
+      <p><a href="https://www.surveymonkey.co.uk/r/W2THPY3" rel="external">What did you think of this service?</a></p>
+
+      <p><a href="https://www.gov.uk/" class="button">Finish</a></p>
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

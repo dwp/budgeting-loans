@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Eligibility - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">You&rsquo;re not eligible for a Budgeting&nbsp;Loan</h1>
+
+      <div class="panel panel-border-wide style1">
+        <p>Based on your answers, you wouldn&rsquo;t get a Budgeting Loan because:</p>
+        <ul class="list list-bullet">
+          <li>you must be getting an income-related benefit, such as income-related Employment and Support Allowance</li>
+        </ul>
+        <p>It appears that you&rsquo;re getting contributions-based Employment and Support Allowance as you have a partner but don&rsquo;t get a joint benefit.</p>
+      </div>
+
+      {% include "includes/not-eligible-general.html" %}
+
+    </div>{# / column-two-thirds #}
+
+    {% include "includes/help-function-v2.html" %}
+    
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

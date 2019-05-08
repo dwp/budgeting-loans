@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Apply for a Budgeting Loan
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+<div class="grid-row">
+	<div class="column-two-thirds">
+	    <h1 class="form-title heading-large">
+	      Budgeting Loans
+	    </h1>
+	    
+		<aside>
+			<div class="inner">
+				<nav role="navigation" class="page-navigation" aria-label="parts to this guide">
+					<ol class="list-bullet list-none grid-row">
+						<div class="column-half">
+							<li class="font-xsmall">
+								1. <a href="overview" title="Part 1:  Overview">How it works</a>
+							</li>
+							<li class="font-xsmall">
+								2. <a href="what-youll-get" title="Part 2:  What you'll get">What you could get</a>
+							</li>
+						</div>
+						<div class="column-half">
+							<li class="font-xsmall">
+								3. <a href="eligibility" title="Part 3: Eligibility">Check your eligibility</a>
+							</li>
+							<!-- <li class="font-xsmall">
+								4. <a href="apply" title="Part 4: Apply">Apply</a>
+							</li> -->
+						</div>
+					</ol>
+				</nav>
+			</div>
+		</aside>
+	    
+	    <div class="inner-block">
+		    <header>
+		    	<h1 class="heading-medium">3. Check your eligibility</h1>
+		    </header>
+			<article>
+				<p>To be eligible for a Budgeting Loan:</p>
+				<ul class="list-bullet">
+					<li>you must not owe the Social Fund more than £1,500 for Crisis Loans and Budgeting Loans</li>
+					<li>you or your partner must have been getting Income Support, income-based Jobseeker's Allowance, income-related Employment and Support Allowance or Pension Credit for the past 6 months (and you must still be getting one of these benefits when you apply)</li>
+					<li>you must need more than £100</li>
+					<li>you must not be involved in industrial action (eg a strike, walkout or lockout)</li>
+				</ul>
+				<p>You can apply for a loan online if you meet the 4 eligibility points above.</p>
+
+				<h1 class="heading-small">Other ways to apply</h1>
+				<p>You can get an application form at your local Jobcentre Plus. If you’d like one posted to you call 0345 603 6967 between 8am and 6pm, Monday to Friday (<a href="https://www.gov.uk/call-charges"> charges apply</a>).</p>
+
+				<p class="get-started">
+					<a class="button button-get-started" href="social-fund-debt">Check eligibility</a>
+				</p>
+
+			</article>
+
+			<footer>
+				<nav class="pagination" role="navigation" aria-label="Pagination">
+					<ul class="group">
+						<li class="previous">
+      						<a href="what-youll-get" rel="prev" title="Navigate to previous part">
+      							<span class="pagination-label">Previous </span> <span class="pagination-part-title"> What you could get</span>
+      						</a>          
+      					</li>
+          				
+    				</ul>
+    			</nav>
+    		</footer>
+	        
+	    </div>
+	</div>
+	
+	
+	<div class="column-third">
+
+	</div>
+</div>
+
+</main><!-- / #page-container -->
+{% endblock %}

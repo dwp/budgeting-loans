@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Budgeting Loans
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/alpha-banner.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+  
+      <form action="money-you-owe" method="#" class="form">
+
+      <a href="children" class="example-back-link">Back</a>
+
+      <h1 class="form-title heading-large">
+        Loan amount
+      </h1>
+
+      <p>You can apply for an amount between £100 and £812.</p>
+
+      <!--div class="panel-indent">
+        <p>You cannot get a loan if you already owe a total of £1500 to Social Fund for a Crisis Loan or Budgeting Loan. If you already owe money to Social Fund, this will affect how much you can get.</p>
+      </div-->
+
+      <ul>
+        <li class="form-group">
+          <label class="form-label-bold" for="loan-amount">How much do you need?</label>
+          <span>£ </span> <input class="form-control-1-8" id="partner-nino" type="text">
+        </li>
+      </ul>
+      
+      <div class="form-group">
+        <input type="submit" class="button" value="Continue">
+      </div>
+
+    </div>
+    <div class="column-third">
+    </div>
+  </div>
+
+
+</main><!-- / #page-container -->
+{% endblock %}

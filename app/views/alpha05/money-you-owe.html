@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Budgeting Loans
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/alpha-banner.html" %}
+  
+  <form action="" method="#" class="form">
+
+  <a href="loan-amount" class="example-back-link">Back</a>
+
+  <h1 class="form-title heading-large">
+    Regular debt repayments
+  </h1>
+  <div class="form-group">
+    <fieldset class="inline">
+      <legend class="form-label-bold" for="partner">Are you or your partner making regular debt repayments?</legend>
+      <p class="form-hint">This includes debts because you have taken out hire purchase agreements, loans, or got behind on your rent or household bills</p>
+      <p class="form-hint">We ask this to work out your Budgeting Loan repayment amounts</p>
+      <label class="block-label" data-target="debt-yes" for="radio-inline-1">
+        <input id="radio-inline-1" type="radio" name="partner" value="Yes">
+        Yes
+      </label>
+      <label class="block-label" data-target="debt-no" for="radio-inline-2">
+        <input id="radio-inline-2" type="radio" name="partner" value="No">
+        No
+      </label>
+    </fieldset>
+  </div>
+
+
+  <div class="js-hidden form-group" id="debt-yes">
+    <a href="debt-repayment" class="button">Continue</a>
+  </div>
+
+  <div class="js-hidden form-group" id="debt-no">
+    <a href="personal-details" class="button">Continue</a> 
+  </div>
+</form>
+</main><!-- / #page-container -->
+{% endblock %}

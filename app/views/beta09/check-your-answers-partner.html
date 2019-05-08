@@ -1,0 +1,311 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Check your answers - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+{% if saved %}
+<div class="panel panel-border-wide alert-success m-t-l">
+  <p>Your changes have been saved</p>
+</div>
+{% endif %}
+
+  <h1 class="heading-large">
+    Check your answers
+  </h1>
+
+  <table class="check-your-answers">
+    <thead>
+      <tr>
+        <th colspan="3">
+          <h2 class="heading-medium m-b-xs">
+            Your partner and children
+          </h2>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="left-col">
+          Current partner
+        </td>
+        <td>
+          Yes
+        </td>
+        <td class="change-answer">
+          <a href="/beta10/partner/edit">
+            Change <span class="visuallyhidden">your current partner answer</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td class="left-col">
+          Name and date of birth
+        </td>
+        <td>
+          Graham Peter Smith<br />
+          10/12/1980
+        </td>
+        <td class="change-answer">
+          <a href="/beta10/your-partner/edit">
+            Change <span class="visuallyhidden">partner&rsquo;s name and date of birth</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td class="left-col">
+          Child Benefit
+        </td>
+        <td>
+          Yes<br />
+          Living with 5 children
+        </td>
+        <td class="change-answer">
+          <a href="/beta10/child-benefit-you-or-partner/edit">
+            Change <span class="visuallyhidden">child benefit answer</span>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="check-your-answers">
+
+    <thead>
+      <tr>
+        <th colspan="3">
+          <h2 class="heading-medium m-b-xs">
+            Your combined outgoings
+          </h2>
+        </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td class="left-col">
+          Credit or store cards
+        </td>
+        <td>
+          Yes<br />
+          Monthly payment: &pound;10<br />
+          Total: &pound;2,000
+        </td>
+        <td class="change-answer">
+          <a href="/beta10/repayments-credit-store-cards-partner/edit">
+            Change <span class="visuallyhidden">credit or store cards answer</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td class="left-col">
+          Loans
+        </td>
+        <td>
+          No
+        </td>
+        <td class="change-answer">
+          <a href="/beta10/repayments-loans-partner/edit">
+            Change <span class="visuallyhidden">loans answer</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td class="left-col">
+          Rental purchases
+        </td>
+        <td>
+          Yes<br />
+          Monthly payment: &pound;12<br />
+          Total: &pound;4,000
+        </td>
+        <td class="change-answer">
+          <a href="/beta10/repayments-rent-to-own-partner/edit">
+            Change <span class="visuallyhidden">rental purchases answer</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td class="left-col">
+          Landlord repayments
+        </td>
+        <td>
+          Yes<br />
+          Monthly payment: &pound;35<br />
+          Total: &pound;200
+        </td>
+        <td class="change-answer">
+          <a href="/beta10/repayments-landlord-payments-partner/edit">
+            Change <span class="visuallyhidden">landlord repayments answer</span>
+          </a>
+        </td>
+      </tr>
+      
+    </tbody>
+
+  </table>
+
+  <table class="check-your-answers">
+
+    <thead>
+      <tr>
+        <th colspan="3">
+          <h2 class="heading-medium m-b-xs">
+            Budgeting Loan amount
+          </h2>
+        </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td class="left-col">
+          Applied for
+        </td>
+        <td>
+          &pound;405
+        </td>
+        <td class="change-answer">
+          <a href="/beta10/loan-amount-partner/edit">
+            Change <span class="visuallyhidden">amount applied for</span>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+
+  <table class="check-your-answers">
+
+    <thead>
+      <tr>
+        <th colspan="3">
+          <h2 class="heading-medium m-b-xs">
+            About you
+          </h2>
+        </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td class="left-col">
+          Name and date of birth
+        </td>
+        <td>
+          Philip Swan<br>
+          10/12/1980
+        </td>
+        <td class="change-answer">
+          <a href="/beta10/about-you-partner/edit">
+            Change <span class="visuallyhidden">your name or date of birth</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td class="left-col">
+          Your address
+        </td>
+        <td>
+          16 Clumber Street<br>
+          Chilwell<br>
+          Leeds<br>
+          LS1 7TY
+        </td>
+        <td class="change-answer">
+          <a href="/beta10/your-address-partner/edit">
+            Change <span class="visuallyhidden">your address</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td class="left-col">
+          Contact preferences
+        </td>
+        <td>
+          Email and letter<br>
+          phil.swan@domain.com
+        </td>
+        <td class="change-answer">
+          <a href="/beta10/your-contact-preferences-partner/edit">
+            Change <span class="visuallyhidden">your contact preferences</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td class="left-col">
+          Text message updates
+        </td>
+        <td>
+          Yes<br>
+          0770 242 6678
+        </td>
+        <td class="change-answer">
+          <a href="/beta10/your-contact-text-updates-partner/edit">
+            Change <span class="visuallyhidden">text message updates</span>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+
+  <table class="check-your-answers m-b-l">
+
+    <thead>
+      <tr>
+        <th colspan="3">
+          <h2 class="heading-medium m-b-xs">
+            Your combined savings
+          </h2>
+        </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td class="left-col">
+          Savings
+        </td>
+        <td>
+          Less than &pound;1,000
+        </td>
+        <td class="change-answer">
+          <a href="/beta10/savings-under63-partner/edit">
+            Change <span class="visuallyhidden">your savings answer</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td class="left-col">
+          Owned property not lived in
+        </td>
+        <td>
+          Yes<br>
+          Value: &pound;200,000
+        </td>
+        <td class="change-answer">
+          <a href="/beta10/savings-under63-partner-property/edit">
+            Change <span class="visuallyhidden">owned property not lived in answer</span>
+          </a>
+        </td>
+      </tr>
+
+    </tbody>
+
+  </table>
+
+
+  <div class="form-group">
+    <a href="/beta10/declaration" class="button">Continue</a>
+  </div>
+
+</main>
+
+{% endblock %}

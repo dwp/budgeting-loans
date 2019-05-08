@@ -1,0 +1,36 @@
+{% extends "layout_unbranded.html" %}
+
+{% block page_title %}
+  Example without branding
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main" class="single-column">
+
+  <h1 class="heading-large">Pagination</h1>
+
+  <h2 class="heading-medium">
+    Improving the accessibility of the pagination links with more explicit titles
+  </h2>
+
+  <dl class="hypo">
+    <dt>If:</dt>
+    <dd>If we include a more specific <code>title</code> on &lsquo;Previous&rsquo; and &lsquo;Next&rsquo; links</dd>
+    <dt>Then:</dt>
+    <dd>Screenreader users will have an easier time understanding where these go</dd>
+    <dt>Because:</dt>
+    <dd>They currently confuse these links with browser forward and back functions</dd>
+  </dl>
+
+  <hr>
+
+  <ul class="list list-bullet">
+    <li><a href="/sandpit/accessible-pagination/start-overview">Page 1</a></li>
+    <li><a href="/sandpit/accessible-pagination/start-what-you-could-get">Page 2</a></li>
+    <li><a href="/sandpit/accessible-pagination/start-eligibility">Page 3</a></li>
+  </ul>
+
+</main>
+
+{% endblock %}

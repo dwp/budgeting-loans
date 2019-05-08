@@ -1,0 +1,177 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Debt repayments - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {# Back link #}
+  {% import "includes/back-link.html" as back %}
+  {{ back.url('#') }}
+{# Back link #}
+
+      <form method="post" class="form">
+
+        <h1 class="form-title heading-large m-b-ml">
+        Your regular debt repayments
+        </h1>
+
+        <p>Select the options that apply to you</p>
+
+        <div class="form-group">
+          <fieldset>
+
+            <label class="block-label" for="option-1" data-target="option-1-panel">
+              <input id="option-1" type="checkbox" name="option-1" value="option-1">
+              Credit or store cards
+            </label>
+
+            <div class="panel panel-border-narrow js-hidden m-b-l" id="option-1-panel">
+
+              <div class="form-group m-b-ml">
+                <label class="form-label m-b-xs" for="regpay01">How much do you pay each month for credit and store cards?</label>
+                <div class="u-1/4-lap-and-up">
+                  <span class="c-form-input-denote">&pound;</span>
+                  <input class="c-form-input-denote__input form-control form-control-1-4" id="regpay01" type="text" name="regpay01" value="">
+                </div>
+              </div>
+
+              <div class="form-group m-b-ml">
+                <label class="form-label m-b-xs" for="total01">How much in total do you have left to pay?</label>
+                <div class="u-1/4-lap-and-up">
+                  <span class="c-form-input-denote">&pound;</span>
+                  <input class="c-form-input-denote__input form-control form-control-1-4" id="total01" type="text" name="total01" value="">
+                </div>
+              </div>
+
+            </div>{# /option-1-panel #}
+
+
+
+            <label class="block-label" for="option-2" data-target="option-2-panel">
+              <input id="option-2" type="checkbox" name="option-2" value="option-2">
+              Gym membership
+            </label>
+
+            <div class="panel panel-border-narrow js-hidden m-b-l" id="option-2-panel">
+
+              <div class="form-group m-b-ml">
+                <label class="form-label m-b-xs" for="regpay01">How much do you pay each month for credit and store cards?</label>
+                <div class="u-1/4-lap-and-up">
+                  <span class="c-form-input-denote">&pound;</span>
+                  <input class="c-form-input-denote__input form-control form-control-1-4" id="regpay01" type="text" name="regpay01" value="">
+                </div>
+              </div>
+
+              <div class="form-group m-b-ml">
+                <label class="form-label m-b-xs" for="total01">How much in total do you have left to pay?</label>
+                <div class="u-1/4-lap-and-up">
+                  <span class="c-form-input-denote">&pound;</span>
+                  <input class="c-form-input-denote__input form-control form-control-1-4" id="total01" type="text" name="total01" value="">
+                </div>
+              </div>
+
+            </div>{# /option-2-panel #}
+
+
+            <label class="block-label" for="option-3" data-target="option-3-panel">
+              <input id="option-3" type="checkbox" name="option-3" value="option-3">
+              Mobile phone contract
+            </label>
+
+            <div class="panel panel-border-narrow js-hidden m-b-l" id="option-3-panel">
+
+              <div class="form-group m-b-ml">
+                <label class="form-label m-b-xs" for="regpay01">How much do you pay each month for credit and store cards?</label>
+                <div class="u-1/4-lap-and-up">
+                  <span class="c-form-input-denote">&pound;</span>
+                  <input class="c-form-input-denote__input form-control form-control-1-4" id="regpay01" type="text" name="regpay01" value="">
+                </div>
+              </div>
+
+              <div class="form-group m-b-ml">
+                <label class="form-label m-b-xs" for="total01">How much in total do you have left to pay?</label>
+                <div class="u-1/4-lap-and-up">
+                  <span class="c-form-input-denote">&pound;</span>
+                  <input class="c-form-input-denote__input form-control form-control-1-4" id="total01" type="text" name="total01" value="">
+                </div>
+              </div>
+
+            </div>{# /option-3-panel #}
+
+            <label class="block-label" for="option-4" data-target="option-4-panel">
+              <input id="option-4" type="checkbox" name="option-4" value="option-4">
+              Loans
+            </label>
+
+            <div class="panel panel-border-narrow js-hidden m-b-l" id="option-4-panel">
+
+              <div class="form-group m-b-ml">
+                <label class="form-label m-b-xs" for="regpay01">How much do you pay each month for credit and store cards?</label>
+                <div class="u-1/4-lap-and-up">
+                  <span class="c-form-input-denote">&pound;</span>
+                  <input class="c-form-input-denote__input form-control form-control-1-4" id="regpay01" type="text" name="regpay01" value="">
+                </div>
+              </div>
+
+              <div class="form-group m-b-ml">
+                <label class="form-label m-b-xs" for="total01">How much in total do you have left to pay?</label>
+                <div class="u-1/4-lap-and-up">
+                  <span class="c-form-input-denote">&pound;</span>
+                  <input class="c-form-input-denote__input form-control form-control-1-4" id="total01" type="text" name="total01" value="">
+                </div>
+              </div>
+
+            </div>{# /option-4-panel #}
+
+
+
+            <label class="block-label" for="option-5" data-target="option-5-panel">
+              <input id="option-5" type="checkbox" name="option-5" value="option-5">
+              Rental purchases
+            </label>
+
+            <div class="panel panel-border-narrow js-hidden m-b-l" id="option-5-panel">
+
+              <div class="form-group m-b-ml">
+                <label class="form-label m-b-xs" for="regpay01">How much do you pay each month for credit and store cards?</label>
+                <div class="u-1/4-lap-and-up">
+                  <span class="c-form-input-denote">&pound;</span>
+                  <input class="c-form-input-denote__input form-control form-control-1-4" id="regpay01" type="text" name="regpay01" value="">
+                </div>
+              </div>
+
+              <div class="form-group m-b-ml">
+                <label class="form-label m-b-xs" for="total01">How much in total do you have left to pay?</label>
+                <div class="u-1/4-lap-and-up">
+                  <span class="c-form-input-denote">&pound;</span>
+                  <input class="c-form-input-denote__input form-control form-control-1-4" id="total01" type="text" name="total01" value="">
+                </div>
+              </div>
+
+            </div>{# /option-5-panel #}
+
+            
+
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>{# / form-group #}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

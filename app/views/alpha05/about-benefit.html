@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Budgeting Loans
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/alpha-banner.html" %}
+  
+  <form action="your-children02" method="#" class="form">
+
+  <a href="before-you-start" class="example-back-link">Back</a>
+
+  <h1 class="form-title heading-large">
+    About your benefits
+  </h1>
+
+  <fieldset class="inline form-group">
+    <legend class="form-label-bold" for="benefit">Have you been getting one of the following benefits for the past 6 months?</legend>
+    <p class="form-hint">Income Support, Income-based Jobseeker's Allowance, Income Related Employment and Support Allowance or Pension Credit</p>
+    <label class="block-label" data-target="benefit-yes" for="radio-inline-1">
+      <input id="radio-inline-1" type="radio" name="benefit" value="Yes">
+      Yes
+    </label>
+    <label class="block-label" data-target="benefit-no" for="radio-inline-2">
+      <input id="radio-inline-2" type="radio" name="benefit" value="No">
+      No
+    </label>
+  </fieldset>
+
+  <div class="js-hidden form-group" id="benefit-yes">
+    <a href="partner" class="button">Continue</a>
+  </div>
+
+  <div class="js-hidden" id="benefit-no">
+    <!--a href="expartner" class="button">Continue</a--> 
+    <div class="panel-indent">
+      <p>You may not be eligible to apply for a budgeting loan.</p>
+    </div>
+    <div class="form-group">
+      <a href="overview" class="button">Finish</a>
+    </div>
+  </div>
+
+  </div>
+
+</main><!-- / #page-container -->
+{% endblock %}

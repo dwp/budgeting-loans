@@ -1,0 +1,134 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Apply for a Budgeting Loan
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+	<form method="post" class="form">
+		<div class="column-two-thirds">
+			<a href="apply" class="example-back-link">Back</a>
+			<h1 class="heading-large">Eligibility checker</h1>
+			<fieldset class="inline form-group" id="less-than-100-container">
+				<h1 class="form-title heading-medium">
+					<legend>Do you need to borrow more than £100?</legend>
+				</h1>
+				<div id="less-than-100-error-container"></div>
+				<div class="form-group">
+					<label class="block-label" for="radio-inline-100-1">
+						<input id="radio-inline-100-1" type="radio" name="less-than-100" value="Yes"
+						required
+						data-parsley-errors-container="#less-than-100-error-container"
+						data-parsley-class-handler="#less-than-100-container"
+						data-parsley-error-message="Select ‘Yes’ or ‘No’"
+						>
+						Yes
+					</label>
+					<label class="block-label" for="radio-inline-100-2">
+						<input id="radio-inline-100-2" type="radio" name="less-than-100" value="No">
+						No
+					</label>
+				</div>
+				<div id="benefit-container">
+					<h1 class="form-title heading-medium">
+						<legend >Have you been getting income-based Jobseeker's Allowance, income-related Employment and Support Allowance, Income Support or Pension Credit for the past 6 months?</legend>
+					</h1>
+					<div class="form-group">
+						<div id="benefit-error-container"></div>
+						<label class="block-label" for="radio-inline-benefit-1">
+							<input id="radio-inline-benefit-1" type="radio" name="benefit" value="Yes"
+							data-parsley-errors-container="#benefit-error-container"
+							data-parsley-class-handler="#benefit-container"
+							data-parsley-error-message="Select ‘Yes’ or ‘No’"
+							>
+							Yes
+						</label>
+						<label class="block-label" for="radio-inline-benefit-2">
+							<input id="radio-inline-benefit-2" type="radio" name="benefit" value="No">
+							No
+						</label>
+					</div>
+				</div>
+				<div id="owe-social-fund-container">
+					<h1 class="form-title heading-medium">
+						<legend for="owe-social-fund">Do you owe the Social Fund more than £1,500 for a Crisis Loan or Budgeting Loan?</legend>
+					</h1>
+					<div class="form-group">
+					<div id="owe-social-fund-error-container"></div>
+						<label class="block-label" for="radio-inline-social-1">
+							<input id="radio-inline-social-1" type="radio" name="owe-social-fund" value="Yes"
+							data-parsley-errors-container="#owe-social-fund-error-container"
+							data-parsley-class-handler="#owe-social-fund-container"
+							data-parsley-error-message="Select ‘Yes’ or ‘No’"
+							>
+							Yes
+						</label>
+						<label class="block-label" for="radio-inline-social-2">
+							<input id="radio-inline-social-2" type="radio" name="owe-social-fund" value="No">
+							No
+						</label>
+					</div>
+				</div>
+				<div id="savings-container">
+					<h1 class="form-title heading-medium">
+						<legend for="savings">Do you or your partner have combined savings of more than £1,000 (£2,000 if either of you are over 61)?</legend>
+					</h1>
+					<div id="savings-error-container"></div>
+					<div class="form-group">
+						<label class="block-label" for="radio-inline-savings-1">
+							<input id="radio-inline-savings-1" type="radio" name="savings" value="Yes"
+							data-parsley-errors-container="#savings-error-container"
+							data-parsley-class-handler="#savings-container"
+							data-parsley-error-message="Select ‘Yes’ or ‘No’"
+							>
+							Yes
+						</label>
+						<label class="block-label" for="radio-inline-savings-2">
+							<input id="radio-inline-savings-2" type="radio" name="savings" value="No">
+							No
+						</label>
+					</div>
+				</div>
+				<div id="industrial-action-container">
+					<h1 class="form-title heading-medium">
+						<legend for="industrial-action">Are you involved in any industrial action (eg a strike, walk-out or lock-out)?</legend>
+					</h1>
+					<div id="industrial-action-error-container"></div>
+					<div class="form-group">
+						<label class="block-label" for="radio-inline-industry-1">
+							<input id="radio-inline-industry-1" type="radio" name="industrial-action" value="Yes"
+							data-parsley-errors-container="#industrial-action-error-container"
+							data-parsley-class-handler="#industrial-action-container"
+							data-parsley-error-message="Select ‘Yes’ or ‘No’"
+							>
+							Yes
+						</label>
+						<label class="block-label" for="radio-inline-industry-2">
+							<input id="radio-inline-industry-2" type="radio" name="industrial-action" value="No">
+							No
+						</label>
+					</div>
+				</div>
+
+			</fieldset>
+
+			<div class="form-group js-hidden warning" id="less-than-100-no">
+				<h2 class="heading-small">You're not eligible for a Budgeting Loan.</h2>
+				<p><a href="https://www.gov.uk/contact-jobcentre-plus">Contact Jobcentre Plus</a> for information about your benefit.</p>
+			</div>
+
+			<div class="form-group">
+				<input type="submit" class="button" value="Submit">
+			</div>
+			<div class="column-third">
+				<p>&nbsp;</p>
+			</div>
+		</div>
+	</form>
+</main><!-- / #page-container -->
+{% endblock %}

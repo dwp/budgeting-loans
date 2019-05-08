@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Outstanding Social Fund loans - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {# Back link #}
+  {% import "includes/back-link.html" as back %}
+  {{ back.url('#') }}
+{# Back link #}
+
+      <form method="post" class="form">
+
+        <h1 class="heading-large m-b-ml m-t-m">
+          <span class="heading-secondary">
+            Check your eligibility
+          </span>
+          Which type of Employment and Support Allowance do you get?
+        </h1>
+
+        <p>Helper text explaining where they can find this - letter etc</p>
+
+        <div class="form-group">
+
+          <fieldset>
+
+            <legend class="c-legend c-legend--medium m-b-s visually-hidden">Which type of Employment and Support Allowance do you get?</legend>
+                <label class="block-label" for="esabenefittype1">
+                  <input id="esabenefittype1" type="radio" name="esabenefittype" value="esabenefittype1">
+                  Income related
+                </label>
+
+                <label class="block-label" for="esabenefittype2">
+                  <input id="esabenefittype2" type="radio" name="esabenefittype" value="esabenefittype2" >
+                  Contribution based
+                </label>
+
+                <label class="block-label" for="esabenefittype3">
+                  <input id="esabenefittype3" type="radio" name="esabenefittype" value="esabenefittype3" >
+                  Don&rsquo;t know
+                </label>
+
+              </fieldset>
+
+        </div>{# / form-group #}
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>{# / form-group #}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

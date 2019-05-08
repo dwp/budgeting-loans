@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Debt repayments - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {# Back link #}
+        {% import "includes/back-link.html" as back %}
+        {{ back.url('#') }}
+      {# Back link #}
+
+      <form method="post" class="form">
+
+        <h1 class="heading-large m-b-m">
+          Are you making regular debt repayments?
+        </h1>
+
+        <div class="form-group">
+
+          <fieldset class="inline">
+
+            <legend class="c-legend c-legend--medium visually-hidden">Are you making regular debt repayments?</legend>
+
+            <p class="m-b-m">This includes hire purchases and loans. Don&rsquo;t include normal living expenses like gas and electricity charges or food bills. This information will help work out your loan repayments.</p>
+
+            <label class="block-label" for="radio-inline-1">
+              <input id="radio-inline-1" type="radio" name="choice" value="yes" >
+              Yes
+            </label>
+            <label class="block-label" for="radio-inline-2">
+              <input id="radio-inline-2" type="radio" name="choice" value="no" >
+              No
+            </label>
+
+          </fieldset>
+
+        </div>{# / form-group #}
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>{# / form-group #}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

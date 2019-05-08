@@ -1,0 +1,123 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Budgeting Loans
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/alpha-banner.html" %}
+  
+  <form action="your-children02" method="#" class="form">
+
+  <a href="before-you-start" class="example-back-link">Back</a>
+
+  <h1 class="form-title heading-large">
+    About a partner
+  </h1>
+
+  <fieldset class="inline form-group">
+    <legend class="form-label-bold" for="partner">Do you currently have a partner?</legend>
+    <p class="form-hint">A partner is someone you are married to, a civil partner or someone you are living with as though you are married or in a civil partnership</p>
+    <label class="block-label" data-target="partner-yes" for="radio-inline-1">
+      <input id="radio-inline-1" type="radio" name="partner" value="Yes">
+      Yes
+    </label>
+    <label class="block-label" data-target="partner-no" for="radio-inline-2">
+      <input id="radio-inline-2" type="radio" name="partner" value="No">
+      No
+    </label>
+  </fieldset>
+
+  <div class="panel-indent js-hidden" id="partner-yes">
+    <fieldset class="inline form-group">
+      <legend class="form-label-bold" for="partner-6months">Have you been with your partner for 6 months or more?</legend>
+      <label class="block-label" data-target="partner-yes2" for="months-1">
+      <input id="months-1" type="radio" name="partner-6months" value="Yes">
+      Yes
+    </label>
+    <label class="block-label" data-target="partner-no" for="months-2">
+      <input id="months-2" type="radio" name="partner-6months" value="No">
+      No
+    </label>
+  </fieldset>
+
+  </div>
+
+  <div class="panel-indent js-hidden" id="partner-yes2">
+    <fieldset class="inline form-group">
+      <legend class="form-label-bold"><span>Has your partner been getting Income Support, Income-based Jobseekers Allowance, Income-based Employment and Support Allowance or Pension Credit for the past 6 months?</span></legend>
+      <label class="block-label" data-target="partner-details" for="radio-inline-3">
+        <input id="radio-inline-3" type="radio" name="radio-inline-group2" value="Yes">
+        Yes
+      </label>
+      <label class="block-label"for="radio-inline-4">
+        <input id="radio-inline-4" type="radio" name="radio-inline-group2" value="No">
+        No
+      </label>
+    </fieldset>
+
+    <div class="js-hidden" id="partner-details">
+      <div class="form-group">
+        <label class="form-label" for="partner-name">Partner's full name</label>
+        <input class="form-control" id="partner-name" type="text">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="partner-nino">Your partner's National Insurance number</label>
+        <p class="form-hint">For example, 'QQ 12 34 56 C'</p>
+        <input class="form-control" id="partner-nino" type="text">
+      </div>
+    </div>  
+
+  </div>
+
+
+
+  <div class="panel-indent js-hidden" id="partner-no">
+    <fieldset class="inline form-group">
+      <legend class="form-label-bold">Have you had a partner in the past 6 months?</legend>
+      <label class="block-label" data-target="expartner" for="radio-inline-5">
+        <input id="radio-inline-5" type="radio" name="radio-inline-group4" value="Yes">
+        Yes
+      </label>
+      <label class="block-label"for="radio-inline-6">
+        <input id="radio-inline-6" type="radio" name="radio-inline-group4" value="No">
+        No
+      </label>
+    </fieldset>
+
+
+    <fieldset class="form-group inline js-hidden" id="expartner">
+      <legend class="form-label-bold"><span>Has your ex-partner been getting Income Support, Income-based Jobseekers Allowance, Income-based Employment and Support Allowance or Pension Credit for the past 6 months?</span></legend>
+      <label class="block-label" data-target="expartner-details" for="radio-inline-7">
+        <input id="radio-inline-7" type="radio" name="radio-inline-group3" value="Yes">
+        Yes
+      </label>
+      <label class="block-label"for="radio-inline-8">
+        <input id="radio-inline-8" type="radio" name="radio-inline-group3" value="No">
+        No
+      </label>
+    </fieldset>
+
+    <div class="js-hidden" id="expartner-details">
+      <div class="form-group">
+        <label class="form-label" for="partner-name">Ex-partner's full name</label>
+        <input class="form-control" id="partner-name" type="text">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="partner-nino">Your ex-partner's National Insurance number</label>
+        <p class="form-hint">For example, 'QQ 12 34 56 C'</p>
+        <input class="form-control" id="partner-nino" type="text">
+      </div>
+    </div> 
+  </div>
+
+  <div class="form-group">
+      <input type="submit" class="button" value="Continue"> 
+    </div>
+
+</main><!-- / #page-container -->
+{% endblock %}

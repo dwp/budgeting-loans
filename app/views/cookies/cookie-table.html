@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Cookie details - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="title heading-large" id="cookie">Cookies</h1>
+
+      <h2 class="heading-medium">Service cookies</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th style="width:27%">Name</th>
+            <th style="width:45%">Purpose</th>
+            <th>Expires</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>seen_cookie_message</td>
+            <td>This records if you&rsquo;ve seen the cookies message at the top of the site when you first come in, so you don&rsquo;t see it on every visit.</td>
+            <td>After 28 days</td>
+          </tr>
+          <tr>
+            <td>_csrf</td>
+            <td>This keeps your application secure.</td>
+            <td>When you close your browser</td>
+          </tr>
+          <tr>
+            <td>language</td>
+            <td>This changes the service between Welsh and English, if you click the link to change the language.</td>
+            <td>After 90 minutes or when you close your browser</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 class="heading-medium">Google Analytics</h2>
+
+      <table class="m-b-l">
+        <thead>
+          <tr>
+            <th style="width:27%">Name</th>
+            <th style="width:45%">Purpose</th>
+            <th>Expires</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_ga</td>
+            <td>This counts how many people visit the service by tracking if you&rsquo;ve visited before.</td>
+            <td>After 2 years</td>
+          </tr>
+          <tr>
+            <td>_gat</td>
+            <td>This counts how many pages are viewed and how often.</td>
+            <td>After 10 minutes</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><a href='cookie-policy'>Go back to cookies page</a></p>
+
+    </div>{# / column-two-thirds #}
+
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "layout_unbranded.html" %}
+
+{% block page_title %}
+  Example without branding
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main" class="single-column">
+
+  <h1 class="heading-large">
+    Masthead label variations
+  </h1>
+
+  <dl class="hypo">
+    <dt>If:</dt>
+    <dd>We change the masthead service title to &lsquo;Budgeting Loans&rsquo;</dd>
+    <dt>Then:</dt>
+    <dd>Fewer users will confuse navigating to the service start page and completing an action</dd>
+    <dt>Because:</dt>
+    <dd>The link isn&rsquo;t a verb</dd>
+  </dl>
+
+  <dl class="hypo">
+    <dt>If:</dt>
+    <dd>We update the masthead service title so that it&rsquo;s no longer a link</dd>
+    <dt>Then:</dt>
+    <dd>Fewer users will confuse navigating to the service start page and completing an action</dd>
+    <dt>Because:</dt>
+    <dd>It&rsquo;s no longer possible to click the title</dd>
+  </dl>
+
+  <hr>
+
+  <ul class="list list-bullet">
+    <li><a href="/sandpit/masthead-label-variations/non-verb">Non-verb example</a></li>
+    <li><a href="/sandpit/masthead-label-variations/non-link">Non-link example</a></li>
+    <li><a href="/sandpit/masthead-label-variations/non-verb-non-link">Non-verb, non-link example</a></li>
+  </ul>
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Budgeting Loans
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/alpha-banner.html" %}
+  
+  <form action="before-you-start" method="#" class="form">
+
+  <a href="eligibilty01" class="example-back-link">Back</a>
+
+  <h1 class="form-title heading-large">
+    Eligibility
+  </h1>
+
+  <ul>
+    <li>
+      <fieldset class="inline form-group">
+        <legend class="form-label-bold add-padding" for="eligibility">Are you involved in a trade dispute?</legend>
+        <p class="form-hint">This includes industrial action, a strike, walk out, lock-out or any other dispute about work.</p>
+        <label class="block-label" data-target="not-eligible" for="eligibility-1">
+          <input id="eligibility-1" type="radio" name="eligibility" value="Yes">
+          Yes
+        </label>
+        <label class="block-label" data-target="is-eligible" for="eligibility-2">
+          <input id="eligibility-2" type="radio" name="eligibility" value="No">
+          No
+        </label>
+      </fieldset>
+    </li>
+  </ul>
+
+  <div class="js-hidden" id="not-eligible">
+    <div class="panel-indent">
+      <p>You are not eligible to apply for a Budgeting Loan.</p>
+    </div>
+    <div class="form-group">
+      <a href="overview" class="button">Finish</a>
+    </div>
+  </div>
+  
+  <div class="js-hidden form-group" id="is-eligible">
+    <input type="submit" class="button" value="Continue">
+  </div>
+
+
+</main><!-- / #page-container -->
+{% endblock %}

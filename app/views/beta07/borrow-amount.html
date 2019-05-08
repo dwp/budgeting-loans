@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Amount to borrow - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {# Back link #}
+        {% import "includes/back-link.html" as back %}
+        {{ back.url('javascript:history.back()') }}
+      {# Back link #}
+
+      <form method="post" class="form">
+
+        <h1 class="heading-large m-b-ml m-t-m">
+          <span class="heading-secondary">
+            Check your eligibility
+          </span>
+          Do you need to borrow £100 or more?
+        </h1>
+
+        <div class="form-group">
+
+          <fieldset class="inline">
+
+            <legend class="c-legend c-legend--medium m-b-s visually-hidden">Do you need to borrow £100 or more?</legend>
+            
+            <label class="block-label" for="borrowamount1">
+              <input id="borrowamount1" type="radio" name="borrowamount" value="yes" >
+              Yes
+            </label>
+
+            <label class="block-label" for="borrowamount2">
+              <input id="borrowamount2" type="radio" name="borrowamount" value="no" >
+              No
+            </label>
+
+          </fieldset>
+
+        </div>{# / form-group #}
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>{# / form-group #}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

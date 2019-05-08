@@ -1,0 +1,168 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Current benefits - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {# Back link #}
+        {% import "includes/back-link.html" as back %}
+        {{ back.url('outstanding-social-fund-loans') }}
+      {# Back link #}
+
+      <form method="post" class="form">
+
+      <h1 class="heading-large m-b-ml m-t-m">
+        <span class="heading-secondary">
+          Check your eligibility
+        </span>
+        Which of these benefits do you get?
+      </h1>
+
+      {# Pension Credit #}
+
+        <fieldset class="form-group js-error-container">
+          <legend class="c-legend c-legend--medium visuallyhidden">Which of these benefits do you get?</legend>
+
+          <label class="block-label" for="benefit1" data-target="pc-benefit-type-panel">
+            <input id="benefit1" type="radio" name="benefit" value="pc">
+            Pension Credit
+          </label>
+
+          <div class="panel js-hidden m-b-l" id="pc-benefit-type-panel">
+
+            <fieldset>
+
+              <legend class="c-legend c-legend--medium m-b-s">How long have you been getting Pension Credit?</legend>
+
+              <label class="block-label" for="pcbenefittype1">
+                <input id="pcbenefittype1" type="radio" name="pcbenefittype" value="pcbenefittype1">
+                More than 6 months
+              </label>
+
+              <label class="block-label" for="pcbenefittype2">
+                <input id="pcbenefittype2" type="radio" name="pcbenefittype" value="pcbenefittype2" >
+                Less than 6 months
+              </label>
+
+            </fieldset>
+
+          </div>{# / pc-benefit-type-panel #}
+
+          {# Income Support #}
+
+          <label class="block-label" for="benefit2" data-target="is-benefit-type-panel">
+            <input id="benefit2" type="radio" name="benefit" value="is" >
+            Income Support
+          </label>
+
+          <div class="panel js-hidden m-b-l" id="is-benefit-type-panel">
+
+            <fieldset>
+
+              <legend class="c-legend c-legend--medium m-b-s">How long have you been getting Income Support?</legend>
+
+              <label class="block-label" for="isbenefittype1">
+                <input id="isbenefittype1" type="radio" name="isbenefittype" value="isbenefittype1">
+                More than 6 months
+              </label>
+
+              <label class="block-label" for="isbenefittype2">
+                <input id="isbenefittype2" type="radio" name="isbenefittype" value="isbenefittype2" >
+                Less than 6 months
+              </label>
+
+            </fieldset>
+
+          </div>{# / pc-benefit-type-panel #}
+
+
+          {# Employment and Support Allowance #}
+
+          <label class="block-label" for="benefit3" data-target="esa-benefit-type-panel">
+            <input id="benefit3" type="radio" name="benefit" value="esa" >
+            Employment and Support Allowance
+          </label>
+
+          <div class="panel js-hidden m-b-l" id="esa-benefit-type-panel">
+
+            <fieldset>
+
+              <legend class="c-legend c-legend--medium m-b-s">How long have you been getting Employment and Support Allowance?</legend>
+
+              <label class="block-label" for="esabenefittype2">
+                <input id="esabenefittype2" type="radio" name="esabenefittype" value="esabenefittype1" >
+                More than 6 months
+              </label>
+
+              <label class="block-label" for="esabenefittype1">
+                <input id="esabenefittype1" type="radio" name="esabenefittype" value="esabenefittype2">
+                Less than 6 months
+              </label>
+
+            </fieldset>
+
+          </div>{# / esa-benefit-type-panel #}
+
+          {# Jobseeker’s Allowance #}
+
+          <label class="block-label" for="benefit4" data-target="jsa-type-panel">
+            <input id="benefit4" type="radio" name="benefit" value="jsa" >
+            Jobseeker&rsquo;s Allowance
+          </label>
+
+          <div class="panel js-hidden m-b-l" id="jsa-type-panel">
+
+            <fieldset>
+
+              <legend class="c-legend c-legend--medium m-b-s">How long have you been getting Jobseeker&rsquo;s Allowance?</legend>
+
+              <label class="block-label" for="jsabenefittype1">
+                <input id="jsabenefittype1" type="radio" name="jsabenefittype" value="jsabenefittype1" >
+                More than 12 months
+              </label>
+
+              <label class="block-label" for="jsabenefittype2">
+                <input id="jsabenefittype2" type="radio" name="jsabenefittype" value="jsabenefittype2" >
+                Between 6 and 12 months
+              </label>
+
+              <label class="block-label" for="jsabenefittype3">
+                <input id="jsabenefittype3" type="radio" name="jsabenefittype" value="jsabenefittype3" >
+                Less than 6 months
+              </label>
+
+            </fieldset>
+
+          </div>{# / jsa-type-panel #}
+
+          {# None of the above #}
+
+          <label class="block-label" for="benefit5">
+            <input id="benefit5" type="radio" name="benefit" value="none" >
+            None of the above
+          </label>
+
+          {# / none of the above #}
+
+        </fieldset>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>{# / form-group #}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

@@ -1,0 +1,62 @@
+
+{% extends "layout_unbranded.html" %}
+
+{% block page_title %}
+  Example without branding
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="notice polite">
+    <h1 class="heading-xlarge">
+      You applied for £500<br>
+      You have been offered £348<br>
+      Weekly repayment £6.08
+    </h1>
+  </div>
+
+  <p>Dear XXXXXX</p>
+  <p>on 25/12/15 you applied for a £500 Budgeting Loan, you have been offered £348.</p>
+  <p>You will repay the loan at £6.08 a week from your Jobseeker's Allowance.</p>
+  <p>Your re-calculated benefit will be paid at £66.30 per week for the next 57 weeks</p>
+
+  <details style="margin-bottom: 1em;">
+    <summary><span class="summary">The amount you're offered is based on</span></summary>
+      <div class="panel-indent">
+        <ul class="list-bullet">
+          <li>how much you owe the Social Fund</li>
+          <li>regular debt repayments</li>
+          <li>how much you can afford to pay each week</li>
+        </ul>
+      </div>
+  </details>
+  <h3 class="heading-medium">If you’re unhappy with a decision<h3>
+  <p>You can ask for a Budgeting Loan decision to be reviewed if you're not happy with it.</p>
+  <p>To do this, you must write to Jobcentre Plus within 28 days of the decision, explaining why you think it was wrong.</p>  
+  <p>f you still think the decision was wrong after the review, you can ask for a further review by the office of the <a href="https://www.gov.uk/government/publications/budgeting-loans-how-to-ask-for-a-further-independent-review">Independent Case Examiner.</a> This review should take no longer than 21 working days.</p>
+  <form method="post" class="form">
+    <fieldset class="inline">
+      <h3 class="heading-medium">Do you want to accept the offer?</h3>
+      <label class="block-label" for="radio-inline-1">
+        <input id="radio-inline-1" type="radio" name="choice" value="yes" >
+        Yes
+      </label>
+      <label class="block-label" for="radio-inline-2">
+        <input id="radio-inline-2" type="radio" name="choice" value="no" >
+        No
+      </label>
+    </fieldset>
+    <div class="form-group">
+      <input class="button" type="submit" value="Continue">
+    </div>{# / form-group #}
+  </form>
+</main>
+
+{% endblock %}
+  
+
+  
+  
+

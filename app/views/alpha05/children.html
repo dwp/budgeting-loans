@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Budgeting Loans
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/alpha-banner.html" %}
+  
+  <form action="loan-amount" method="#" class="form">
+
+  <a href="partner-yes" class="example-back-link">Back</a>
+
+  <h1 class="form-title heading-large">
+    Child Benefit
+  </h1>
+
+  <ul>
+    <li>
+      <fieldset class="inline form-group">
+        <legend class="form-label-bold add-padding" for="children">Do you or your partner get Child Benefit?</legend>
+        <label class="block-label" data-target="live-with" for="children-1">
+          <input id="children-1" type="radio" name="children" value="Yes">
+          Yes
+        </label>
+        <label class="block-label" for="children-2">
+          <input id="children-2" type="radio" name="children" value="No">
+          No
+        </label>
+      </fieldset>
+    </li>
+  </ul>
+
+  <div class="js-hidden panel-indent" id="live-with">
+    <div class="form-group">
+      <label class="form-label-bold" for="child-location">
+        How many of those children live with you?
+      </label>
+      <input type="text" class="form-control-1-4" id="child-location" name="child-location">
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <input type="submit" class="button" value="Continue">
+  </div>
+
+
+</main><!-- / #page-container -->
+{% endblock %}

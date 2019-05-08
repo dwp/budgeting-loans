@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Apply for a Budgeting Loan
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+  
+     
+  <form action="children" method="post" class="form">
+
+    <div class="grid-row"> 
+      <div class="column-two-thirds">
+          <a href="partner-yes" class="example-back-link">Back</a>
+
+          
+          <ul>
+            <li>
+              <fieldset class="inline form-group" id="children-container">
+                <h1 class="form-title heading-large"><legend for="children">Do you or your partner get Child Benefit?</legend>
+                </h1>  
+                <label class="block-label" data-target="live-with" for="children-1">
+                  <input id="children-1" type="radio" name="children" value="Yes"
+                    required
+                    data-parsley-errors-container="#children-container"
+                    data-parsley-class-handler="#children-container"
+                    data-parsley-error-message="Select ‘Yes’ or ‘No’ to confirm whether you get Child Benefit"
+                  >
+                  Yes
+                </label>
+                <label class="block-label" for="children-2">
+                  <input id="children-2" type="radio" name="children" value="No">
+                  No
+                </label>
+              </fieldset>
+            </li>
+          </ul>
+
+          <div class="js-hidden panel-indent" id="live-with">
+            <div class="form-group">
+              <label class="form-label-small" for="child-location">
+                How many of these children live with you?
+              </label>
+              <div>
+              <input type="text" class="form-control-1-8" id="child-location" name="child-location">
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <input type="submit" class="button" value="Continue">
+          </div>
+        </form>
+      </div>
+
+      <div class="column-third">
+            <p>&nbsp;</p>
+      </div>
+    </div>
+  </form> 
+</main><!-- / #page-container -->
+{% endblock %}

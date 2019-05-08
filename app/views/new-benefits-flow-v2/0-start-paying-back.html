@@ -1,0 +1,179 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+    Paying back the loan - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+{% include "includes/breadcrumbs.html" %}
+
+<div class="grid-row">
+
+  <div class="column-two-thirds">
+
+    <h1 class="heading-xlarge">Apply for a Budgeting&nbsp;Loan</h1>
+
+    <div class="grid-row rough--section-links">
+      <div role="navigation" aria-label="parts to this guide">
+        <div class="u-clearfix" role="listbox">
+
+          <div class="column-half  u-m0 u-p0">
+            <ol class="list list-number m-b-0" role="presentation">
+              <li class="font-xsmall" role="option">
+                <a href="0-start-overview" title="Part 1: How they work" class="">How they work</a>
+              </li>
+              <li class="font-xsmall" role="option">
+                <a href="0-start-check-if-eligible" title="Part 2: Check if you're eligible" class="">Check if you&rsquo;re eligible</a>
+              </li>
+              <li class="font-xsmall" role="option">
+                <a href="0-start-paying-back" title="Part 3: What you could get" class="">What you could get</a>
+              </li>
+            </ol>
+          </div>
+
+          <div class="column-half  u-m0 u-p0">
+            <ol start="4" class="list list-number" role="presentation">
+              <li class="font-xsmall" role="option">
+                Paying back the loan
+              </li>
+              <li class="font-xsmall" role="option">
+                <a href="0-start-apply" title="Part 5: Apply" class="">Apply</a>
+              </li>
+              <li class="font-xsmall" role="option">
+                <a href="0-start-other-help" title="Part 6: Other help" class="">Other help you can get</a>
+              </li>
+            </ol>
+          </div>
+
+        </div>
+      </div>
+    </div>{# /rough--section-links #}
+
+    <hr class="rough--section-links-divider">
+
+      <h3 class="heading-medium">4. Paying back the loan</h3>
+
+        <p>A Budgeting Loan is interest free so you only pay back what you borrow.</p>
+        <p>The repayments will automatically be taken from your benefits. The amounts you repay are based on how much benefit you get and what you can afford.</p>
+        <p>You normally have to repay the loan within 2 years (104 weeks). If you stop getting benefits, you&rsquo;ll need to arrange another way to repay.</p>
+
+      <h3 class="heading-medium">Repayments if your benefits are paid weekly</h3>       
+
+          <table class="m-b-l">
+            <thead>
+              <tr>
+                <th style="width: 21%">Loan amount</th>
+                <th style="width: 42%">Your weekly benefit</th>
+                <th>Weekly deduction</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="7" style="vertical-align: top; min-width: 75px;">&pound;100&nbsp;&ndash;&nbsp;&pound;812</td>
+                <td>&pound;57.90</td>
+                <td>&pound;2.90 &ndash; &pound;6.95</td>
+              </tr>
+              <tr>
+                <td>&pound;73.10</td>
+                <td>&pound;3.66 &ndash; &pound;8.77</td>
+              </tr>
+              <tr>
+                <td>&pound;87.50</td>
+                <td>&pound;4.38 &ndash; &pound;10.50</td>
+              </tr>
+              <tr>
+                <td>&pound;102.15</td>
+                <td>&pound;5.11 &ndash; &pound;12.26</td>
+              </tr>
+              <tr>
+                <td>&pound;109.30</td>
+                <td>&pound;5.45 &ndash; &pound;13.12</td>
+              </tr>
+              <tr>
+                <td>&pound;114.85</td>
+                <td>&pound;5.74 &ndash; &pound;13.78</td>
+              </tr>
+              <tr>
+                <td>&pound;300.00</td>
+                <td>&pound;15.00 &ndash; &pound;36.00</td>
+              </tr>
+            </tbody>
+          </table>
+
+      <h3 class="heading-medium">Repayments if your benefits are paid fortnightly</h3> 
+
+        
+
+          <table class="m-b-l">
+            <thead>
+              <tr>
+                <th style="width: 21%">Loan amount</th>
+                <th style="width: 42%">Your current fortnightly benefit</th>
+                <th>Fortnightly deduction</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="7" style="vertical-align: top; min-width: 75px;">&pound;100&nbsp;&ndash;&nbsp;&pound;812</td>
+                <td>&pound;115.80</td>
+                <td>&pound;5.79 &ndash; &pound;13.90</td>
+              </tr>
+              <tr>
+                <td>&pound;146.20</td>
+                <td>&pound;7.31 &ndash; &pound;17.54</td>
+              </tr>
+              <tr>
+                <td>&pound;175.00</td>
+                <td>&pound;8.75 &ndash; &pound;21.00</td>
+              </tr>
+              <tr>
+                <td>&pound;204.30</td>
+                <td>&pound;10.22 &ndash; &pound;24.52</td>
+              </tr>
+              <tr>
+                <td>&pound;218.60</td>
+                <td>&pound;10.93 &ndash; &pound;26.23</td>
+              </tr>
+              <tr>
+                <td>&pound;229.70</td>
+                <td>&pound;11.49 &ndash; &pound;27.56</td>
+              </tr>
+              <tr>
+                <td>&pound;600.00</td>
+                <td>&pound;30.00 &ndash; &pound;72.00</td>
+              </tr>
+            </tbody>
+          </table>
+
+       
+      <footer>
+        <nav class="pagination" role="navigation" aria-label="Pagination">
+          <ul class="group">
+
+            <li class="previous">
+              <a href="0-start-what-you-could-get" rel="previous" title="Navigate to previous part">
+                <span class="pagination-label">Previous</span> <span class="pagination-part-title"> What you could get</span>
+              </a>
+            </li>
+
+            <li class="next">
+              <a href="0-start-apply" rel="next" title="Navigate to next part">
+                <span class="pagination-label">Next</span> <span class="pagination-part-title"> Apply</span>
+              </a>
+            </li>
+
+          </ul>
+        </nav>
+      </footer>
+
+    </div>
+
+  </div>
+</main>
+
+{% endblock %}

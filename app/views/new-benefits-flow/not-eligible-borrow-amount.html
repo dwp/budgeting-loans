@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Eligibility - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {# Back link #}
+        {% import "includes/back-link.html" as back %}
+        {{ back.url('borrow-amount') }}
+      {# Back link #}
+
+      <h1 class="heading-large">You&rsquo;re not eligible for a Budgeting&nbsp;Loan</h1>
+
+      <div class="notice polite">
+        <p>Based on your answers, you wouldn&rsquo;t get a Budgeting Loan if you applied because:</p>
+        <ul class="list list-bullet">
+          <li>you need less than &pound;100</li>
+        </ul>
+      </div>{# /notice polite #}
+
+      <h2 class="heading-medium">If you made a mistake</h2>
+
+      <p>Make sure you have the correct information and <a href="start-eligibility">check your eligibility again</a>.
+
+      <h2 class="heading-medium">If your answers are correct</h2>
+
+      <p>You may still be able to get an emergency loan from your <a href="https://www.gov.uk/find-your-local-council">local council</a>.</p>
+
+      <h2 class="heading-medium">If you&rsquo;d like to discuss your eligibility</h2>
+
+      <p>Contact your local <a href="https://www.gov.uk/contact-jobcentre-plus">Jobcentre Plus</a>.</p>
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

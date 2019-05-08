@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Your partner - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+        {% if edit %}
+        {% else %}
+        {# Back link #}
+          {% import "includes/back-link.html" as back %}
+          {{ back.url('4-industrial-action') }}
+        {# Back link #}
+        {% endif %}
+
+      <form method="post" class="form">
+
+        <h1 class="form-title heading-large m-b-m">
+          Do you have a partner?
+        </h1>
+
+          
+
+          <legend class="c-legend c-legend--medium visually-hidden">Do you have a partner?</legend>
+
+          <p class="m-b-m">A partner is someone over the age of 16 who you&rsquo;re married to or live with as if you&rsquo;re married to&nbsp;them.</p>
+
+            <fieldset class="inline form-group">
+
+              <label class="block-label" for="answer1">
+                <input id="answer1" type="radio" name="answer" value="yes">
+                Yes
+              </label>
+
+              <label class="block-label" for="answer2">
+                <input id="answer2" type="radio" name="answer" value="no" >
+                No
+              </label>
+
+            </fieldset>
+
+       
+
+        {% include "includes/continue-save.html" %}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+
+  <!-- {% include "includes/help-function-v3.html" %}
+  -->
+
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

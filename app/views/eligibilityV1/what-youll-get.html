@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Apply for a Budgeting Loan
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+<div class="grid-row">
+	<div class="column-two-thirds">
+	    <h1 class="form-title heading-large">
+	      Budgeting Loans
+	    </h1>
+	    
+		<aside>
+			<div class="inner">
+				<nav role="navigation" class="page-navigation" aria-label="parts to this guide">
+					<ol class="list-bullet list-none grid-row">
+						<div class="column-half">
+							<li class="font-xsmall">
+								1. <a href="overview" title="Part 1:  Overview">Overview</a>
+							</li>
+							<li class="font-xsmall">
+								2. <a href="what-youll-get" title="Part 2:  What you'll get">What you'll get</a>
+							</li>
+						</div>
+						<div class="column-half">
+							<li class="font-xsmall">
+								3. <a href="eligibility" title="Part 3: Eligibility">Eligibility</a>
+							</li>
+							<li class="font-xsmall">
+								4. <a href="apply" title="Part 4: Apply">Apply</a>
+							</li>
+						</div>
+					</ol>
+				</nav>
+			</div>
+		</aside>
+	    
+	    <div class="inner-block">
+		    <header>
+		    	<h1 class="heading-medium">2. What you'll get</h1>
+		    </header>
+			<article>
+				<p>You can get up to:</p>
+				<ul class="list-bullet">
+					<li>£348 if you’re single</li>
+					<li>£464 if you’re part of a couple</li>
+					<li>£812 if you have children</li>
+				</ul>
+				<p>How much you can get depends on if you:</p>
+				<ul class="list-bullet">
+					<li>can pay the loan back</li>
+					<li>have any savings over £1,000 (or £2,000 if you or your partner are over 61)</li>
+					<li>You can’t owe the Social Fund more than £1,500 - this includes Budgeting Loans and <a href="https://www.gov.uk/crisis-loans">Crisis Loans</a>.</li>
+				</ul>
+
+				<h2 class="heading-small">How you’re paid</h2>
+				<p>Loans are usually paid <a href="https://www.gov.uk/how-to-have-your-benefits-paid">into your account</a>, eg a bank account.</p>
+
+			</article>
+
+			<footer>
+				<nav class="pagination" role="navigation" aria-label="Pagination">
+					<ul class="group">
+						<li class="previous">
+      						<a href="overview" rel="prev" title="Navigate to previous part">
+      							<span class="pagination-label">Previous </span> <span class="pagination-part-title"> Overview</span>
+      						</a>          
+      					</li>
+          				<li class="next">
+            				<a href="eligibility" rel="next" title="Navigate to next part">
+              					<span class="pagination-label">Next</span> <span class="pagination-part-title"> Eligibility</span>
+							</a>          			
+						</li>
+    				</ul>
+    			</nav>
+    		</footer>
+	        
+	    </div>
+	</div>
+	
+	
+	<div class="column-third">
+
+	</div>
+</div>
+
+</main><!-- / #page-container -->
+{% endblock %}

@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Apply for a Budgeting Loan
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+  
+  <form action="children" method="#" class="form">
+
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+        <a href="partner" class="example-back-link">Back</a>
+        <h1 class="form-title heading-large">
+            <legend for="partnerdetail">Your partner</legend>
+          </h1> 
+
+          <div class="form-group" id="full-name">
+            <hi class="form-title heading-medium">Their full name</h1>
+            <div id="full-name-error-container"></div>
+            <input type="text" class="form-control" id="partners-name" name="partners-name" 
+            required=""
+            data-parsley-errors-container="#full-name-error-container"
+            data-parsley-class-handler="#full-name"
+            data-parsley-error-message="Enter your partner’s full name">
+          </div>
+
+          <div class="form-group" id="dob-container">
+            <fieldset>
+              <legend class="form-label-bold">Their date of birth</legend>
+              <div id="dob-error-container"></div>
+              <div class="form-date">
+              <div class="form-group form-group-day">
+                <label for="dob-day">Day</label>
+                <input type="text" class="form-control" id="dob-day" maxlength="2" name="dob-day" required="" type="range" data-parsley-range="[1, 31]" data-parsley-errors-container="#dob-error-container"
+              data-parsley-class-handler="#dob-container"
+              data-parsley-error-message="Enter a date (DD)">
+              </div>
+              <div class="form-group form-group-month">
+                <label for="dob-month">Month</label>
+                <input type="text" class="form-control" id="dob-month" maxlength="2" name="dob-month" required="" type="range" data-parsley-range="[1, 12]" data-parsley-errors-container="#dob-error-container"
+              data-parsley-class-handler="#dob-container"
+              data-parsley-error-message="Enter a month (MM)">
+              </div>
+              <div class="form-group form-group-year">
+                <label for="dob-year">Year</label>
+                <input type="text" class="form-control" id="dob-year" maxlength="4" name="dob-year" required="" type="range" data-parsley-range="[1890, 2000]" data-parsley-errors-container="#dob-error-container"
+              data-parsley-class-handler="#dob-container"
+              data-parsley-error-message="Enter a year (YYYY)">
+              </div>
+            </div>
+          </fieldset>
+        </div>
+          
+          <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+      
+      </div> 
+       
+      <div class="column-third">
+          <p>&nbsp;</p>
+      </div>
+
+    </div>  
+  </form>
+
+
+</main><!-- / #page-container -->
+{% endblock %}

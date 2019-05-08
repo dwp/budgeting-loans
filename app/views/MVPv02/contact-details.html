@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Apply for a Budgeting Loan
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <form action="declaration" method="#" class="form">
+
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+        <div class="form-group">
+          <a href="personal-details" class="example-back-link">Back</a>
+        </div>
+       <ul>
+        <li>
+          <fieldset id="contact-details">
+            <h1 class="form-title heading-large">About you</h1>
+      
+          <!--  <legend class="form-label-bold">Address</legend> -->
+            <div class="form-group" id="address-container">
+            <p class="form-label">Address</p>
+              <div id="address-error-container"> </div>
+              <label class="form-label"><input type="text" class="form-control" id="address-line1"
+                required
+                data-parsley-errors-container="#address-error-container"
+                data-parsley-class-handler="#address-container"
+                data-parsley-error-message="Enter your address"
+                ></label>
+              <label class="form-label"><input type="text" class="form-control" id="address-line2"></label>
+              <label class="form-label"><input type="text" class="form-control" id="address-line3"></label>
+            </div>
+            
+            <div class="form-group" id="postcode-container">
+              <label class="form-label" for="postcode">Postcode</label>
+              <div id="postcode-error-container"> </div>
+              <input type="text" class="form-control" id="postcode"
+                required
+                data-parsley-errors-container="#postcode-error-container"
+                data-parsley-class-handler="#postcode-container"
+                data-parsley-error-message="Enter a valid postcode"
+              >
+            <!-- <p class="font-small">If you have no fixed address, put a contact address where we can write to you.</p> -->
+            </div>
+            
+          </fieldset>
+        </li>
+        <!--/ <li class="form-group">
+          <label class="form-label-bold" for="email">Your email</label>
+          <input type="text" class="form-control" id="email">
+        </li> </!>-->
+        <li class="form-group" id="phone-container">
+          <label class="form-label-bold" for="phone">Mobile (optional)</label>
+          <p>Receive text message updates about your application</p>
+          <div id="phone-error-container"> </div>
+          <input type="text" class="form-control" id="phone"
+            required
+            data-parsley-errors-container="#phone-error-container"
+            data-parsley-class-handler="#phone-container"
+            data-parsley-error-message="Enter a valid mobile number to receive text message updates"
+          >
+        </li>
+      </ul>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+
+      </div>
+
+      <div class="column-third">
+        <p>&nbsp;</p>
+      </div>
+    
+    </div>
+
+  </form>
+
+</main><!-- / #page-container -->
+{% endblock %}

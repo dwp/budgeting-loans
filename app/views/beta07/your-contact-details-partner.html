@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Your contact details - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {# Back link #}
+        {% import "includes/back-link.html" as back %}
+        {{ back.url('about-you-partner') }}
+      {# Back link #}
+
+      <form method="post" class="form">
+
+        <h1 class="form-title heading-large m-b-ml">
+          Your contact details
+        </h1>
+
+        <!-- Your address -->
+
+        <fieldset class="form-group u-clearfix m-b-0">
+
+          <legend class="form-label-bold">Your address</legend>
+
+          <p class="form-hint m-b-xs">If you have no fixed address, enter an address where you can be contacted.</p>
+
+          <div class="form-group js-error-container">
+
+            <label class="form-label m-b-xs">
+              <input type="text" class="form-control" id="address-line1" name="address1" value="">
+            </label>
+
+            <label class="form-label m-b-xs">
+              <input type="text" class="form-control" id="address-line2" name="address2" data-validate-via="address1" value="">
+            </label>
+
+            <label class="form-label m-b-xs">
+              <input type="text" class="form-control" id="address-line3" name="address3" data-validate-via="address1" value="">
+            </label>
+
+          </div>
+
+          <div class="form-group js-error-container m-t-ns">
+            <label class="form-label" for="postcode">Postcode</label>
+            <input type="text" class="form-control form-control-1-4" id="postcode" name="postcode" value="">
+          </div>
+
+        </fieldset>
+
+
+        <!-- Your mobile -->
+        <div class="form-group m-b-ml">
+          <fieldset>
+            <legend class="c-legend c-legend--large form-label-bold">Your mobile (optional)</legend>
+            <label for="phone" class="form-label">Receive text message updates about your application.</label>
+            <input type="text" class="form-control" id="phone" name="phone" value="">
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

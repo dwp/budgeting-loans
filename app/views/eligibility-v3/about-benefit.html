@@ -1,0 +1,324 @@
+
+
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Apply for a Budgeting Loan
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <form action="about-benefit" method="post" class="form">
+
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+        <a href="less-than-100" class="example-back-link">Back</a>
+
+        <h1 class="form-title heading-large">Check your eligibility</h1>
+
+        <fieldset class="inline form-group" id="benefit-container">
+          <ul>
+            <li>
+              <fieldset class="inline form-group" id="income-support-container">
+                <h1 class="form-title heading-medium"><legend for="income-support">Do you get Income Support?</legend>
+                </h1>
+                <label class="block-label" data-target="income-support" for="income-support-1">
+                  <input id="income-support-1" type="radio" name="incomesupport" value="Yes"
+                    required
+                    data-parsley-errors-container="#income-support-container"
+                    data-parsley-class-handler="#income-support-container"
+                    data-parsley-error-message="Select ‘Yes’ or ‘No’ to confirm whether you get Income Support"
+                  >
+                  Yes
+                </label>
+                <label class="block-label" for="income-support-2">
+                  <input id="income-support-2" type="radio" name="incomesupport" value="No">
+                  No
+                </label>
+              </fieldset>
+            </li>
+          </ul>
+
+          <div class="js-hidden panel-indent" id="income-support">
+            <div class="form-group">
+              <fieldset class="inline form-group" id="is-how-long-container">
+                <h1 class="form-title heading-medium"><legend for="is-how-long">Have you been getting Income Support for the past 6 months?</legend>
+                </h1>
+                <label class="block-label" data-target="is-how-long" for="is-how-long-1">
+                  <input id="is-how-long-1" type="radio" name="incomesupport6" value="Yes"
+                    data-parsley-errors-container="#is-how-long-container"
+                    data-parsley-class-handler="#is-how-long-container"
+                    data-parsley-error-message="Select ‘Yes’ or ‘No’ to confirm whether you have been getting Income Support for the past 6 months"
+                  >
+                  Yes
+                </label>
+                <label class="block-label" for="is-how-long-2">
+                  <input id="is-how-long-2" type="radio" name="incomesupport6" value="No">
+                  No
+                </label>
+              </fieldset>
+            </div>
+          </div>
+         
+          <ul>
+            <li>
+              <fieldset class="inline form-group" id="pension-credit-container">
+                <h1 class="form-title heading-medium"><legend for="pension-credit">Do you get Pension Credit?</legend>
+                </h1>
+                <label class="block-label" data-target="pension-credit" for="pension-credit-1">
+                  <input id="pension-credit-1" type="radio" name="pensioncredit" value="Yes"
+                    required
+                    data-parsley-errors-container="#pension-credit-container"
+                    data-parsley-class-handler="#pension-credit-container"
+                    data-parsley-error-message="Select ‘Yes’ or ‘No’ to confirm whether you get Pension Credit"
+                  >
+                  Yes
+                </label>
+                <label class="block-label" for="pension-credit-2">
+                  <input id="pension-credit-2" type="radio" name="pensioncredit" value="No">
+                  No
+                </label>
+              </fieldset>
+            </li>
+          </ul>
+
+          <div class="js-hidden panel-indent" id="pension-credit">
+            <div class="form-group">
+              <fieldset class="inline form-group" id="pc-how-long-container">
+                <h1 class="form-title heading-medium"><legend for="pc-how-long">Have you been getting Pension Credit for the past 6 months?</legend>
+                </h1>
+                <label class="block-label" data-target="pc-how-long" for="pc-how-long-1">
+                  <input id="pc-how-long-1" type="radio" name="pensioncredit6" value="Yes"
+                    data-parsley-errors-container="#pc-how-long-container"
+                    data-parsley-class-handler="#pc-how-long-container"
+                    data-parsley-error-message="Select ‘Yes’ or ‘No’ to confirm whether you have been getting Pension Credit for the past 6 months"
+                  >
+                  Yes
+                </label>
+                <label class="block-label" for="pc-how-long-2">
+                  <input id="pc-how-long-2" type="radio" name="pensioncredit6" value="No">
+                  No
+                </label>
+              </fieldset>
+            </div>
+          </div>
+
+<ul>
+            <li>
+              <fieldset class="inline form-group" id="jsa-container">
+                <h1 class="form-title heading-medium"><legend>Do you get Jobseeker's Allowance?</legend>
+                </h1>
+                <label class="block-label" data-target="jsa" for="jsa-1">
+                  <input id="jsa-1" type="radio" name="jsa" value="Yes"
+                    required
+                    data-parsley-errors-container="#jsa-container"
+                    data-parsley-class-handler="#jsa-container"
+                    data-parsley-error-message="Select ‘Yes’ or ‘No’ to confirm whether you get Jobseeker's Allowance"
+                  >
+                  Yes
+                </label>
+                <label class="block-label" for="jsa-2">
+                  <input id="jsa-2" type="radio" name="jsa" value="No">
+                  No
+                </label>
+              </fieldset>
+            </li>
+          </ul>
+
+          <div class="js-hidden panel-indent" id="jsa">
+            <div class="form-group">
+              <fieldset class="inline form-group" id="jsa-type-container">
+                <h1 class="form-title heading-medium"><legend>Which type of Jobseeker's Allowance do you get?</legend>
+                </h1>
+                <label class="block-label" data-target="jsa-type" for="jsa-type-1">
+                  <input id="jsa-type-1" type="radio" name="jsatype" value="Income"
+                    data-parsley-errors-container="#jsa-type-container"
+                    data-parsley-class-handler="#jsa-type-container"
+                    data-parsley-error-message="Select the type of Jobseeker's Allowance you get"
+                  >
+                  Income-based
+                </label>
+                <label class="block-label" for="jsa-type-2" data-target="contribution">
+                  <input id="jsa-type-2" type="radio" name="jsatype" value="Contribution">
+                  Contribution-based
+                </label>
+                <label class="block-label" for="jsa-type-3" data-target="unsure">
+                  <input id="jsa-type-3" type="radio" name="jsatype" value="Unsure">
+                  Don't know
+                </label>
+              </fieldset>
+            </div>
+          </div>
+
+          <!-- <div class="form-group js-hidden warning" id="contribution">
+
+          <h2 class="heading-small">You must have been getting income-based Jobseeker's Allowance to be eligible for a Budgeting Loan</h2>
+          <p>Find out more details about your Jobseeker’s Allowance by contacting<a href="https://www.gov.uk/contact-jobcentre-plus"> Jobcentre Plus</a></p>
+
+        </div> -->
+
+          <!-- <div class="form-group js-hidden warning" id="unsure">
+
+          <h2 class="heading-small">You must have been getting income-based Jobseeker's Allowance to be eligible for a Budgeting Loan</h2>
+          <p>Find out more details about your Jobseeker’s Allowance by contacting<a href="https://www.gov.uk/contact-jobcentre-plus"> Jobcentre Plus</a></p>
+
+        </div> -->
+          <div class="js-hidden panel-indent" id="jsa-type">
+            <div class="form-group">
+              <fieldset class="inline form-group" id="jsa-length-container">
+                <h1 class="form-title heading-medium"><legend for="jsa-length">Have you been getting income-based Jobseeker's Allowance for the past 6 months?</legend>
+                </h1>
+                <label class="block-label" data-target="jsa-length" for="jsa-length-1">
+                  <input id="jsa-length-1" type="radio" name="jsa6" value="Yes"
+                    data-parsley-errors-container="#jsa-length-container"
+                    data-parsley-class-handler="#jsa-length-container"
+                    data-parsley-error-message="Select ‘Yes’ or ‘No’ to confirm whether you have been getting Jobseeker's Allowance for the past 6 months"
+                  >
+                  Yes
+                </label>
+                <label class="block-label" for="jsa-length-2">
+                  <input id="jsa-length-2" type="radio" name="jsa6" value="No">
+                  No
+                </label>
+
+              </fieldset>
+            </div>
+          </div>
+
+          <ul>
+            <li>
+              <fieldset class="inline form-group" id="esa-container">
+                <h1 class="form-title heading-medium"><legend for="esa">Do you get Employment and Support Allowance?</legend>
+                </h1>
+                <label class="block-label" data-target="esa" for="esa-1">
+                  <input id="esa-1" type="radio" name="esa" value="Yes"
+                    required
+                    data-parsley-errors-container="#esa-container"
+                    data-parsley-class-handler="#esa-container"
+                    data-parsley-error-message="Select ‘Yes’ or ‘No’ to confirm whether you get Employment and Support Allowance"
+                  >
+                  Yes
+                </label>
+                <label class="block-label" for="esa-2">
+                  <input id="esa-2" type="radio" name="esa" value="No">
+                  No
+                </label>
+              </fieldset>
+            </li>
+          </ul>
+
+          <div class="js-hidden panel-indent" id="esa">
+            <div class="form-group">
+              <fieldset class="inline form-group" id="esa-type-container">
+                <h1 class="form-title heading-medium"><legend for="esa-type">Which type of Employment and Support Allowance do you get?</legend>
+                </h1>
+                <label class="block-label" data-target="esa-type" for="esa-type-1">
+                  <input id="esa-type-1" type="radio" name="esatype" value="Income"
+                    data-parsley-errors-container="#esa-type-container"
+                    data-parsley-class-handler="#esa-type-container"
+                    data-parsley-error-message="Select the type of Employment and Support Allowance you get"
+                  >
+                  Income-related
+                </label>
+                <label class="block-label" for="esa-type-2" data-target="contribution">
+                  <input id="esa-type-2" type="radio" name="esatype" value="Contribution">
+                  Contribution-based
+                </label>
+                <label class="block-label" for="esa-type-3" data-target="unsure">
+                  <input id="esa-type-3" type="radio" name="esatype" value="Unsure">
+                  Don't know
+                </label>
+              </fieldset>
+
+            </div>
+          </div>
+          <!-- <div class="form-group js-hidden warning" id="contribution">
+
+          <h2 class="heading-small">You must have been getting income-related Employment and Support Allowance to be eligible for a Budgeting Loan</h2>
+          <p><a href="https://www.gov.uk/contact-jobcentre-plus">Contact Jobcentreplus</a> for information about your benefit.</p>
+
+        </div> -->
+
+          <!-- <div class="form-group js-hidden warning" id="unsure">
+
+          <h2 class="heading-small">You must have been getting income-related Employment and Support Allowance to be eligible for a Budgeting Loan</h2>
+          <p><a href="https://www.gov.uk/contact-jobcentre-plus">Contact Jobcentreplus</a> for information about your benefit.</p>
+
+        </div> -->
+
+          <div class="js-hidden panel-indent" id="esa-type">
+            <div class="form-group">
+              <fieldset class="inline form-group" id="esa-length-container">
+                <h1 class="form-title heading-medium"><legend for="esa-length">Have you been getting income-related Employment and Support Allowance for the past 6 months?</legend>
+                </h1>
+                <label class="block-label" data-target="esa-length" for="esa-length-1">
+                  <input id="esa-length-1" type="radio" name="esa6" value="Yes"
+                    data-parsley-errors-container="#esa-length-container"
+                    data-parsley-class-handler="#esa-length-container"
+                    data-parsley-error-message="Select ‘Yes’ or ‘No’ to confirm whether you have been getting Employment and Support Allowance for the past 6 months"
+                  >
+                  Yes
+                </label>
+                <label class="block-label" for="esa-length-2">
+                  <input id="esa-length-2" type="radio" name="esa6" value="No">
+                  No
+                </label>
+
+              </fieldset>
+            </div>
+          </div>
+
+
+
+
+
+         <!-- <label class="block-label" data-target="pc" for="radio-inline-1">
+            <input id="radio-inline-1" type="radio" name="benefit" value="pc"
+              required
+              data-parsley-errors-container="#pc-container"
+              data-parsley-class-handler="#pc-container"
+              data-parsley-error-message="Select ‘Yes’ or ‘No’ to confirm whether you have been getting one of the benefits listed"
+              >
+            Pension Credit
+          </label>
+          <label class="block-label" data-target="is" for="radio-inline-2">
+            <input id="radio-inline-2" type="radio" name="benefit" value="is">
+            Income Support
+          </label>
+          <label class="block-label" data-target="esa" for="radio-inline-3">
+            <input id="radio-inline-3" type="radio" name="benefit" value="esa">
+            Employment and Support Allowance
+          </label>
+          <label class="block-label" data-target="jsa" for="radio-inline-2">
+            <input id="radio-inline-2" type="radio" name="benefit" value="jsa">
+            Jobseeekers Allowance
+          </label>
+        </fieldset> -->
+
+       
+        <!-- <div class="js-hidden" id="benefit-no">
+          <div class="panel-indent">
+            <p>If you do not claim the benefits listed you will not be eligible to apply for a Budgeting Loan. For information on loans <a href="https://www.gov.uk/find-your-local-council">contact your Local Council</a> </p>
+          </div>
+        </div> -->
+
+        <div class=" form-group" id="benefit-yes">
+          <input type="submit" class="button" value="Continue">
+        </div>        
+      </div>
+
+      <div class="column-third">
+        <p>&nbsp;</p>
+      </div>
+
+    </div>
+  </form>  
+  
+
+</main><!-- / #page-container -->
+{% endblock %}

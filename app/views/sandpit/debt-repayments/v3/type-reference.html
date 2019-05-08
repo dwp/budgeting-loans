@@ -1,0 +1,163 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Debt repayments - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {# Back link #}
+  {% import "includes/back-link.html" as back %}
+  {{ back.url('#') }}
+{# Back link #}
+
+      <form method="post" class="form">
+
+        <h1 class="heading-large m-b-ml m-t-m">
+        <span class="heading-secondary">
+          Your regular outgoings
+        </span>
+        Do you have any credit or store cards?
+        </h1>
+
+        <div class="form-group">
+          <fieldset class="inline">
+
+            <legend class="visuallyhidden">
+              Do you have any credit or store cards?
+            </legend>
+
+            <label class="block-label" for="radio-home-address" data-target="debt-details">
+              <input id="radio-home-address" type="radio" name="radio-indent-group" value="Yes">
+              Yes
+            </label>
+
+            <label class="block-label" for="radio-other-address">
+              <input id="radio-other-address" type="radio" name="radio-indent-group" value="No">
+              No
+            </label>
+
+            <div class="panel panel-border-narrow js-hidden" id="debt-details">
+
+              <div class="form-group m-b-ml">
+                <label class="form-label m-b-xs" for="regpay01">How much are your repayments?</label>
+                <div class="u-1/4-lap-and-up">
+                  <span class="c-form-input-denote">&pound;</span>
+                  <input class="c-form-input-denote__input form-control form-control-1-4" id="regpay01" type="text" name="regpay01" value="">
+                </div>
+              </div>
+
+              <div class="form-group m-b-ml">
+                <fieldset>
+                  <legend class="m-b-s">How often do you make repayments?</legend>
+                  <label class="block-label" for="radio-inline-1">
+                    <input id="radio-inline-1" type="radio" name="choice" value="weekly" >
+                    Weekly
+                  </label>
+                  <label class="block-label" for="radio-inline-2">
+                    <input id="radio-inline-2" type="radio" name="choice" value="fortnightly" >
+                    Fortnightly
+                  </label>
+                  <label class="block-label" for="radio-inline-3">
+                    <input id="radio-inline-3" type="radio" name="choice" value="monthly" >
+                    Monthly
+                  </label>
+                </fieldset>
+              </div>{# / form-group #}
+
+              <div class="form-group m-b-ml">
+                <label class="form-label m-b-xs" for="total01">How much do you owe on this debt in total?</label>
+                <div class="u-1/4-lap-and-up">
+                  <span class="c-form-input-denote">&pound;</span>
+                  <input class="c-form-input-denote__input form-control form-control-1-4" id="total01" type="text" name="total01" value="">
+                </div>
+              </div>
+
+            </div>{# /debt-details #}
+            
+          </fieldset>
+        </div>
+
+        <h2 class="heading-small m-b-m">Do you have any credit or store cards?</h2>
+
+        <p>Yes No</p>
+
+        <p>What&rsquo;s the total outstanding balance of your card(s)</p>
+
+        <p><input type="text"></p>
+
+        <p>How often do you make repayments?</p>
+
+        <hr />
+
+        <h2 class="heading-small m-b-m">Do you have any outstanding loans?</h2>
+
+        <p></p>
+
+        <p>Yes No</p>
+
+        <p>What&rsquo;s the total outstanding balance of your loan(s)</p>
+
+        <p><input type="text"></p>
+
+        <hr />
+
+        <h2 class="heading-small m-b-m">Do you have a mobile phone contract?</h2>
+
+        <p>This doesn&rsquo;t include a pay-as-you-go sim card.</p>
+
+        <p>Yes No</p>
+
+        <p>How much do you pay each month?</p>
+
+        <p><input type="text"></p>
+
+        <hr />
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>{# / form-group #}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Your contact details - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {% if edit %}
+      {% else %}
+        {# Back link #}
+          {% import "includes/back-link.html" as back %}
+          {{ back.url('about-you') }}
+        {# Back link #}
+      {% endif %}
+
+      <form method="post" class="form">
+
+        <h1 class="form-title heading-large m-b-ml">
+          Your contact address
+        </h1>
+
+{#         <p class="m-b-l">If you have no fixed address, enter an address where you can be contacted.</p> #}
+
+        <!-- Your address -->
+
+        <fieldset class="form-group u-clearfix m-b-0">
+
+          <legend class="c-legend c-legend--medium visually-hidden">Your address</legend>
+
+          <div class="form-group">
+
+            <label class="form-label" for="address-building-street">Building and street</label>
+            <input type="text" class="form-control" id="address-building-street" name="address-building-street" value="">
+
+            <label class="form-label visually-hidden" for="address-building-street2">Building and street line 2 (optional)</label>
+            <input type="text" class="form-control" id="address-building-street2" name="address1" value="">
+
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="address-town">Town or city</label>
+            <input type="text" class="form-control" id="address-town" name="address-town" value="">
+          </div>
+
+          <div class="form-group js-error-container m-t-ns">
+            <label class="form-label" for="address-postcode">Postcode</label>
+            <input type="text" class="form-control form-control-1-4" id="address-postcode" name="address-postcode" value="">
+          </div>
+
+        </fieldset>
+
+{#         <!-- Your mobile -->
+        <div class="form-group m-b-ml">
+          <fieldset>
+            <legend class="c-legend c-legend--large form-label-bold">Your mobile (optional)</legend>
+            <label for="phone" class="form-label">Receive text message updates about your application.</label>
+            <input type="text" class="form-control" id="phone" name="phone" value="">
+          </fieldset>
+        </div> #}
+
+        {% include "includes/continue-save.html" %}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+
+    {% include "includes/help-function-v3.html" %}
+
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

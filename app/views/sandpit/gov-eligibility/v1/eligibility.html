@@ -1,0 +1,113 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Apply for a Budgeting Loan
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+<div class="grid-row">
+	<div class="column-two-thirds">
+	    <h1 class="heading-xlarge">Budgeting&nbsp;Loans</h1>
+
+    <div class="grid-row rough--section-links">
+      <div role="navigation" aria-label="parts to this guide">
+        <div class="u-clearfix" role="listbox">
+
+          <div class="column-half  u-m0 u-p0">
+            <ol class="list list-number m-b-0" role="presentation">
+              <li class="font-xsmall">
+                <a href="overview" title="Part 1:  How it works">How it works</a>
+              </li>
+              <li class="font-xsmall">
+                Eligibility for people on benefits
+              </li>
+              <li class="font-xsmall">
+                <a href="what-youll-get" title="Part 3: What you'll get">What you'll get</a>
+              </li>
+            </ol>
+          </div>
+
+          <div class="column-half  u-m0 u-p0">
+            <ol class="list list-number m-b-0" role="presentation" start="4">
+              <li class="font-xsmall">
+                <a href="apply" title="Part 4: How to apply">How to apply</a>
+              </li>
+              <li class="font-xsmall">
+                <a href="other-help" title="Part 5: Other help you can get">Other help you can get</a>
+              </li>
+            </ol>
+          </div>
+
+        </div>
+      </div>
+    </div>{# /rough--section-links #}
+	    
+
+    <hr class="rough--section-links-divider">
+	    
+	    <div class="inner-block">
+		    <header>
+		    	<h1 class="heading-medium">2. Eligibility for people on benefits</h1>
+		    </header>
+			<article>
+				<p>To qualify for a Budgeting Loan you or your partner must have been getting one of these benefits for at least 26 weeks:</p>
+				<ul class="list-bullet">
+					<li>Income Support</li>
+					<li>income-based Jobseeker's Allowance</li>
+					<li>income-related Employment and Support Allowance</li>
+					<li>Pension Credit </li>
+				</ul>
+				<p>You must still be getting one of these benefits when your application is assessed.</p>
+				
+				<p>If you’re on Universal Credit, you can’t get a Budgeting Loan. You could apply for a Budgeting Advance instead.</p>
+
+				<div>
+					<h2 class="heading-small">What can a loan pay for</h2>
+				</div>	
+				<p>Budgeting Loans can help you pay for:</p>
+
+				<ul class="list-bullet">
+					<li>furniture or household equipment</li>
+					<li>clothing or footwear</li>
+					<li>rent in advance when you find a new place to live</li>
+					<li>removal expenses when you move home</li>
+					<li>travelling expenses</li>
+					<li>things to help you look for or start work</li>
+					<li>improving, maintaining or securing your home</li>
+					<li>maternity or funeral expenses</li>
+					<li>repaying hire purchase or other debts you took out to pay for any of the above</li>
+			</article>
+
+			<footer>
+				<nav class="pagination" role="navigation" aria-label="Pagination">
+					<ul class="group">
+						<li class="previous">
+      						<a href="overview" rel="prev" title="Navigate to previous part">
+      							<span class="pagination-label">Previous </span> <span class="pagination-part-title"> How it works</span>
+      						</a>          
+      					</li>
+          				<li class="next">
+            				<a href="what-youll-get" rel="next" title="Navigate to next part">
+              					<span class="pagination-label">Next</span> <span class="pagination-part-title"> What you'll get</span>
+							</a>          			
+						</li>
+    				</ul>
+    			</nav>
+    		</footer>
+	        
+	    </div>
+	</div>
+	
+	
+	<div class="column-third">
+
+	</div>
+</div>
+
+</main><!-- / #page-container -->
+{% endblock %}

@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Apply for a Budgeting Loan
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+  
+  <form action="personal-details" method="#" class="form">
+
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        <a href="javascript:history.go(-1)" class="example-back-link">Back</a>
+
+        <h1 class="form-title heading-large">Are you or your partner making regular debt repayments?</h1>
+    
+        <div class="form-group">
+          <fieldset class="inline">
+            
+            <p>This includes hire purchases and loans. Don't include normal living expenses like gas and electric charges or food bills. This information will help work out your Budgeting Loan repayments.</p>
+
+            <label class="block-label" data-target="list-debts" for="radio-inline-1">
+              <input id="radio-inline-1" type="radio" name="partner" value="Yes">
+              Yes
+            </label>
+            <label class="block-label" for="radio-inline-2">
+              <input id="radio-inline-2" type="radio" name="partner" value="No">
+              No
+            </label>
+          </fieldset>
+        </div>
+
+       
+       
+        <div class="panel-indent js-hidden" id="list-debts">
+        <div class="form-group">
+        <label class="form-label-bold" for="who01">Who do you make the repayment to?</label>
+        <input class="form-control" id="who01" type="text">
+        </div>
+        <div class="form-group">
+          <label class="form-label-bold" for="regpay01">How much are your repayments?</label>
+        <input class="form-control" id="regpay01" type="text">
+        </div>
+        <fieldset class="form-group">
+          <legend class="form-label-bold">How often do you make repayments?</legend>
+          <label class="block-label" for="weekly1">
+            <input id="weekly1" type="radio" name="weekly1" value="Weekly">
+            Weekly
+          </label>
+          <label class="block-label"for="fortnightly1">
+            <input id="fortnightly1" type="radio" name="fortnightly1" value="No">
+            Fortnightly
+          </label>
+          <label class="block-label"for="monthly1">
+            <input id="monthly1" type="radio" name="monthly1" value="No">
+            Monthly
+          </label>
+        </fieldset>
+      <div class="form-group">
+        <label class="form-label-bold" for="total01">How much do you owe on this debt in total?</label>
+        <input class="form-control" id="total01" type="text">
+      </div>
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+      </div>
+
+      <div class="column-third">
+        <p>&nbsp;</p>
+      </div>
+
+    </div>
+
+  </form>
+
+</main><!-- / #page-container -->
+{% endblock %}

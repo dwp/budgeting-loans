@@ -1,0 +1,120 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+    Paying back the loan - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+{% include "includes/breadcrumbs.html" %}
+
+<div class="grid-row">
+
+  <div class="column-two-thirds">
+
+    <h1 class="heading-xlarge">Apply for a Budgeting&nbsp;Loan</h1>
+
+    <div class="grid-row rough--section-links">
+      <div role="navigation" aria-label="parts to this guide">
+        <div class="u-clearfix" role="listbox">
+
+          <div class="column-half  u-m0 u-p0">
+            <ol class="list list-number m-b-0" role="presentation">
+              <li class="font-xsmall" role="option">
+              	<a href="0-start-overview" title="Part 1: How it works" class="">How it works</a>
+              </li>
+              <li class="font-xsmall" role="option">
+                <a href="0-start-what-you-could-get" title="Part 2: What you could get" class="">What you could get</a>
+              </li>
+            </ol>
+          </div> {# / column-half #}
+
+          <div class="column-half  u-m0 u-p0">
+            <ol start="3" class="list list-number" role="presentation">
+              <li class="font-xsmall" role="option">
+                Paying back the loan
+              </li>
+              <li class="font-xsmall" role="option">
+                <a href="0-start-apply" title="Part 3: Apply" class="">Check your eligibility and apply</a>
+              </li>
+            </ol>
+          </div> {# / column-half #}
+
+        </div> {# / u-clearfix #}
+      </div> {# / navigation #}
+    </div>{# /rough--section-links #}
+
+    <hr class="rough--section-links-divider">
+
+    <h3 class="heading-medium">3. Paying back the loan</h3>
+
+      <p>A Budgeting Loan is interest free so you only pay back what you borrow. The loan repayments are based on how much benefit you get and what you can afford.</p>
+
+      <p>The repayments will automatically be taken from your benefits.</p>
+
+      <p>You normally have to repay the loan within 2 years (104 weeks). If you stop getting benefits, you’ll need to arrange another way to repay.</p>
+
+     <div class="panel panel-border-wide m-b-l">
+      <h4 class="heading-small">Find out how much your repayments might be</h4>
+
+      <p>How often do you get your benefits paid?</p>
+      <div class="form-group inline">
+          <label class="block-label" for="answer1">
+            <input id="answer1" type="radio" name="choice1" value="weekly" >
+            Weekly
+          </label>
+          <label class="block-label" for="answer2">
+            <input id="answer2" type="radio" name="choice1" value="fortnightly">
+            Fortnightly
+          </label>
+      </div> {# / form-group #}
+
+      <div class="form-group">
+        <label class="form-label" for="benefit-amount">How much benefit do you get paid?</label>
+        <div class="u-1/4-lap-and-up">
+          <span class="c-form-input-denote">&pound;</span>
+          <input class="c-form-input-denote__input form-control form-control-1-4" id="benefit-amount" type="text" name="total01" value="60">
+        </div> {# / u-1/4-lap-and-up #}
+      </div> {# / form-group #}
+
+      <div class="form-group">
+        <input class="button" type="submit" value="Calculate">
+      </div> {# / form-group #}
+
+      <p>You would get the following amount taken directly from your benefit each week:</p>
+      <h3 class="heading-medium">&pound;2.60 &ndash; &pound;6.95</h3>
+
+      <p>This would mean that your weekly benefit payment would be:</p>
+      <h3 class="heading-medium">&pound;57.10 &ndash; &pound;53.05</h3>
+      
+     </div> {# / panel -- panel-border-wide #}
+      <footer>
+        <nav class="pagination" role="navigation" aria-label="Pagination">
+          <ul class="group">
+
+            <li class="previous">
+              <a href="0-start-what-you-could-get" rel="previous" title="Navigate to previous part">
+                <span class="pagination-label">Previous</span> <span class="pagination-part-title"> What you could get</span>
+              </a>
+            </li>
+
+            <li class="next">
+              <a href="0-start-apply" rel="next" title="Navigate to next part">
+                <span class="pagination-label">Next</span> <span class="pagination-part-title"> Check your eligibility and apply</span>
+              </a>
+            </li>
+
+          </ul>
+        </nav>
+      </footer>
+
+    </div> {# / column-two-thirds #}
+
+  </div> {# / grid-row #}
+</main>
+
+{% endblock %}

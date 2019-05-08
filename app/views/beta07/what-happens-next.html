@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+    Application received - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  {% include "includes/beta-banner.html" %}
+  
+  <div class="grid-row">
+    <div class="column-two-thirds">
+  
+      <form action="what-happens-next" method="#" class="form">
+
+      <div class="govuk-box-highlight">
+        <h1 class="bold-large m-b-m">Your application has been received</h1>
+        <p><strong class="heading-small">Your National Insurance number is your reference</strong></p>
+      </div>
+
+      <h2 class="heading-medium">What happens next</h2>
+
+      <p>You&rsquo;ll get a decision within 12 days.</p>
+      <p>If you’re offered a loan you&rsquo;ll be told:</p>
+      <ul class="list list-bullet">
+        <li>how much you can borrow</li>
+        <li>how much your weekly repayments will be</li>
+        <li>how long it will take to repay</li>
+      </ul>
+      
+      <p>You don&rsquo;t have to accept a loan offer if you don&rsquo;t want to.</p>
+
+      <h2 class="heading-small">Contact Jobcentre Plus about your application</h2>
+
+      <p>
+        Telephone: 0345 603 6967<br>
+        Monday to Friday, 8am to 6pm<br>
+        <a href="/call-charges">Find out about call charges</a>
+      </p>
+      <p class="u-mt"><a href="https://www.surveymonkey.co.uk/r/W2THPY3" rel="external">What did you think of this service?</a></p>
+     
+    </div>
+    <div class="column-third">
+    </div>
+  </div>
+
+</main><!-- / #page-container -->
+
+{% endblock %}

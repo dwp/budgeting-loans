@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Declaration - Send application - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {% if edit %}
+      {% else %}
+        {# Back link #}
+          {% import "includes/back-link.html" as back %}
+          {{ back.url('javascript:history.back()') }}
+        {# Back link #}
+      {% endif %}
+
+      <form method="post" class="form">
+
+        <h1 class="form-title heading-large m-b-l">Help and support</h1>
+
+        <p>We are sorry you have experienced problems using the service, for help and advice please telephone the DWP Online Helpdesk</p>
+        <div>
+          <h2 class="form-title heading-medium">DWP Online Helpdesk: 0345 604 3349</h2>
+          <h2 class="form-title heading-medium">Textphone: 0345 604 3412</h2>
+          <h2 class="form-title heading-medium">Welsh Language: 0345 604 0523</h2>
+        </div>
+
+        <div>
+          <h2 class="form-title heading-medium">Opening hours</h2>
+          <p>The Helpdesk is open Monday to Friday from 8am to 6pm. (Lines are normally less busy between 8am and 9am).</p>
+          <p>The Helpdesk is closed on all Bank Holidays and Public Holidays.</p>
+          <p><a href="https://www.gov.uk/call-charges">Find out about call charges</a></p>
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

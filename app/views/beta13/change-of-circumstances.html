@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Change of circumstances - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {% if edit %}
+      {% else %}
+        {# Back link #}
+          {% import "includes/back-link.html" as back %}
+          {{ back.url('jsa-budgeting-loan-before') }}
+        {# Back link #}
+      {% endif %}
+
+      <form method="post" class="form">
+
+        <h1 class="heading-large m-b-ml m-t-m">
+          <span class="heading-secondary">
+            Check your eligibility
+          </span>
+        Have your benefits changed since the last time you got a Budgeting&nbsp;Loan?
+        </h1>
+
+        <div class="form-group">
+          <fieldset>
+
+            <legend class="visually-hidden">Have your benefits changed since the last time you got a Budgeting Loan?</legend>
+
+            <label class="block-label" data-target="savings-amount" for="option1">
+              <input id="option1" type="radio" name="choice" value="yes" >
+              Yes
+            </label>
+            <label class="block-label" for="option2">
+              <input id="option2" type="radio" name="choice" value="no" >
+              No
+            </label>
+            <label class="block-label" for="option3">
+              <input id="option3" type="radio" name="choice" value="unsure" >
+              Don&rsquo;t know
+            </label>
+
+          </fieldset>
+
+        </div>
+
+        {% include "includes/continue-save.html" %}
+
+    </form>
+
+    </div>{# / column-two-thirds #}
+
+  {% include "includes/help-function-v3.html" %}
+
+  </div>{# / grid-row #}
+  </main>
+
+{% endblock %}

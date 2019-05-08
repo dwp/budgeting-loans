@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Budgeting Loans
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/alpha-banner.html" %}
+  
+  <form action="template03" method="#" class="form">
+
+  <a href="template01" class="example-back-link">Back</a>
+
+  <h1 class="form-title heading-large">
+    Template 02
+  </h1>
+
+  <fieldset>
+      
+    <legend class="form-label-bold">Your address</legend>
+      <p class="form-hint">Please tell me where you live?</p>
+            
+      <div class="form-group">
+        <p class="form-label">Address</p>
+        <label class="form-label"><input type="text" class="form-control" id="address-line1"></label>
+        <label class="form-label"><input type="text" class="form-control" id="address-line2"></label>
+        <label class="form-label"><input type="text" class="form-control" id="address-line3"></label>
+      </div>
+            
+    <div class="form-group">
+      <label class="form-label" for="postcode">Postcode</label>
+      <input type="text" class="form-control-1-4" id="postcode">
+    </div>
+            
+  </fieldset>
+  
+  <div class="form-group" >
+    <input type="submit" class="button" value="Continue">
+  </div>
+
+</main><!-- / #page-container -->
+{% endblock %}

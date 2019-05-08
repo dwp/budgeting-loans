@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  You&rsquo;re eligible - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="phase-banner">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+    </p>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a href="../" class="link-back">Back</a>
+
+      <h1 class="heading-large">You&rsquo;re eligible for a Budgeting Loan, based on your answers</h1>
+
+      <p>You said:</p>
+
+      <ul class="list list-bullet">
+        <li>you don&rsquo;t owe the Social Fund more than £1,500</li>
+          <li>you or your partner get one of the <a href="overview-eligibility">qualifying benefits</a></li>
+          <li>you need more than £100</li>
+          <li>you aren't involved in industrial action</li>
+      </ul>
+
+      <h2 class="heading-medium">If you made a mistake</h2>
+
+      <p>If any of your answers are wrong, make sure you have the correct information and <a href="overview">check your eligibility again</a>.</p>
+
+      <h2 class="heading-medium">If you want to apply</h2>
+
+      <p>Make sure you have details about your regular debt repayments (such as hire purchases and loans, but not normal living expenses like gas and electric charges or food bills).</p>
+
+      <p>
+        <button type="submit" class="button button-get-started">
+          Apply now
+        </button>
+      </p>
+
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

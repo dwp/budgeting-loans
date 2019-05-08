@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Pension Credit - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {# Back link #}
+        {% import "includes/back-link.html" as back %}
+        {{ back.url('current-benefits') }}
+      {# Back link #}
+
+      <form method="post" class="form">
+
+        <h1 class="heading-large m-b-ml m-t-m">
+          <span class="heading-secondary">
+            Check your eligibility
+          </span>
+          How long have you been getting Pension Credit?
+        </h1>
+
+        <div class="form-group">
+
+          <fieldset>
+
+            <legend class="c-legend c-legend--medium m-b-s visually-hidden">How long have you been getting Pension&nbsp;Credit?</legend>
+            
+            <label class="block-label" for="duration1">
+              <input id="duration1" type="radio" name="duration" value="over6" >
+              More than 6 months
+            </label>
+
+            <label class="block-label" for="duration2">
+              <input id="duration2" type="radio" name="duration" value="under6" >
+              Less than 6 months
+            </label>
+
+          </fieldset>
+
+        </div>{# / form-group #}
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>{# / form-group #}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

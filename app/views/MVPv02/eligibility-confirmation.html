@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Apply for a Budgeting Loan
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+  
+  <form action="partner" method="#" class="form">
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <a href="industrial-action" class="example-back-link">Back</a>
+
+        <h1 class="form-title heading-large">You're eligible for a Budgeting Loan, based on your answers</h1>        
+        <p>You siad:</p>   
+        <ul class="list-bullet">
+          <li>you don't owe the Social Fund more than £1,500</li>
+          <li>you or your partner get one of the <a href="eligibility">qualifying benefits</a></li>
+          <li>you need more than £100</li>
+          <li>you aren't involved in industrial action</li>
+        </ul>     
+        <h2 class="form-label-bold">If you made a mistake</h2>
+        <p>If any of your answers are wrong, make sure you have the correct information and <a href="overview">check your eligibility again.</a></p>
+        <h2 class="form-label-bold">If you want to apply</h2>
+        <p>Make sure you have details about your regular debt repayments (such as hire purchases and loans, but not normal living expenses like gas and electric charges or food bills).</p>
+        <p class="get-started">
+          <a class="button button-get-started" href="partner">Apply now</a>
+        </p>
+      </div>
+
+      <div class="column-third">
+          <p>&nbsp;</p>
+      </div>
+
+    </div>
+  </form>  
+
+</main><!-- / #page-container -->
+{% endblock %}

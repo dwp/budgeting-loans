@@ -1,0 +1,40 @@
+{% extends "layout_unbranded.html" %}
+
+{% block page_title %}
+  Example without branding
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main" class="single-column">
+
+  <h1 class="heading-large">Contact details question</h1>
+
+  <dl class="hypo">
+    <dt>If:</dt>
+    <dd>We swap the contact details text updates wording around</dd>
+    <dt>Then:</dt>
+    <dd>It will be clearer that we&rsquo;re requesting the mobile number so we can send text updates</dd>
+    <dt>Because:</dt>
+    <dd>This is an important feature - we know that users want confirmation that they&rsquo;ve applied</dd>
+  </dl>
+
+  <dl class="hypo">
+    <dt>If:</dt>
+    <dd>We update the hint wording for the address field</dd>
+    <dt>Then:</dt>
+    <dd>Fewer users will think that this field is only for people with no fixed address</dd>
+    <dt>Because:</dt>
+    <dd>We have seen this happen during usability tests</dd>
+  </dl>
+
+  <hr>
+
+  <ul class="list list-bullet">
+    <li><a href="contact-details-question/v1">V1: Updated address hint text and rearranged mobile number field label</a></li>
+    <li><a href="contact-details-question/v2">V2: No address hint text and rearranged mobile number field label</a></li>
+  </ul>
+
+</main>
+
+{% endblock %}

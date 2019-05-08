@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Savings - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {# Back link #}
+  {% import "includes/back-link.html" as back %}
+  {{ back.url('#') }}
+{# Back link #}
+
+      <form method="post" class="form">
+
+        <h1 class="heading-large m-b-ml m-t-m">
+          <span class="heading-secondary">
+            Check your eligibility
+          </span>
+        Have your benefit circumstances changed since you last successfully applied for Budgeting Loan?
+        </h1>
+
+        <div class="form-group">
+          <fieldset class="inline">
+
+            <legend class="visually-hidden">Have you circumstances changed since you last successfully applied for a Budgeting Loan?</legend>
+
+            <label class="block-label" data-target="savings-amount" for="savings-1">
+              <input id="savings-1" type="radio" name="choice" value="yes" >
+              Yes
+            </label>
+            <label class="block-label" for="savings-2">
+              <input id="savings-2" type="radio" name="choice" value="no" >
+              No
+            </label>
+
+          </fieldset>
+        </div>{# / form-group #}
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>{# / form-group #}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+    </div>{# / grid-row #}
+    </main>
+
+    {% endblock %}

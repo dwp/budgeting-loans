@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Apply for a Budgeting Loan
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+  
+  <form action="about-benefit" method="post" class="form">
+
+  <a href="before-you-start" class="example-back-link">Back</a>
+
+  <h1 class="form-title heading-large">
+    About your benefits
+  </h1>
+
+  <fieldset class="inline form-group" id="benefit-container">
+    <legend class="form-label-bold" for="benefit">Have you been getting one of the following benefits for the past 6 months?</legend>
+    <p class="form-hint">Income Support, Income-based Jobseeker's Allowance, Income Related Employment and Support Allowance or Pension Credit</p>
+    <div id="benefit-error-container"></div>
+    <label class="block-label" for="radio-inline-1">
+      <input id="radio-inline-1" type="radio" name="benefit" value="Yes"
+        required
+        data-parsley-errors-container="#benefit-error-container"
+        data-parsley-class-handler="#benefit-container"
+        data-parsley-error-message="Select ‘Yes’ or ‘No’ to confirm whether you have been getting one of the benefits listed">
+      Yes
+    </label>
+    <label class="block-label" data-target="benefit-no" for="radio-inline-2">
+      <input id="radio-inline-2" type="radio" name="benefit" value="No">
+      No
+    </label>
+  </fieldset>
+
+  <div class="js-hidden" id="benefit-no">
+    <div class="panel-indent">
+      <p>You may not be eligible to apply for a budgeting loan.</p>
+    </div>
+  </div>
+
+  <div class=" form-group" id="benefit-yes">
+    <input type="submit" class="button" value="Continue">
+  </div>
+
+  
+
+  </div>
+
+</main><!-- / #page-container -->
+{% endblock %}

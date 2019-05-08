@@ -1,0 +1,97 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Apply for a Budgeting Loan
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+	 
+   <h1 class="heading-xlarge">Budgeting&nbsp;Loans</h1>
+
+    <div class="grid-row rough--section-links">
+      <div role="navigation" aria-label="parts to this guide">
+        <div class="u-clearfix" role="listbox">
+
+          <div class="column-half  u-m0 u-p0">
+            <ol class="list list-number m-b-0" role="presentation">
+              <li class="font-xsmall">
+                <a href="how-it-works" title="Part 1:  Overview">How it works</a>
+              </li>
+              <li class="font-xsmall">
+                What you could get
+              </li>
+            </ol>
+          </div>
+
+          <div class="column-half  u-m0 u-p0">
+            <ol class="list list-number m-b-0" role="presentation" start="3">
+              <li class="font-xsmall">
+                <a href="check-eligibility" title="Part 3: Eligibility">Check your eligibility</a>
+              </li>
+            </ol>
+          </div>
+
+        </div>
+      </div>
+    </div>{# /rough--section-links #}
+
+    <hr class="rough--section-links-divider">
+	    
+	    <div class="inner-block">
+		    <header>
+		    	<h1 class="heading-medium">2. What you could get</h1>
+		    </header>
+			<article>
+				<p>You could get up to:</p>
+
+				<ul class="list list-bullet">
+					<li>£348 if you're single</li>
+					<li>£464 if you're part of a couple</li>
+					<li>£812 if you have children</li>
+				</ul>
+
+				<p>How much you could get depends on if you:</p>
+
+				<ul class="list list-bullet">
+					<li>can pay the loan back</li>
+					<li>have savings of more than £1,000 (£2,000 if you or your partner are over 63)</li>
+					<li>owe money to the Social Fund through Budgeting Loans and Crisis Loans</li>
+				</ul>
+
+			</article>
+
+			<footer>
+				<nav class="pagination" role="navigation" aria-label="Pagination">
+					<ul class="group">
+						<li class="previous">
+      						<a href="how-it-works" rel="prev" title="Navigate to previous part">
+      							<span class="pagination-label">Previous </span> <span class="pagination-part-title"> How it works</span>
+      						</a>          
+      					</li>
+          				<li class="next">
+            				<a href="check-eligibility" rel="next" title="Navigate to next part">
+              					<span class="pagination-label">Next</span> <span class="pagination-part-title"> Check your eligibility</span>
+							</a>          			
+						</li>
+    				</ul>
+    			</nav>
+    		</footer>
+	        
+	    </div>
+	</div>
+	
+	
+	<div class="column-third">
+
+	</div>
+</div>
+
+</main><!-- / #page-container -->
+{% endblock %}

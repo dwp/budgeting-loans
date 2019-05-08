@@ -1,0 +1,349 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+    Apply for a Budgeting Loan
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  {% include "includes/beta-banner.html" %}
+
+  <form action="personal-details" method="#" class="form">
+
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        <a href="javascript:history.go(-1)" class="example-back-link">Back</a>
+
+        <h1 class="form-title heading-large">Are you or your partner making regular debt repayments?</h1>
+    
+        <div class="form-group">
+          <fieldset class="inline">
+            
+            <p>This includes hire purchases and loans. Don't include normal living expenses like gas and electric charges or food bills. This information will help work out your Budgeting Loan repayments.</p>
+
+            <label class="block-label" data-target="list-debts" for="radio-inline-1">
+              <input id="radio-inline-1" type="radio" name="partner" value="Yes">
+              Yes
+            </label>
+            <label class="block-label" for="radio-inline-2">
+              <input id="radio-inline-2" type="radio" name="partner" value="No">
+              No
+            </label>
+          </fieldset>
+        </div>
+
+        <div class="panel-indent js-hidden" id="list-debts">
+          <!-- medication -->
+        <div class="form-group">  
+          <label class="form-label-bold" for="health-conditions">Give more details</label> 
+
+          <table class="condition">
+            <thead>
+              <tr>
+                <th scope="col">Who is the debt to?</th>
+                <th class="numeric" scope="col">How much in total?</th>
+                <th class="numeric" scope="col">How much are your repayments?</th>
+                <th scope="col">Frequency of repayments</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="text" class="form-control form-wide"></td>
+                <td class="numeric">&pound; <input type="text" class="form-control" style="width: 50%;"></td>
+                <td class="numeric">&pound; <input type="text" class="form-control" style="width: 50%;"></td>
+                <td>
+                  <div class="styled-select">
+                    <select id="select-box" style="width: 100%;">
+                      <option>weekly</option>
+                      <option>fortnightly</option>
+                      <option>monthly</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="text" class="form-control form-wide"></td>
+                <td class="numeric">&pound; <input type="text" class="form-control" style="width: 50%;"></td>
+                <td class="numeric">&pound; <input type="text" class="form-control" style="width: 50%;"></td>
+                <td>
+                  <div class="styled-select">
+                    <select id="select-box" style="width: 100%;">
+                      <option>weekly</option>
+                      <option>fortnightly</option>
+                      <option>monthly</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="text" class="form-control form-wide"></td>
+                <td class="numeric">&pound; <input type="text" class="form-control" style="width: 50%;"></td>
+                <td class="numeric">&pound; <input type="text" class="form-control" style="width: 50%;"></td>
+                <td>
+                  <div class="styled-select">
+                    <select id="select-box" style="width: 100%;">
+                      <option>weekly</option>
+                      <option>fortnightly</option>
+                      <option>monthly</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div style="margin-top: 14px; margin-bottom: 0;">
+            <a href="#" id="show-condition6">Add another debt</a>
+          </div>
+
+          <div class="js-hidden" id="condition6">
+            <table class="condition">
+              <tbody>
+                <tr>
+                  <td><input type="text" class="form-control form-wide"></td>
+                  <td class="numeric">&pound; <input type="text" class="form-control" style="width: 50%;"></td>
+                  <td class="numeric">&pound; <input type="text" class="form-control" style="width: 50%;"></td>
+                  <td>
+                  <div class="styled-select">
+                    <select id="select-box" style="width: 100%;">
+                      <option>weekly</option>
+                      <option>fortnightly</option>
+                      <option>monthly</option>
+                    </select>
+                  </div>
+                </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div style="margin-top: 14px; margin-bottom: 0;">
+              <a href="#" id="show-condition7">Add another debt</a>
+            </div>
+          </div>
+
+          <div class="js-hidden" id="condition7">
+            <table class="condition">
+              <tbody>
+                <tr>
+                  <td><input type="text" class="form-control form-wide"></td>
+                  <td class="numeric">&pound; <input type="text" class="form-control" style="width: 50%;"></td>
+                  <td class="numeric">&pound; <input type="text" class="form-control" style="width: 50%;"></td>
+                  <td>
+                  <div class="styled-select">
+                    <select id="select-box" style="width: 100%;">
+                      <option>weekly</option>
+                      <option>fortnightly</option>
+                      <option>monthly</option>
+                    </select>
+                  </div>
+                </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div style="margin-top: 14px; margin-bottom: 0;">
+              <a href="#" id="show-condition10">Add another debt</a>
+            </div>
+          </div>
+
+          <div class="js-hidden" id="condition10">
+            <table class="condition">
+              <tbody>
+                <tr>
+                  <td><input type="text" class="form-control form-wide"></td>
+                  <td class="numeric">&pound; <input type="text" class="form-control" style="width: 50%;"></td>
+                  <td class="numeric">&pound; <input type="text" class="form-control" style="width: 50%;"></td>
+                  <td>
+                  <div class="styled-select">
+                    <select id="select-box" style="width: 100%;">
+                      <option>weekly</option>
+                      <option>fortnightly</option>
+                      <option>monthly</option>
+                    </select>
+                  </div>
+                </td>
+                </tr>
+              </tbody>
+            </table>
+            <div style="margin-top: 14px; margin-bottom: 0;">
+              <a href="#" id="show-condition11">Add another debt</a>
+            </div>
+          </div>
+
+          <div class="js-hidden" id="condition11">
+            <table class="condition">
+              <tbody>
+                <tr>
+                  <td><input type="text" class="form-control form-wide"></td>
+                  <td class="numeric">&pound; <input type="text" class="form-control" style="width: 50%;"></td>
+                  <td class="numeric">&pound; <input type="text" class="form-control" style="width: 50%;"></td>
+                  <td>
+                  <div class="styled-select">
+                    <select id="select-box" style="width: 100%;">
+                      <option>weekly</option>
+                      <option>fortnightly</option>
+                      <option>monthly</option>
+                    </select>
+                  </div>
+                </td>
+                </tr>
+              </tbody>
+            </table>
+            <div style="margin-top: 14px; margin-bottom: 0;">
+              <a href="#" id="show-condition12">Add another debt</a>
+            </div>
+          </div>
+
+          <div class="js-hidden" id="condition12">
+            <table class="condition">
+              <tbody>
+                <tr>
+                  <td><input type="text" class="form-control form-wide"></td>
+                  <td class="numeric">&pound; <input type="text" class="form-control" style="width: 50%;"></td>
+                  <td class="numeric">&pound; <input type="text" class="form-control" style="width: 50%;"></td>
+                  <td>
+                  <div class="styled-select">
+                    <select id="select-box" style="width: 100%;">
+                      <option>weekly</option>
+                      <option>fortnightly</option>
+                      <option>monthly</option>
+                    </select>
+                  </div>
+                </td>
+                </tr>
+              </tbody>
+            </table>
+            <div style="margin-top: 14px; margin-bottom: 0;">
+              <a href="#" id="show-condition13">Add another debt</a>
+            </div>
+          </div>
+
+          <div class="js-hidden" id="condition13">
+            <table class="condition">
+              <tbody>
+                <tr>
+                  <td><input type="text" class="form-control form-wide"></td>
+                  <td class="numeric">&pound; <input type="text" class="form-control" style="width: 50%;"></td>
+                  <td class="numeric">&pound; <input type="text" class="form-control" style="width: 50%;"></td>
+                  <td>
+                  <div class="styled-select">
+                    <select id="select-box" style="width: 100%;">
+                      <option>weekly</option>
+                      <option>fortnightly</option>
+                      <option>monthly</option>
+                    </select>
+                  </div>
+                </td>
+                </tr>
+              </tbody>
+            </table>
+            <div style="margin-top: 14px; margin-bottom: 0;">
+              <a href="#" id="show-condition14">Add another debt</a>
+            </div>
+          </div>
+
+
+          <table class="condition js-hidden" id="condition14">
+            <tbody>
+                <tr>
+                  <td><input type="text" class="form-control form-wide"></td>
+                  <td class="numeric">&pound; <input type="text" class="form-control" style="width: 50%;"></td>
+                  <td class="numeric">&pound; <input type="text" class="form-control" style="width: 50%;"></td>
+                  <td>
+                  <div class="styled-select">
+                    <select id="select-box" style="width: 100%;">
+                      <option>weekly</option>
+                      <option>fortnightly</option>
+                      <option>monthly</option>
+                    </select>
+                  </div>
+                </td>
+                </tr>
+              </tbody>
+          </table>
+
+        </div> 
+        </div>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+      </div>
+
+      <div class="column-third">
+        <p>&nbsp;</p>
+      </div>
+
+    </div>
+
+  </form>
+
+</main><!-- / #page-container -->
+
+{% endblock %}
+
+<script>
+          $(document).ready(function() {
+          
+            $("#show-condition4").click(function() {
+              $("#condition4").show();
+              $("#show-condition4").hide();
+               return false;
+            });
+            $("#show-condition5").click(function() {
+              $("#condition5").show();
+              $("#show-condition5").hide();
+               return false;
+            });
+            $("#show-condition6").click(function() {
+              $("#condition6").show();
+              $("#show-condition6").hide();
+               return false;
+            });
+            $("#show-condition7").click(function() {
+              $("#condition7").show();
+              $("#show-condition7").hide();
+               return false;
+            });
+            $("#show-condition8").click(function() {
+              $("#condition8").show();
+              $("#show-condition8").hide();
+               return false;
+            });
+            $("#show-condition9").click(function() {
+              $("#condition9").show();
+              $("#show-condition9").hide();
+               return false;
+            });
+            $("#show-condition10").click(function() {
+              $("#condition10").show();
+              $("#show-condition10").hide();
+               return false;
+            });
+            $("#show-condition11").click(function() {
+              $("#condition11").show();
+              $("#show-condition11").hide();
+               return false;
+            });
+            $("#show-condition12").click(function() {
+              $("#condition12").show();
+              $("#show-condition12").hide();
+               return false;
+            });
+            $("#show-condition13").click(function() {
+              $("#condition13").show();
+              $("#show-condition13").hide();
+               return false;
+            });
+            $("#show-condition14").click(function() {
+              $("#condition14").show();
+              $("#show-condition14").hide();
+               return false;
+            });
+            
+          });
+        </script>

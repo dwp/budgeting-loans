@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Text updates - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {% if edit %}
+      {% else %}
+        {# Back link #}
+          {% import "includes/back-link.html" as back %}
+          {{ back.url('your-contact-preferences-partner') }}
+        {# Back link #}
+      {% endif %}
+
+      <form method="post" class="form">
+
+        <h1 class="form-title heading-large m-b-ml">
+          Receive text message updates about your application
+        </h1>
+
+        <div class="form-group m-b-ml">
+          <fieldset>
+            <label for="phone" class="c-legend c-legend--large form-label"><span style="font-weight: bold; display: inline">Your mobile</span> (optional)</label>
+            <input type="text" class="form-control" id="phone" name="phone" value="" data-parsley-id="12">
+          </fieldset>
+
+
+
+{#           You can find this on the letter you should have received last weekend. This is something you can find on the letter you s #}
+
+        </div>
+
+        <p>Your number is safe, we never pass it on to any third-parties.</p>
+
+{#         <!-- Your mobile -->
+        <div class="form-group m-b-ml">
+          <fieldset>
+            <legend class="c-legend c-legend--large form-label-bold">Your mobile (optional)</legend>
+            <label for="phone" class="form-label">Receive text message updates about your application.</label>
+            <input type="text" class="form-control" id="phone" name="phone" value="">
+          </fieldset>
+        </div> #}
+
+        {% include "includes/continue-save.html" %}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+
+    {% include "includes/help-function.html" %}
+
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

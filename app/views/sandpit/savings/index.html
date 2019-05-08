@@ -1,0 +1,40 @@
+{% extends "layout_unbranded.html" %}
+
+{% block page_title %}
+  Example without branding
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main" class="single-column">
+
+  <h1 class="heading-large">Savings</h1>
+
+  <dl class="hypo">
+    <dt>If:</dt>
+    <dd>We provide a subsequent data capture field when a customer answers &lsquo;Yes&rsquo; to the savings question that asks for a total debt amount</dd>
+    <dt>Then:</dt>
+    <dd>Users can enter their full capital/savings amount</dd>
+    <dt>Because:</dt>
+    <dd>Users will find it less confusing not having to deduct the savings threshold when answering this question</dd>
+  </dl>
+
+  <dl class="hypo">
+    <dt>If:</dt>
+    <dd>We add a definition for what we mean by ‘savings’, splitting the current question into 2 parts (savings and property)</dd>
+    <dt>Then:</dt>
+    <dd>Users will enter the savings information correctly</dd>
+    <dt>Because:</dt>
+    <dd>Some users don&rsquo;t understand what we mean by &lsquo;savings&rsquo; at the moment</dd>
+  </dl>
+
+  <ul class="list list-bullet">
+    <li><a href="/sandpit/savings/v1/savings-with-amount-capture">Version 1 (basic version with no additional text)</a></li>
+    <li><a href="/sandpit/savings/v2/savings-with-amount-capture">Version 2 (exploring hint text)</a></li>
+    <!--  <li><a href="/sandpit/savings/v2/savings-with-amount-capture-validation">Version 2 with validation</a></li> -->
+    <li><a href="/sandpit/savings/v3/">Version 3 (different variation for different ages and statuses)</a></li>
+  </ul>
+
+</main>
+
+{% endblock %}

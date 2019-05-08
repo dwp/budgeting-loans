@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Apply for a Budgeting Loan
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+<div class="grid-row">
+	<div class="column-two-thirds">
+	    <h1 class="heading-xlarge">Budgeting&nbsp;Loans</h1>
+
+    <div class="grid-row rough--section-links">
+      <div role="navigation" aria-label="parts to this guide">
+        <div class="u-clearfix" role="listbox">
+
+          <div class="column-half  u-m0 u-p0">
+            <ol class="list list-number m-b-0" role="presentation">
+              <li class="font-xsmall">
+                <a href="overview" title="Part 1:  How it works">How it works</a>
+              </li>
+              <li class="font-xsmall">
+                <a href="eligibility" title="Part 2:  Eligibility for people on benefits">Eligibility for people on benefits</a>
+              </li>
+              <li class="font-xsmall">
+                <a href="what-youll-get" title="Part 3: What you'll get">What you'll get</a>
+              </li>
+            </ol>
+          </div>
+
+          <div class="column-half  u-m0 u-p0">
+            <ol class="list list-number m-b-0" role="presentation" start="4">
+              <li class="font-xsmall">
+                <a href="apply" title="Part 4: How to apply">How to apply</a>
+              </li>
+              <li class="font-xsmall">
+                Other help you can get
+              </li>
+            </ol>
+          </div>
+
+        </div>
+      </div>
+    </div>{# /rough--section-links #}
+	    
+
+    <hr class="rough--section-links-divider">
+	    
+	    <div class="inner-block">
+		    <header>
+		    	<h1 class="heading-medium">5. Other help you can get</h1>
+		    </header>
+			<article>
+				<p>You may be able to get other kinds of support, including:</p>
+				<ul class="list-bullet">
+					<li>a Budgeting Advance, if you’re on Universal Credit</li>
+					<li>help from <a href="https://www.gov.uk/find-your-local-council">your local council</a> and <a href="https://www.gov.uk/contact-jobcentre-plus"> Jobcentre Plus</a></li>
+					<li>the <a href="http://www.moneymadeclearwales.org/home.php?page_id=60">Discretionary Assistance Fund in Wales</a></li>
+					<li>a Crisis Loan or Community Care Grant in <a href="http://www.nidirect.gov.uk/index/information-and-services/money-tax-and-benefits/benefits-and-financial-support/on-a-low-income-1/help-from-the-social-fund.htm">Northern Ireland</a> or <a href="http://www.gov.scot/Topics/People/fairerscotland/scottishwelfarefund"> Scotland</a></li>
+				</ul>
+
+				<p>You can’t get a Crisis Loan or Community Care Grant in England or Wales any more.</p>
+			</article>
+
+			<footer>
+				<nav class="pagination" role="navigation" aria-label="Pagination">
+					<ul class="group">
+						<li class="previous">
+      						<a href="apply" rel="prev" title="Navigate to previous part">
+      							<span class="pagination-label">Previous </span> <span class="pagination-part-title"> How to apply</span>
+      						</a>          
+      					</li>
+    				</ul>
+    			</nav>
+    		</footer>
+	        
+	    </div>
+	</div>
+	
+	
+	<div class="column-third">
+
+	</div>
+</div>
+
+</main><!-- / #page-container -->
+{% endblock %}

@@ -1,0 +1,194 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+    Apply for a Budgeting Loan
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  {% include "includes/beta-banner.html" %}
+  
+  <form action="personal-details" method="#" class="form">
+
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+      <a href="javascript:history.go(-1)" class="example-back-link">Back</a>
+      <h1 class="form-title heading-large">Are you or your partner making regular debt repayments?</h1>
+      <fieldset class="inline form-group" id="debt-repayment">
+        <div id="debt-repayment-error-container">
+        <legend class="form-label-large-bold" for="debt">This includes official payments such as hire purchases and loans. Don't include normal living expenses like gas and electric charges or food bills. This information will help work out your Budgeting Loan repayments.</legend>
+        <label class="block-label" data-target="money-owed01" for="radio-inline-1">
+          <input id="radio-inline-1" type="radio" name="debt" value="Yes"
+          required
+          data-parsley-errors-container="#debt-repayment-error-container"
+          data-parsley-class-handler="#debt-repayment"
+          data-parsley-error-message="Enter Yes or No"
+          >
+          Yes
+        </label>
+        <label class="block-label" for="radio-inline-2">
+          <input id="radio-inline-2" type="radio" name="debt" value="No">
+          No
+        </label>
+      </div>
+      </fieldset>
+      <div class="panel-indent js-hidden" id="money-owed01">
+        <div class="form-group">
+          <p class="bold-small">Debt 1</p>
+          <label class="form-label-bold" for="who01">Who do you make the repayment to?</label>
+          <input class="form-control" id="who01" type="text">
+        </div>
+        <div class="form-group">
+          <label class="form-label-bold" for="regpay01">How much are your repayments?</label>
+          <span>£</span>
+          <input class="form-control-1-8" id="regpay01" type="text">
+        </div>
+        <fieldset class="form-radio  inline">
+          <legend class="form-label-bold">How often do you make repayments?</legend>
+          <label class="block-label" for="weekly-1">
+            <input id="weekly-1" type="radio" name="weekly-1" value="Weekly">
+            Weekly
+          </label>
+          <label class="block-label"for="fortnightly-1">
+            <input id="fortnightly-1" type="radio" name="fortnightly-1" value="No">
+            Fortnightly
+          </label>
+          <label class="block-label"for="monthly-1">
+            <input id="monthly-1" type="radio" name="monthly-1" value="No">
+            Monthly
+          </label>
+        </fieldset>
+        <div class="form-group">
+          <label class="form-label-bold" for="total01">How much do you owe on this debt in total?</label>
+          <span>£</span>
+          <input class="form-control-1-8" id="total01" type="text">
+        </div>
+        <a href="#" id="show-debt2">Add another debt</a>
+
+      </div>
+      <div class="panel-indent js-hidden" id="debt2">
+        <div class="form-group">
+          <p class="bold-small">Debt 2</p>
+          <label class="form-label-bold" for="who01">Who do you make the repayment to?</label>
+          <input class="form-control" id="who01" type="text">
+        </div>
+        <div class="form-group">
+          <label class="form-label-bold" for="regpay01">How much are your repayments?</label>
+          <span>£</span>
+          <input class="form-control-1-8" id="regpay01" type="text">
+        </div>
+        <fieldset class="form-radio  inline">
+          <legend class="form-label-bold">How often do you make repayments?</legend>
+          <label class="block-label" for="weekly-1">
+            <input id="weekly-1" type="radio" name="weekly-1" value="Weekly">
+            Weekly
+          </label>
+          <label class="block-label"for="fortnightly-1">
+            <input id="fortnightly-1" type="radio" name="fortnightly-1" value="No">
+            Fortnightly
+          </label>
+          <label class="block-label"for="monthly-1">
+            <input id="monthly-1" type="radio" name="monthly-1" value="No">
+            Monthly
+          </label>
+        </fieldset>
+        <div class="form-group">
+          <label class="form-label-bold" for="total01">How much do you owe on this debt in total?</label>
+          <span>£</span>
+          <input class="form-control-1-8" id="total01" type="text">
+        </div>
+        <div class="form-group">
+          <a href="#show-debt2" id="remove-debt2">Remove this debt</a>
+        </div>
+        <a href="#" id="show-debt3">Add another debt</a>
+      </div>
+      <div class="panel-indent js-hidden" id="debt3">
+        <div class="form-group">
+          <p class="bold-small">Debt 3</p>
+          <label class="form-label-bold" for="who01">Who do you make the repayment to?</label>
+          <input class="form-control" id="who01" type="text">
+        </div>
+        <div class="form-group">
+          <label class="form-label-bold" for="regpay01">How much are your repayments?</label>
+          <span>£</span>
+          <input class="form-control-1-8" id="regpay01" type="text">
+        </div>
+        <fieldset class="form-radio  inline">
+          <legend class="form-label-bold">How often do you make repayments?</legend>
+          <label class="block-label" for="weekly-1">
+            <input id="weekly-1" type="radio" name="weekly-1" value="Weekly">
+            Weekly
+          </label>
+          <label class="block-label"for="fortnightly-1">
+            <input id="fortnightly-1" type="radio" name="fortnightly-1" value="No">
+            Fortnightly
+          </label>
+          <label class="block-label"for="monthly-1">
+            <input id="monthly-1" type="radio" name="monthly-1" value="No">
+            Monthly
+          </label>
+        </fieldset>
+        <div class="form-group">
+          <label class="form-label-bold" for="total01">How much do you owe on this debt in total?</label>
+          <span>£</span>
+          <input class="form-control-1-8" id="total01" type="text">
+        </div>
+        <div class="form-group">
+          <a href="#show-debt3" id="remove-debt3">Remove this debt</a>
+        </div>
+        <a href="#" id="show-debt4">Add another debt</a>
+      </div>
+      <div class="panel-indent js-hidden" id="debt4">
+        <div class="form-group">
+          <p class="bold-small">Debt 4</p>
+          <label class="form-label-bold" for="who01">Who do you make the repayment to?</label>
+          <input class="form-control" id="who01" type="text">
+        </div>
+        <div class="form-group">
+          <label class="form-label-bold" for="regpay01">How much are your repayments?</label>
+          <span>£</span>
+          <input class="form-control-1-8" id="regpay01" type="text">
+        </div>
+        <fieldset class="form-radio  inline">
+          <legend class="form-label-bold">How often do you make repayments?</legend>
+          <label class="block-label" for="weekly-1">
+            <input id="weekly-1" type="radio" name="weekly-1" value="Weekly">
+            Weekly
+          </label>
+          <label class="block-label"for="fortnightly-1">
+            <input id="fortnightly-1" type="radio" name="fortnightly-1" value="No">
+            Fortnightly
+          </label>
+          <label class="block-label"for="monthly-1">
+            <input id="monthly-1" type="radio" name="monthly-1" value="No">
+            Monthly
+          </label>
+        </fieldset>
+        <div class="form-group">
+          <label class="form-label-bold" for="total01">How much do you owe on this debt in total?</label>
+          <span>£</span>
+          <input class="form-control-1-8" id="total01" type="text">
+        </div>
+        <div class="form-group">
+          <a href="#show-debt3" id="remove-debt4">Remove this debt</a>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="submit" class="button" value="Continue">
+      </div>
+
+      <div class="column-third">
+        <p>&nbsp;</p>
+      </div>
+
+    </div>
+
+  </form>
+
+</main><!-- / #page-container -->
+
+{% endblock %}

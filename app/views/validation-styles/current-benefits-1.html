@@ -1,0 +1,152 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Current benefits - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="phase-banner">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+    </p>
+  </div>{# /phase-banner #}
+
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+
+      <a href="../" class="link-back">Back</a>
+
+      <form method="post" class="form">
+
+        <div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
+
+          <h1 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">There&rsquo;s a problem</h1>
+
+          <p>Check your form. You must:</p>
+
+          <ul class="error-summary-list">
+            <li><a href="#question-benefits">Select which of these benefits you or your partner get</a></li>
+          </ul>
+
+        </div>
+
+        <h1 class="heading-large m-b-ml m-t-m" id="question-benefits">
+          <span class="heading-secondary">
+            Check your eligibility
+          </span>
+          Which of these benefits do you get?
+        </h1>
+
+        <div class="form-group error">
+
+          <span class="error-message">Select an answer</span>
+
+          {# Pension Credit #}
+      
+          <fieldset class="form-group js-error-container">
+            <legend class="c-legend c-legend--medium visuallyhidden">Which of these benefits do you get?</legend>
+
+            <label class="block-label" for="benefit1">
+              <input id="benefit1" type="radio" name="benefit" value="pc" >
+              Pension Credit
+            </label>
+
+            {# Income Support #}
+
+            <label class="block-label" for="benefit2">
+              <input id="benefit2" type="radio" name="benefit" value="is" >
+              Income Support
+            </label>
+
+            {# Employment and Support Allowance #}
+
+            <label class="block-label" for="benefit3" data-target="esa-benefit-type-panel">
+              <input id="benefit3" type="radio" name="benefit" value="esa" >
+              Employment and Support Allowance
+            </label>
+
+            <div class="panel js-hidden m-b-l" id="esa-benefit-type-panel">
+
+              <fieldset>
+
+                <legend class="c-legend c-legend--medium m-b-s">Which type of Employment and Support Allowance do you get?</legend>
+
+                <label class="block-label" for="esabenefittype1">
+                  <input id="esabenefittype1" type="radio" name="esabenefittype" value="esabenefittype1">
+                  Income-related
+                </label>
+
+                <label class="block-label" for="esabenefittype2">
+                  <input id="esabenefittype2" type="radio" name="esabenefittype" value="esabenefittype2" >
+                  Contribution-based
+                </label>
+
+                <label class="block-label" for="esabenefittype3">
+                  <input id="esabenefittype3" type="radio" name="esabenefittype" value="esabenefittype3" >
+                  Don&rsquo;t know
+                </label>
+              </fieldset>
+
+            </div>{# / esa-benefit-type-panel #}
+
+            {# Jobseeker’s Allowance #}
+
+            <label class="block-label" for="benefit4" data-target="jsa-type-panel">
+              <input id="benefit4" type="radio" name="benefit" value="jsa" >
+              Jobseeker&rsquo;s Allowance
+            </label>
+
+            <div class="panel js-hidden m-b-l" id="jsa-type-panel">
+
+              <fieldset>
+
+                <legend class="c-legend c-legend--medium m-b-s">Which type of Jobseeker&rsquo;s Allowance do you get?</legend>
+
+                <label class="block-label" for="jsabenefittype1">
+                  <input id="jsabenefittype1" type="radio" name="jsabenefittype" value="jsabenefittype1" >
+                  Income-related
+                </label>
+
+                <label class="block-label" for="jsabenefittype2">
+                  <input id="jsabenefittype2" type="radio" name="jsabenefittype" value="jsabenefittype2" >
+                  Contribution-based
+                </label>
+
+                <label class="block-label" for="isbenefittype3">
+                  <input id="isbenefittype3" type="radio" name="jsabenefittype" value="jsabenefittype3" >
+                  Don&rsquo;t know
+                </label>
+
+              </fieldset>
+
+            </div>{# / jsa-type-panel #}
+
+            {# None of the above #}
+
+            <label class="block-label" for="benefit5">
+              <input id="benefit5" type="radio" name="benefit" value="none" >
+              None of the above
+            </label>
+
+            {# / none of the above #}
+
+          </fieldset>
+
+        </div>{# /form-group error #}
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>{# / form-group #}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

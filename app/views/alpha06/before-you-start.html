@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Budgeting Loans
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/alpha-banner.html" %}
+  
+  <form action="about-benefit" method="#" class="form">
+
+  <a href="apply" class="example-back-link">Back</a>
+
+  <h1 class="heading-large">
+    Before you start
+  </h1>
+
+  <div class="text">
+
+    <p>
+      To get a Budgeting Loan:
+    </p>
+
+    <ul class="list-bullet">
+      <li>you or a partner must have been getting at least 1 of the following benefits for the past 6 months (Income Support, income-based Jobseeker's Allowance, income related Employment and Support Allowance or Pension Credit)</li>
+      <li>you mustn't owe the Social Fund more than £1,500 for a Crisis Loan or Budgeting Loan</li>
+      <li>you and your partner mustn’t have savings of more than £1,000 (£2,000 if either of you are over 61)</li>
+      <li>you mustn't be involved in a trade dispute (This means industrial action, eg a strike, walk-out or lock-out)</li>
+    </ul>
+
+    <!-- Primary buttons, secondary links -->
+    <div class="form-group">
+      <input type="submit" class="button" value="I agree - start my application"> <!--a href="overview">I do not agree - leave now</a-->
+    </div>
+
+  </div>
+
+</main><!-- / #page-container -->
+{% endblock %}

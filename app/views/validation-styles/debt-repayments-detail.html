@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Debt repayment details - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {# Back link #}
+  {% import "includes/back-link.html" as back %}
+  {{ back.url('#') }}
+{# Back link #}
+
+      <form method="post" class="form">
+
+        <div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
+
+          <h1 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">There&rsquo;s a problem</h1>
+
+          <p>Check your form. You must:</p>
+
+          <ul class="error-summary-list">
+            <li><a href="#question-who">Enter the name of the organisation you make repayments to</a></li>
+            <li><a href="#question-how-much">Enter the amount of your regular repayments as a number</a></li>
+            <li><a href="#question-how-often">Select &lsquo;Weekly&rsquo;, &lsquo;Fortnightly&rsquo; or &lsquo;Monthly&rsquo; to confirm how often you make repayments</a></li>
+            <li><a href="#question-total">Enter the total amount you owe as a number</a></li>
+          </ul>
+
+        </div>
+
+        <h1 class="form-title heading-large m-b-ml">
+          Debt repayment details
+        </h1>
+
+        <div class="form-group m-b-ml error" id="question-who">
+          <label class="form-label m-b-xs" for="who01">Who do you make the repayment to?</label>
+          <span class="error-message">Enter your answer</span>
+          <input type="text" class="form-control" id="who01" name="who01" value="">
+        </div>
+
+        <div class="form-group m-b-ml error" id="question-how-much">
+          <label class="form-label m-b-xs" for="regpay01">How much are your repayments?</label>
+          <span class="error-message">Enter your answer</span>
+          <div class="u-1/4-lap-and-up">
+            <span class="c-form-input-denote">&pound;</span>
+            <input class="c-form-input-denote__input form-control form-control-1-4" id="regpay01" type="text" name="regpay01" value="">
+          </div>
+        </div>
+
+        <div class="form-group m-b-ml error" id="question-how-often">
+          <fieldset>
+            <legend class="m-b-s">How often do you make repayments?</legend>
+            <span class="error-message">Select an answer</span>
+            <label class="block-label" for="radio-inline-1">
+              <input id="radio-inline-1" type="radio" name="choice" value="weekly" >
+              Weekly
+            </label>
+            <label class="block-label" for="radio-inline-2">
+              <input id="radio-inline-2" type="radio" name="choice" value="fortnightly" >
+              Fortnightly
+            </label>
+            <label class="block-label" for="radio-inline-3">
+              <input id="radio-inline-3" type="radio" name="choice" value="monthly" >
+              Monthly
+            </label>
+          </fieldset>
+        </div>{# / form-group #}
+
+        <div class="form-group m-b-ml error" id="question-total">
+          <label class="form-label m-b-xs" for="total01">How much do you owe on this debt in total?</label>
+          <span class="error-message">Enter your answer</span>
+          <div class="u-1/4-lap-and-up">
+            <span class="c-form-input-denote">&pound;</span>
+            <input class="c-form-input-denote__input form-control form-control-1-4" id="total01" type="text" name="total01" value="">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

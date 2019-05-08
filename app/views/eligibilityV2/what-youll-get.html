@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Apply for a Budgeting Loan
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+<div class="grid-row">
+	<div class="column-two-thirds">
+	    <h1 class="form-title heading-large">
+	      Budgeting Loans
+	    </h1>
+	    
+		<aside>
+			<div class="inner">
+				<nav role="navigation" class="page-navigation" aria-label="parts to this guide">
+					<ol class="list-bullet list-none grid-row">
+						<div class="column-half">
+							<li class="font-xsmall">
+								1. <a href="overview" title="Part 1:  Overview">How it works</a>
+							</li>
+							<li class="font-xsmall">
+								2. <a href="what-youll-get" title="Part 2:  What you'll get">Eligibility</a>
+							</li>
+						</div>
+						<div class="column-half">
+							<li class="font-xsmall">
+								3. <a href="eligibility" title="Part 3: Eligibility">What you'll get</a>
+							</li>
+							<li class="font-xsmall">
+								4. <a href="apply" title="Part 4: Apply">Apply</a>
+							</li>
+						</div>
+					</ol>
+				</nav>
+			</div>
+		</aside>
+	    
+	    <div class="inner-block">
+		    <header>
+		    	<h1 class="heading-medium">2. Eligibility</h1>
+		    </header>
+			<article>
+				<p>To apply for a Budgeting Loan:</p>
+				<ul class="list-bullet">
+					<li>you must need more than £100</li>
+					<li>you must have been getting Income Support, income-based Jobseeker's Allowance, income-related Employment and Support Allowance or Pension Credit for the past 6 months (and you must still be getting one of these benefits when you apply)</li>
+					<li>you must not owe the Social Fund more than £1,500 for a Crisis Loan or Budgeting Loan</li>
+					<li>you and your partner must not have combined savings of more than £1,000 (£2,000 if either of you are over 61)</li>
+					<li>you must not be involved in industrial action (eg a strike, walk-out or lock-out)</li>
+				</ul>
+
+			</article>
+
+			<footer>
+				<nav class="pagination" role="navigation" aria-label="Pagination">
+					<ul class="group">
+						<li class="previous">
+      						<a href="overview" rel="prev" title="Navigate to previous part">
+      							<span class="pagination-label">Previous </span> <span class="pagination-part-title"> How it works</span>
+      						</a>          
+      					</li>
+          				<li class="next">
+            				<a href="eligibility" rel="next" title="Navigate to next part">
+              					<span class="pagination-label">Next</span> <span class="pagination-part-title"> What you'll get</span>
+							</a>          			
+						</li>
+    				</ul>
+    			</nav>
+    		</footer>
+	        
+	    </div>
+	</div>
+	
+	
+	<div class="column-third">
+
+	</div>
+</div>
+
+</main><!-- / #page-container -->
+{% endblock %}

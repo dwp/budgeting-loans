@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Apply for a Budgeting Loan
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+  
+      <form action="money-you-owe" method="#" class="form">
+
+      <a href="loan-amount" class="example-back-link">Back</a>
+
+      <h1 class="form-title heading-large">
+        Reason you need a loan
+      </h1>
+      
+      <div class="form-group">
+        <label class="form-label-bold" for="example7">What do you need the loan for?</label>
+        <textarea type="text" class="form-control-3-4" id="example7" name="example7"></textarea>
+      </div>
+
+      <div class="form-group">
+        <input type="submit" class="button" value="Continue">
+      </div>
+
+    </div>
+    <div class="column-third">
+    </div>
+  </div>
+
+
+</main><!-- / #page-container -->
+{% endblock %}

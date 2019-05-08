@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+    Apply for a Budgeting Loan
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  {% include "includes/beta-banner.html" %}
+
+<div class="grid-row">
+	<div class="column-two-thirds">
+	    <h1 class="form-title heading-large">
+	      Budgeting Loans
+	    </h1>
+	    
+		<aside>
+			<div class="inner">
+				<nav role="navigation" class="page-navigation" aria-label="parts to this guide">
+					<ol class="list-bullet list-none grid-row">
+						<div class="column-half">
+							<li class="font-xsmall">
+								1. <a href="overview" title="Part 1:  Overview">Overview</a>
+							</li>
+							<li class="font-xsmall">
+								2. <a href="what-youll-get" title="Part 2:  What you'll get">What you'll get</a>
+							</li>
+						</div>
+						<div class="column-half">
+							<li class="font-xsmall">
+								3. <a href="eligibility" title="Part 3: Eligibility">Eligibility</a>
+							</li>
+							<li class="font-xsmall">
+								4. <a href="apply" title="Part 4: Apply">Apply</a>
+							</li>
+						</div>
+					</ol>
+				</nav>
+			</div>
+		</aside>
+	    
+	    <div class="inner-block">
+		    <header>
+		    	<h1 class="heading-medium">4. Apply</h1>
+		    </header>
+			<article>
+				<p>Before you apply make sure you have details about your regular debt repayments (such as hire purchases and loans, but not normal living expenses like gas and electric charges or food bills)</p>
+				<p class="get-started">
+					<a class="button button-get-started" href="before-you-start">Apply now</a>
+				</p>
+
+			</article>
+
+			<footer>
+				<nav class="pagination" role="navigation" aria-label="Pagination">
+					<ul class="group">
+						<li class="previous">
+      						<a href="eligibility" rel="prev" title="Navigate to previous part">
+      							<span class="pagination-label">Previous </span> <span class="pagination-part-title"> Eligibility</span>
+      						</a>          
+      					</li>
+    				</ul>
+    			</nav>
+    		</footer>
+	        
+	    </div>
+	</div>
+	
+	
+	<div class="column-third">
+
+	</div>
+</div>
+
+</main><!-- / #page-container -->
+
+{% endblock %}

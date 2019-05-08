@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Industrial action - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="phase-banner">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+    </p>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a href="../" class="link-back">Back</a>
+
+      <form action="/" method="post" class="form">
+
+        <h1 class="heading-large m-t-m">
+          <span class="heading-secondary">Check your eligibility</span>
+          Are you involved in any industrial action?
+        </h1>
+
+        <div class="form-group m-b-ml">
+          <fieldset class="inline">
+
+            <legend class="c-legend c-legend--medium visually-hidden">Are you involved in any industrial action?</legend>
+
+            <p class="m-b-m">For example, a strike, walkout or lockout.</p>
+
+            <label class="block-label" for="radio-inline-1">
+              <input id="radio-inline-1" type="radio" name="choice" value="yes" >
+              Yes
+            </label>
+            <label class="block-label" for="radio-inline-2">
+              <input id="radio-inline-2" type="radio" name="choice" value="no" >
+              No
+            </label>
+
+          </fieldset>
+        </div>{# / form-group #}
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>{# / form-group #}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

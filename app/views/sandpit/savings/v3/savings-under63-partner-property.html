@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Savings - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {# Back link #}
+  {% import "includes/back-link.html" as back %}
+  {{ back.url('#') }}
+{# Back link #}
+
+      <form method="post" class="form">
+
+        <h1 class="heading-large m-b-ml">
+          Do you own any property that you don&rsquo;t live in?
+        </h1>
+
+        <div class="form-group">
+          <fieldset class="inline">
+
+            <legend class="visually-hidden">Do you or your partner own any property that you don&rsquo;t live in?</legend>
+
+            <p>For example, a house you let out, a holiday home, or somewhere another member of your family lives.</p>
+
+            <label class="block-label" data-target="savings-amount" for="savings-1">
+              <input id="savings-1" type="radio" name="choice" value="yes" >
+              Yes
+            </label>
+            <label class="block-label" for="savings-2">
+              <input id="savings-2" type="radio" name="choice" value="no" >
+              No
+            </label>
+
+          </fieldset>
+
+          <div class="panel panel-border-narrow js-hidden m-b-0" id="savings-amount">
+
+            <label class="form-label m-b-xs" for="savings-amount-total">
+              How much is this property worth?
+            </label>
+
+            <div class="u-1/4-lap-and-up">
+              <span class="c-form-input-denote">&pound;</span>
+              <input class="c-form-input-denote__input form-control form-control-1-4" id="savings-amount-total" type="text" name="savings-amount-total" value="">
+            </div>
+
+          </div>{# / panel #}
+
+        </div>{# / form-group #}
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>{# / form-group #}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

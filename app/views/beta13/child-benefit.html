@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Child Benefit - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {% if edit %}
+      {% else %}
+        {# Back link #}
+          {% import "includes/back-link.html" as back %}
+          {{ back.url('javascript:history.back()') }}
+        {# Back link #}
+      {% endif %}
+
+      <form method="post" class="form">
+
+        <h1 class="heading-large m-b-ml">
+          Do you get Child&nbsp;Benefit?
+        </h1>
+
+        <div class="form-group">
+          <fieldset class="inline">
+
+            <legend class="visually-hidden">Do you get Child Benefit?</legend>
+
+            <label class="block-label" for="cb-1" data-target="cb-number-living">
+              <input id="cb-1" type="radio" name="choice" value="yes" >
+              Yes
+            </label>
+            <label class="block-label" for="cb-2">
+              <input id="cb-2" type="radio" name="choice" value="no" >
+              No
+            </label>
+
+            <div class="panel panel-border-narrow js-hidden m-b-0" id="cb-number-living">
+              <label class="form-label m-b-xs" for="children_living_with">
+                How many of these children live with you?
+              </label>
+              <input class="form-control form-control-1-8" type="text" id="children_living_with" name="children_living_with">
+            </div>
+
+          </fieldset>
+        </div>{# / form-group #}
+
+        {% include "includes/continue-save.html" %}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+
+      {% include "includes/help-function-v3.html" %}
+
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

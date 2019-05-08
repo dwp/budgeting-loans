@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Savings - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {# Back link #}
+        {% import "includes/back-link.html" as back %}
+        {{ back.url('#') }}
+      {# Back link #}
+
+      <form method="post" class="form">
+
+        <h1 class="heading-large m-b-ml">
+          Do you have savings of more than £1,000 (£2,000 if you&rsquo;re over 63)?
+        </h1>
+
+        <div class="form-group">
+          <fieldset class="inline">
+
+            <legend class="visually-hidden">Do you have savings of more than £1,000 (£2,000 if you&rsquo;re over 63)?</legend>
+
+            <label class="block-label" for="savings-1">
+              <input id="savings-1" type="radio" name="choice" value="yes" >
+              Yes
+            </label>
+            <label class="block-label" for="savings-2">
+              <input id="savings-2" type="radio" name="choice" value="no" >
+              No
+            </label>
+
+          </fieldset>
+        </div>{# / form-group #}
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>{# / form-group #}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

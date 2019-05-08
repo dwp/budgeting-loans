@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Child Benefit - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="phase-banner">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+    </p>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a href="../" class="link-back">Back</a>
+
+      <h1 class="heading-large m-b-ml">Do you or your partner get Child&nbsp;Benefit?</h1>
+
+      <form action="/" method="post" class="form">
+
+      <div class="form-group">
+        <fieldset class="inline">
+
+          <legend class="visually-hidden">Do you get Child Benefit?</legend>
+
+          <label class="block-label" for="cb-1" data-target="cb-number-living">
+            <input id="cb-1" type="radio" name="choice" value="yes" >
+            Yes
+          </label>
+          <label class="block-label" for="cb-2">
+            <input id="cb-2" type="radio" name="choice" value="no" >
+            No
+          </label>
+
+          <div class="panel panel-border-narrow js-hidden m-b-0" id="cb-number-living">
+            <label class="form-label" for="nationality_other_countries">
+              How many of these children live with you?
+            </label>
+            <input class="form-control form-control-1-8" type="text" id="nationality_other_countries">
+          </div>
+
+        </fieldset>
+      </div>{# / form-group #}
+
+      <div class="form-group">
+        <input class="button" type="submit" value="Continue">
+      </div>{# / form-group #}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

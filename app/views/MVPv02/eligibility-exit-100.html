@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Apply for a Budgeting Loan
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <form action="#" class="form">
+
+      <div class="grid-row">
+
+        <div class="column-two-thirds">
+
+          <h1 class="form-title heading-large">You're not eligible for a Budgeting Loan</h1>
+            
+         <p>Based on your answers, you wouldn't get a Budgeting Loan if you applied because:</p>
+         <ul class="list-bullet">
+          <li>you need less than £100</li>
+         </ul>
+         
+         <h2 class="form-label-bold">If you made a mistake</h2>
+         <p>Make sure you have the correct information and <a href="overview">check your eligibility again. </a></p>
+
+         <h2 class="form-label-bold">If your answers are correct</h2>
+         <p>You may still be able to get an emergency loan from your <a href="https://www.gov.uk/find-your-local-council"> local council.</a></p>
+
+         <h2 class="form-label-bold">If you'd like to discuss your eligibility</h2>
+         <p>Contact your local<a href="https://www.gov.uk/contact-jobcentre-plus"> Jobcentre Plus</a></p>
+
+        </div>
+
+        <div class="column-third">
+          <p>&nbsp;</p>
+        </div>
+
+      </div>
+
+  </form>
+      
+</main><!-- / #page-container -->
+{% endblock %}

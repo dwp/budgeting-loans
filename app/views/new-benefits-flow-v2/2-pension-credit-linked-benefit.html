@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Other benefits - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {% if edit %}
+      {% else %}
+        {# Back link #}
+          {% import "includes/back-link.html" as back %}
+          {{ back.url('javascript:history.back()') }}
+        {# Back link #}
+      {% endif %}
+
+      <form method="post" class="form">
+
+        <h1 class="heading-large m-b-ml">
+          Have you got any of these benefits in the last 6 months?
+        </h1>
+
+        <ul class="list list-bullet">
+          <li>income&ndash;related Employment and Support Allowance</li>
+          <li>income &ndash;based Jobseeker&rsquo;s Allowance</li>
+          <li>Income Support</li>
+        </ul>  
+
+        <div class="form-group">
+
+          <fieldset class="inline"> 
+            <label class="block-label" data-target="pc-linked" for="answer1">
+                <input id="answer1" type="radio" name="answer1" value="yes" >
+                  Yes
+            </label>
+            <label class="block-label" for="answer2">
+                <input id="answer2" type="radio" name="answer1" value="no" >
+                  No
+            </label>
+          </fieldset>
+       
+
+        </div>{# / form-group #}
+
+        {% include "includes/continue-save.html" %}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+
+  <!-- {% include "includes/help-function-v4.html" %}
+  -->
+
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

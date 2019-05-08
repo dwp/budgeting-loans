@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Apply for a Budgeting Loan
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+  
+      <form action="what-happens-next" method="#" class="form">
+
+      <!--a href="personal-details" class="example-back-link">Back</a-->
+
+      <h1 class="form-title heading-large">
+        Declaration
+      </h1>
+        
+      <p>By sending this application you agree:</p>
+      <ul class="list-bullet">
+        <li>the information in this application is complete and correct as far as you know</li>
+        <li>to report any changes to your circumstances promptly</li>
+        <li>that you will use the loan for one of the qualifying reasons</li>
+      </ul>
+      <details style="margin-bottom: 1em;">
+        <summary><span class="summary">Qualifying reasons for a loan</span></summary>
+        <div class="panel-indent">
+          <ul class="list-bullet">
+            <li>Furniture or household equipment</li>
+            <li>Clothing or footware</li>
+            <li>Rent in advance or house moving expense</li>
+            <li>Maintenance, security or improvements to the home</li>
+            <li>Travelling expenses within the UK</li>
+            <li>Expenses associated with getting a new job</li>
+            <li>Maternity costs</li>
+            <li>Funeral costs</li>
+            <li>Repaying hire purchase</li>
+            <li>Repaying loans taken for the above items</li>
+          </ul>
+        </div>
+      </details>
+
+      <div class="application-notice help-notice">
+        <p>Your benefit may be stopped if you deliberately give wrong information that would affect your claim, or don't report changes promptly.</p>
+      </div>
+
+      <div class="form-group">
+        <input type="submit" class="button" value="I agree - send my application">
+      </div>
+
+    </div>
+    <div class="column-third">
+    </div>
+  </div>
+
+
+</main><!-- / #page-container -->
+{% endblock %}

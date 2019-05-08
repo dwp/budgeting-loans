@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Earnings history - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {% if edit %}
+      {% else %}
+        {# Back link #}
+          {% import "includes/back-link.html" as back %}
+          {{ back.url('jsa-budgeting-loan-before') }}
+        {# Back link #}
+      {% endif %}
+
+      <form method="post" class="form">
+
+        <h1 class="heading-large m-b-ml m-t-m">
+          <span class="heading-secondary">
+            Check your eligibility
+          </span>
+          Were you ever paid &pound;153 per week or more over the last 2 years
+        </h1>
+
+        <div class="form-group">
+          <fieldset class="inline">
+
+            <legend class="visually-hidden">Have you worked over the last 2 years?</legend>
+
+            <label class="block-label" data-target="savings-amount" for="savings-1">
+              <input id="savings-1" type="radio" name="choice" value="yes" >
+              Yes
+            </label>
+            <label class="block-label" for="savings-2">
+              <input id="savings-2" type="radio" name="choice" value="no" >
+              No
+            </label>
+
+          </fieldset>
+
+          <div class="panel panel-border-narrow js-hidden m-b-0" id="savings-amount">
+
+            <fieldset>
+
+              <legend class="m-b-s">In how many weeks did you earn &pound;153 or more?</legend>
+
+              <label class="block-label" for="duration1">
+                <input id="duration1" type="radio" name="duration" value="duration1" >
+                26 weeks or more
+              </label>
+
+              <label class="block-label" for="duration2">
+                <input id="duration2" type="radio" name="duration" value="duration2" >
+                Less than 26 weeks
+              </label>
+
+            </fieldset>
+
+          </div>{# / panel #}
+
+        </div>{# / form-group #}
+
+        {% include "includes/continue-save.html" %}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+
+  {% include "includes/help-function-v2.html" %}
+
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

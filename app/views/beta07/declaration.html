@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Declaration - Send application - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {# Back link #}
+        {% import "includes/back-link.html" as back %}
+        {{ back.url('javascript:history.back()') }}
+      {# Back link #}
+
+      <form method="post" class="form">
+
+        <h1 class="form-title heading-large m-b-l">Declaration</h1>
+
+        <p>By sending this application you agree:</p>
+        <ul class="list list-bullet  u-mb">
+          <li>the information in this application is complete and correct as far as you know</li>
+          <li>to report any changes to your circumstances promptly</li>
+          <li>that you'll use the loan for one of the qualifying reasons</li>
+        </ul>
+
+        <details class="u-mb">
+
+        <summary>See the qualifying reasons for a loan</summary>
+
+        <div class="panel panel-indent">
+
+          <p>You can use a Budgeting Loan to pay for:</p>
+
+          <ul class="list list-bullet">
+            <li>furniture or household items</li>
+            <li>clothing or footwear</li>
+            <li>rent in advance</li>
+            <li>costs linked to moving house</li>
+            <li>maintenance, security or improvements to your home</li>
+            <li>travelling costs within the UK</li>
+            <li>costs linked to getting a new job</li>
+            <li>maternity costs</li>
+            <li>funeral costs</li>
+            <li>repaying hire purchase loans</li>
+            <li>repaying loans taken for the above items</li>
+          </ul>
+
+        </div>
+        </details>
+
+        <div class="application-notice help-notice m-t-m m-b-s">
+          <p>Your benefit may be stopped if you deliberately give wrong information that would affect your claim, or don&rsquo;t report changes promptly.</p>
+        </div>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="I agree - send my application">
+        </div>
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

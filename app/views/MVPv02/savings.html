@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Apply for a Budgeting Loan
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+  
+     
+  <form action="debt-repayments-single" method="#" class="form">
+
+    <div class="grid-row"> 
+      <div class="column-two-thirds">
+          <a href="javascript:history.back()" class="example-back-link">Back</a>
+
+         <!-- <h1 class="form-title heading-large">Check your eligiblity</h1> -->
+          <ul>
+            <li>
+              <fieldset class="inline form-group" id="savings-container">
+                <h1 class="form-title heading-large">
+                  <legend for="savings">Do you have savings of more than £1,000 (£2,000 you are over 63)?</legend>
+                </h1>   
+                <label class="block-label" data-target="savings" for="savings-1">
+                  <input id="savings-1" type="radio" name="savings" value="Yes"
+                    required
+                    data-parsley-errors-container="#savings-container"
+                    data-parsley-class-handler="#savings-container"
+                    data-parsley-error-message="Select 'Yes' or 'No' to confirm whether you have savings of more than £1,000"
+                  >
+                  Yes
+                </label>
+                <label class="block-label" for="savings-2">
+                  <input id="savings-2" type="radio" name="savings" value="No">
+                  No
+                </label>
+                
+              </fieldset>
+            </li>
+          </ul>
+          <div class="form-group">
+            <input type="submit" class="button" value="Continue">
+          </div>
+          
+        </form>
+      </div>
+
+      <div class="column-third">
+            <p>&nbsp;</p>
+      </div>
+    </div>
+  </form> 
+</main><!-- / #page-container -->
+{% endblock %}

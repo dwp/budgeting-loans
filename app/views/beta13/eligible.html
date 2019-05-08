@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Eligibility - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {% if edit %}
+      {% else %}
+        {# Back link #}
+          {% import "includes/back-link.html" as back %}
+          {{ back.url('javascript:history.back()') }}
+        {# Back link #}
+      {% endif %}
+
+      <form method="post" class="form">
+
+        <h1 class="heading-large">You&rsquo;re eligible for a Budgeting Loan, based on your answers</h1>
+
+        <p>You said:</p>
+
+        <ul class="list list-bullet">
+          <li>you need £100 or more</li>
+          <li>you don&rsquo;t owe the Social Fund more than £1,500</li>
+          <li>you get one of the qualifying benefits</li>
+        </ul>
+
+        <h2 class="heading-medium">If you made a mistake</h2>
+
+        <p>If any of your answers are wrong, make sure you have the correct information and <a href="start-eligibility">check your eligibility again</a>.</p>
+
+        <h2 class="heading-medium">If you want to apply</h2>
+
+        <p>We will ask you about your regular debt repayments (such as hire purchases and loans, but not normal living expenses like gas and electric charges or food bills).</p>
+
+        <p>
+          <button type="submit" class="button button-get-started">
+            Apply now
+          </button>
+        </p>
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+
+    {% include "includes/help-function-v3.html" %}
+    
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

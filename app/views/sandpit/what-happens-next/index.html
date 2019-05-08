@@ -1,0 +1,41 @@
+{% extends "layout_unbranded.html" %}
+
+{% block page_title %}
+  Example without branding
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main" class="single-column">
+
+  <h1 class="heading-large">What happens next</h1>
+
+  <dl class="hypo">
+    <dt>If:</dt>
+    <dd>We include a phone number on the &lsquo;What happens next&rsquo; page</dd>
+    <dt>Then:</dt>
+    <dd>A user feels more comfortable as there&rsquo;s an accessible number visible</dd>
+    <dt>Because:</dt>
+    <dd>Most users expect to see a phone number here (from insight)</dd>
+  </dl>
+
+  <ul class="list list-bullet">
+    <li><a href="/sandpit/what-happens-next/v1">Version 1</a></li>
+  </ul>
+
+  <dl class="hypo">
+    <dt>If:</dt>
+    <dd>Info about what happens if no offer is made is included on the &lsquo;what happens next&rsquo; screen</dd>
+    <dt>Then:</dt>
+    <dd>This screen will meet their expectations and they&rsquo;ll be better prepared for a nil decision</dd>
+    <dt>Because:</dt>
+    <dd>Users have told us they want to see this info</dd>
+  </dl>
+
+  <ul class="list list-bullet">
+    <li><a href="/sandpit/what-happens-next/v2">Version 2</a></li>
+  </ul>
+
+</main>
+
+{% endblock %}

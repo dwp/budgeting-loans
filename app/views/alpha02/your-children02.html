@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Budgeting Loans
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/alpha-banner.html" %}
+  
+  <form action="loan-amount" method="#" class="form">
+
+  <a href="your-children" class="example-back-link">Back</a>
+
+  <h1 class="form-title heading-large">
+    Young children and young persons
+  </h1>
+
+  <ul>
+    <li>
+      <fieldset class="inline form-group">
+        <legend class="form-label-bold" for="young-person">Are you getting benefit for someone aged 16, 17, 18 or 19?</legend>
+        <label class="block-label" for="young-person-1">
+          <input id="young-person-1" type="radio" name="young-person" value="Yes">
+          Yes
+        </label>
+        <label class="block-label" for="young-person-2">
+          <input id="young-person-2" type="radio" name="young-person" value="No">
+          No
+        </label>
+      </fieldset>
+    </li>
+  </ul>
+  
+  <div class="form-group">
+    <input type="submit" class="button" value="Continue">
+  </div>
+
+
+</main><!-- / #page-container -->
+{% endblock %}

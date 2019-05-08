@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Budgeting Loans
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/alpha-banner.html" %}
+  
+  <form action="template02" method="#" class="form">
+
+  <a href="#" class="example-back-link">Back</a>
+
+  <h1 class="form-title heading-large">
+    Template 01
+  </h1>
+
+  <div class="form-group" >
+    <label class="form-label-bold" for="full-name-f1">Your name</label>
+    <input class="form-control" id="full-name-f1" type="text">
+  </div>
+
+ <div class="form-group" >
+  <fieldset class="inline">
+    <legend class="form-label-bold" for="partner">Are you sure this is your name?</legend>
+
+    <label class="block-label" for="radio-inline-1">
+      <input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes">
+      Yes
+    </label>
+    <label class="block-label" for="radio-inline-2">
+      <input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">
+      No
+    </label>
+  </fieldset>
+ </div> 
+
+  <div class="form-group" > 
+    <input type="submit" class="button" value="Continue">
+  </div>    
+
+</main><!-- / #page-container -->
+{% endblock %}

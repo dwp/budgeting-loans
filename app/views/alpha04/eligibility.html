@@ -1,0 +1,105 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Budgeting Loans
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/alpha-banner.html" %}
+
+<div class="grid-row">
+	<div class="column-two-thirds">
+	    <h1 class="form-title heading-xlarge">
+	      Budgeting Loans
+	    </h1>
+	    
+		<aside>
+			<div class="inner">
+				<nav role="navigation" class="page-navigation" aria-label="parts to this guide">
+					<ol class="list-bullet list-none grid-row">
+						<div class="column-half">
+							<li class="font-xsmall">
+								1. <a href="overview" title="Part 1:  Overview">Overview</a>
+							</li>
+							<li class="font-xsmall">
+								2. <a href="what-youll-get" title="Part 2:  What you'll get">What you'll get</a>
+							</li>
+						</div>
+						<div class="column-half">
+							<li class="font-xsmall">
+								3. <a href="eligibility" title="Part 3: Eligibility">Eligibility</a>
+							</li>
+							<li class="font-xsmall">
+								4. <a href="apply" title="Part 4: Apply">Apply</a>
+							</li>
+						</div>
+					</ol>
+				</nav>
+			</div>
+		</aside>
+	    
+	    <div class="inner-block">
+		    <header>
+		    	<h1 class="heading-medium">3. Eligibility</h1>
+		    </header>
+			<article>
+				<p>To qualify for a Budgeting Loan you or your partner must have been getting one of these benefits for at least 26 weeks:</p>
+
+				<ul class="list-bullet">
+					<li>Income Support</li>
+					<li>income-based Jobseeker’s Allowance</li>
+					<li>income-related Employment and Support Allowance</li>
+					<li>Pension Credit</li>
+				</ul>
+				<p>You must still be getting one of these benefits when your application is assessed.</p>
+				<div class="panel-indent">
+					<p>If you get Universal Credit, apply for a budgeting advance from your local Jobcentre Plus instead.</p>
+				</div>
+
+				<h2 class="heading-small">What a loan can pay for</h2>
+				<p>Budgeting Loans can pay for:</p>
+				<ul class="list-bullet">
+					<li>furniture or household equipment</li>
+					<li>clothing or footwear</li>
+					<li>rent in advance when you find a new place to live</li>
+					<li>removal expenses when you move home</li>
+					<li>travelling expenses</li>
+					<li>things to help you look for or start work</li>
+					<li>improving, maintaining or securing your home</li>
+					<li>maternity or funeral expenses</li>
+					<li>repaying hire purchase or other debts you took out to pay for any of the above</li>
+				</ul>
+
+			</article>
+
+			<footer>
+				<nav class="pagination" role="navigation" aria-label="Pagination">
+					<ul class="group">
+						<li class="previous">
+      						<a href="what-youll-get" rel="prev" title="Navigate to previous part">
+      							<span class="pagination-label">Previous </span> <span class="pagination-part-title"> What you'll get</span>
+      						</a>          
+      					</li>
+          				<li class="next">
+            				<a href="apply" rel="next" title="Navigate to next part">
+              					<span class="pagination-label">Next</span> <span class="pagination-part-title"> Apply</span>
+							</a>          			
+						</li>
+    				</ul>
+    			</nav>
+    		</footer>
+	        
+	    </div>
+	</div>
+	
+	
+	<div class="column-third">
+
+	</div>
+</div>
+
+</main><!-- / #page-container -->
+{% endblock %}

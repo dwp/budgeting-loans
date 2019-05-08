@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Previous Budgeting Loans - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {# Back link #}
+        {% import "includes/back-link.html" as back %}
+        {{ back.url('current-benefits') }}
+      {# Back link #}
+
+      <form method="post" class="form">
+
+    <h1 class="heading-large m-b-ml m-t-m">
+      <span class="heading-secondary">
+      Check your eligibility
+      </span>
+      Have you had a Budgeting Loan before?
+    </h1>
+
+    <div class="form-group inline">
+      <fieldset>
+        <label class="block-label" for="esabenefitbefore1" data-target="change-circumstances">
+          <input id="esabenefitbefore1" type="radio" name="esabenefitbefore" value="esabenefitbefore1">
+          Yes
+        </label>
+        <label class="block-label" for="esabenefitbefore2">
+          <input id="esabenefitbefore2" type="radio" name="esabenefitbefore" value="esabenefitbefore2">
+          No
+        </label>
+      </fieldset>
+
+      {# <div class="panel panel-border-narrow js-hidden m-b-0" id="change-circumstances">
+
+        <label class="form-label m-b-xs" for="savings-amount-total">
+          Have your benefits changed since your last Budgeting Loan?
+        </label>
+
+        <fieldset>
+          <label class="block-label" for="esabenefitbefore1" data-target="change-circumstances">
+            <input id="esabenefitbefore1" type="radio" name="esabenefitbefore" value="esabenefitbefore1">
+            Yes
+          </label>
+          <label class="block-label" for="esabenefitbefore2">
+            <input id="esabenefitbefore2" type="radio" name="esabenefitbefore" value="esabenefitbefore2">
+            No
+          </label>
+        </fieldset>
+
+      </div> #}{# / panel #}
+
+    </div>{# / form-group #}
+
+    <div class="form-group">
+      <input class="button" type="submit" value="Continue">
+    </div>{# / form-group #}
+
+    </form>
+
+  </div>{# / column-two-thirds #}
+</div>{# / grid-row #}
+</main>
+
+{% endblock %}

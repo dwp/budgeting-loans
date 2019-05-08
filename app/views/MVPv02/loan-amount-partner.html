@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Apply for a Budgeting Loan
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+  <form action="savings-partner" method="#" class="form">
+
+    <div class="grid-row">
+      
+      <div class="column-two-thirds">
+    
+        <a href="children" class="example-back-link">Back</a>
+
+        <div class="form-group" id="amount-container">    
+            <label for="loan-amount"><h1 class="heading-large">You can apply for between £100 and £464 - how much do you need?</h1>
+            </label>
+          <div id="amount-error-container"></div>
+            <span>£ </span> <input class="form-control-1-8" id="partner-nino" type="text"
+            required=""
+          type="range" data-parsley-range="[100, 464]" 
+          data-parsley-errors-container="#amount-error-container"
+          data-parsley-class-handler="#amount-container"
+          data-parsley-error-message="Enter an amount between £100 and £464">
+        </div>  
+        
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+
+      </div>
+      <div class="column-third">
+        <p>&nbsp;</p>
+      </div>
+
+    </div>
+
+  </form>  
+
+</main><!-- / #page-container -->
+{% endblock %}

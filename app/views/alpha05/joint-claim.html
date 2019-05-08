@@ -1,0 +1,154 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Budgeting Loans
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/alpha-banner.html" %}
+  
+  <form action="personal-details" method="#" class="form">
+
+  <a href="need-loan" class="example-back-link">Back</a>
+
+  <h1 class="form-title heading-large">
+    Your benefit
+  </h1>
+
+  <fieldset class="inline form-group">
+    <legend class="form-label-bold" for="partner">Has your benefit been part of a joint claim in the past 6 months?</legend>
+    <label class="block-label" data-target="partner-yes" for="radio-inline-1">
+      <input id="radio-inline-1" type="radio" name="partner" value="Yes">
+      Yes
+    </label>
+    <label class="block-label" data-target="partner-no" for="radio-inline-2">
+      <input id="radio-inline-2" type="radio" name="partner" value="No">
+      No
+    </label>
+  </fieldset>
+
+  <div class="panel-indent js-hidden" id="partner-yes">
+
+      <div class="form-group">
+        <label class="form-label" for="who01">Who do you pay the money to?</label>
+        <input class="form-control" id="who01" type="text">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="regpay01">How much are your payments?</label>
+        <input class="form-control" id="regpay01" type="text">
+      </div>
+      <fieldset class="inline form-group">
+        <legend class="form-label">How often are your payments?</legend>
+        <label class="block-label" for="weekly1">
+          <input id="weekly1" type="radio" name="weekly1" value="Weekly">
+          Weekly
+        </label>
+        <label class="block-label"for="fortnightly1">
+          <input id="fortnightly1" type="radio" name="fortnightly1" value="No">
+          Fortnightly
+        </label>
+        <label class="block-label"for="monthly1">
+          <input id="monthly1" type="radio" name="monthly1" value="No">
+          Monthly
+        </label>
+      </fieldset>
+      <div class="form-group">
+        <label class="form-label" for="total01">How much do you owe in total?</label>
+        <input class="form-control" id="total01" type="text">
+      </div>
+
+      <p><a href="#" id="show-payment2">Add another payment</a></p>
+
+  </div>
+
+  <div class="panel-indent js-hidden" id="payment2">
+
+      <div class="form-group">
+        <label class="form-label" for="who02">Who do you pay the money to?</label>
+        <input class="form-control" id="who02" type="text">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="regpay02">How much are your payments?</label>
+        <input class="form-control" id="regpay02" type="text">
+      </div>
+      <fieldset class="inline form-group">
+        <legend class="form-label">How often are your payments?</legend>
+        <label class="block-label" for="weekly2">
+          <input id="weekly2" type="radio" name="weekly2" value="Weekly">
+          Weekly
+        </label>
+        <label class="block-label"for="fortnightly2">
+          <input id="fortnightly2" type="radio" name="fortnightly2" value="No">
+          Fortnightly
+        </label>
+        <label class="block-label"for="monthly2">
+          <input id="monthly2" type="radio" name="monthly2" value="No">
+          Monthly
+        </label>
+      </fieldset>
+      <div class="form-group">
+        <label class="form-label" for="total02">How much do you owe in total?</label>
+        <input class="form-control" id="total02" type="text">
+      </div>
+
+      <p><a href="#" id="show-payment3">Add another payment</a></p>
+
+  </div>
+
+  <div class="panel-indent js-hidden" id="payment3">
+
+      <div class="form-group">
+        <label class="form-label" for="who03">Who do you pay the money to?</label>
+        <input class="form-control" id="who03" type="text">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="regpay03">How much are your payments?</label>
+        <input class="form-control" id="regpay03" type="text">
+      </div>
+      <fieldset class="inline form-group">
+        <legend class="form-label">How often are your payments?</legend>
+        <label class="block-label" for="weekly3">
+          <input id="weekly3" type="radio" name="weekly3" value="Weekly">
+          Weekly
+        </label>
+        <label class="block-label"for="fortnightly3">
+          <input id="fortnightly3" type="radio" name="fortnightly3" value="No">
+          Fortnightly
+        </label>
+        <label class="block-label"for="monthly3">
+          <input id="monthly3" type="radio" name="monthly3" value="No">
+          Monthly
+        </label>
+      </fieldset>
+      <div class="form-group">
+        <label class="form-label" for="total03">How much do you owe in total?</label>
+        <input class="form-control" id="total03" type="text">
+      </div>
+
+  </div>
+
+
+  <div class="form-group">
+      <input type="submit" class="button" value="Continue"> 
+    </div>
+
+</main><!-- / #page-container -->
+{% endblock %}
+<script>
+  $(document).ready(function() {
+  
+    $("#show-payment2").click(function() {
+      $("#payment2").show();
+      $("#show-payment2").hide();
+       return false;
+    });
+    $("#show-payment3").click(function() {
+      $("#payment3").show();
+      $("#show-payment3").hide();
+       return false;
+    });
+  });
+</script>

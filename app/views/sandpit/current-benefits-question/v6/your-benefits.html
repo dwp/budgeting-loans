@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Your benefits - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {% if edit %}
+      {% else %}
+        {# Back link #}
+          {% import "includes/back-link.html" as back %}
+         <!-- {{ back.url('4-outgoings') }} -->
+        {# Back link #}
+      {% endif %}
+
+      <form method="post" class="form">
+
+        
+        <h1 class="heading-large m-b-ml">
+          Your benefits
+        </h1>
+      
+
+        <div class="form-group">
+          <fieldset class="inline">
+
+            <label class="block-label" for="radio-benefits-1" data-target="debt-details">
+              <input id="radio-benefits-1" type="radio" name="radio-indent-group" value="claiming-one-benefit">
+              I have been claiming an eligible benefit for 6 months or over
+              <p>This includes income-related Employment and Support Allowance, income-based Jobseekers Allowance, Income Support and Pension Credit</p>
+            </label>
+
+            <label class="block-label" for="radio-benefits-2">
+              <input id="radio-benefits-2" type="radio" name="radio-indent-group" value="claiming-more-than-one-benefit">
+              I have been claiming more than one eligible benefit for 6 months or over
+              <p>This includes any combination of income-related Employment and Support Allowance, income-based Jobseekers Allowance, Income Support or Pension Credit</p>
+            </label>
+
+            <label class="block-label" for="radio-benefits-3">
+              <input id="radio-benefits-3" type="radio" name="radio-indent-group" value="not-sure">
+              Not sure what benefit type I am claiming and how long I have been claiming it for
+            </label>
+
+            <label class="block-label" for="radio-benefits-4">
+              <input id="radio-benefits-4" type="radio" name="radio-indent-group" value="no-benefit">
+              I haven't been claiming an eligible benefit for 6 months or more
+            </label>
+
+
+          </fieldset>
+        </div>
+
+        {% include "includes/continue-save.html" %}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+
+    {% include "includes/help-function-v4.html" %}
+
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

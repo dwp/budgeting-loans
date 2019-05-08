@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Apply for a Budgeting Loan
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+  
+  <form action="debt-repayment-2" method="#" class="form">
+
+  <a href="money-you-owe" class="example-back-link">Back</a>
+
+  <h1 class="form-title heading-large">
+    Debt repayment details
+  </h1>
+
+      <div class="form-group" id="repay-1-container">
+
+        <label class="form-label-bold" for="who01">Who do you make the repayment to?</label>
+        <div id="repay-1-error-container"></div>
+        <input class="form-control" id="who01" type="text"
+            required
+            data-parsley-errors-container="#repay-1-error-container"
+            data-parsley-class-handler="#repay-1-container"
+            data-parsley-error-message="Enter the name of the organisation you make repayments to"
+        >
+      </div>
+
+      <div class="form-group" id="repay-2-container">
+        <label class="form-label-bold" for="regpay01">How much are your repayments?</label>
+        <div id="repay-2-error-container"></div>
+        <input class="form-control" id="regpay01" type="text"
+            required
+            data-parsley-errors-container="#repay-2-error-container"
+            data-parsley-class-handler="#repay-2-container"
+            data-parsley-error-message="Enter the amount of your regular repayments"
+        >
+      </div>
+
+      <fieldset class="form-group" id="repay-3-container">
+        <legend class="form-label-bold">How often do you make repayments?</legend>
+        <div id="repay-3-error-container"></div>
+        <label class="block-label" for="weekly1">
+          <input id="weekly1" type="radio" name="frequency" value="Weekly"
+            required
+            data-parsley-errors-container="#repay-3-error-container"
+            data-parsley-class-handler="#repay-3-container"
+            data-parsley-error-message="Select ‘Weekly’, ‘Fortnightly’ or ‘Monthly’ to confirm how often you make repayment"
+          >
+          Weekly
+        </label>
+        <label class="block-label"for="fortnightly1">
+          <input id="fortnightly1" type="radio" name="frequency" value="No">
+          Fortnightly
+        </label>
+        <label class="block-label"for="monthly1">
+          <input id="monthly1" type="radio" name="frequency" value="No">
+          Monthly
+        </label>
+      </fieldset>
+
+      <div class="form-group" id="repay-4-container">
+        <label class="form-label-bold" for="total01">How much do you owe on this debt in total?</label>
+        <div id="repay-4-error-container"> </div>
+        <input class="form-control" id="total01" type="text"
+            required
+            data-parsley-errors-container="#repay-4-error-container"
+            data-parsley-class-handler="#repay-4-container"
+            data-parsley-error-message="Enter the total amount you owe"
+        >
+      </div>
+
+  <div class="form-group">
+      <input type="submit" class="button" value="Continue"> 
+    </div>
+
+</main><!-- / #page-container -->
+{% endblock %}
+

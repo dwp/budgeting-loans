@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Budgeting Loans
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/alpha-banner.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+  
+      <form action="money-you-owe" method="#" class="form">
+
+      <a href="loan-amount" class="example-back-link">Back</a>
+
+      <h1 class="form-title heading-large">
+        Reason you need a loan
+      </h1>
+
+      <!--fieldset class=form-group>
+        <legend class="form-label-bold">What do you need the loan for?</legend>
+        <p>Select all that apply</p>
+        <label class="block-label" for="checkbox-1">
+          <input id="checkbox-1" type="checkbox" value="furniture">
+          Furniture or household equipment
+        </label>
+        <label class="block-label" for="checkbox-2">
+          <input id="checkbox-2" type="checkbox" value="clothing">
+          Clothing or footwear
+        </label>
+        <label class="block-label" for="checkbox-3">
+          <input id="checkbox-3" type="checkbox" value="accomodation">
+          Rent or moving house
+        </label>
+        <label class="block-label" for="checkbox-4">
+          <input id="checkbox-4" type="checkbox" value="home">
+          Maintenance, security or improvements to home
+        </label>
+        <label class="block-label" for="checkbox-5">
+          <input id="checkbox-5" type="checkbox" value="travel">
+          Travelling expenses within the UK
+        </label>
+        <label class="block-label" for="checkbox-6">
+          <input id="checkbox-6" type="checkbox" value="job">
+          Expenses associated with getting a job
+        </label>
+        <label class="block-label" for="checkbox-7">
+          <input id="checkbox-7" type="checkbox" value="maternity">
+          Maternity costs
+        </label>
+        <label class="block-label" for="checkbox-8">
+          <input id="checkbox-8" type="checkbox" value="funeral">
+          Funeral costs
+        </label>
+        <label class="block-label" for="checkbox-9">
+          <input id="checkbox-9" type="checkbox" value="debts">
+          Repaying hire purchase or debts
+        </label>
+        <label class="block-label" for="checkbox-10">
+          <input id="checkbox-10" type="checkbox" value="other">
+          Other
+        </label>
+      </fieldset-->
+
+      <div class="form-group">
+        <label class="form-label-bold" for="example7">What do you need the loan for?</label>
+        <textarea type="text" class="form-control-3-4" id="example7" name="example7"></textarea>
+      </div>
+
+      <div class="form-group">
+        <input type="submit" class="button" value="Continue">
+      </div>
+
+    </div>
+    <div class="column-third">
+    </div>
+  </div>
+
+
+</main><!-- / #page-container -->
+{% endblock %}

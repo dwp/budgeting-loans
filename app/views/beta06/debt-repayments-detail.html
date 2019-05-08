@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Debt repayment details - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {# Back link #}
+        {% import "includes/back-link.html" as back %}
+        {{ back.url('#') }}
+      {# Back link #}
+
+      <form method="post" class="form">
+
+        <h1 class="form-title heading-large m-b-ml">
+          Debt repayment details
+        </h1>
+
+        <div class="form-group m-b-ml">
+          <label class="form-label" for="who01">Who do you make the repayment to?</label>
+          <input type="text" class="form-control" id="who01" name="who01" value="">
+        </div>
+
+        <div class="form-group m-b-ml">
+          <label class="form-label m-b-xs" for="regpay01">How much are your repayments?</label>
+          <div class="u-1/4-lap-and-up">
+            <span class="c-form-input-denote">&pound;</span>
+            <input class="c-form-input-denote__input form-control form-control-1-4" id="regpay01" type="text" name="regpay01" value="">
+          </div>
+        </div>
+
+        <div class="form-group m-b-ml">
+          <fieldset>
+            <legend class="m-b-s">How often do you make repayments?</legend>
+            <label class="block-label" for="radio-inline-1">
+              <input id="radio-inline-1" type="radio" name="choice" value="weekly" >
+              Weekly
+            </label>
+            <label class="block-label" for="radio-inline-2">
+              <input id="radio-inline-2" type="radio" name="choice" value="fortnightly" >
+              Fortnightly
+            </label>
+            <label class="block-label" for="radio-inline-3">
+              <input id="radio-inline-3" type="radio" name="choice" value="monthly" >
+              Monthly
+            </label>
+          </fieldset>
+        </div>{# / form-group #}
+
+        <div class="form-group m-b-ml">
+          <label class="form-label m-b-xs" for="total01">How much do you owe on this debt in total?</label>
+          <div class="u-1/4-lap-and-up">
+            <span class="c-form-input-denote">&pound;</span>
+            <input class="c-form-input-denote__input form-control form-control-1-4" id="total01" type="text" name="total01" value="">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

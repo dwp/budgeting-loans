@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Employment Benefit Allowance activity group - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {# Back link #}
+        {% import "includes/back-link.html" as back %}
+        {{ back.url('esa-benefit-type') }}
+      {# Back link #}
+
+      <form method="post" class="form">
+
+        <h1 class="heading-large m-b-ml m-t-m">
+          <span class="heading-secondary">
+            Check your eligibility
+          </span>
+          Which Employment Benefit Allowance activity group are you in?
+        </h1>
+
+        <p>You will have been told this following your Work Capability Assessment.</p>
+
+        <div class="form-group">
+
+          <fieldset>
+
+            <legend class="c-legend c-legend--medium m-b-s visually-hidden">Which Employment Benefit Allowance activity group are you in?</legend>
+
+            <label class="block-label" for="option2" data-target="income-related-panel">
+              <input id="option2" type="radio" name="type" value="option1">
+              Work-related activity group        
+            </label>
+
+            <div class="panel js-hidden m-b-l" id="income-related-panel">
+
+              <fieldset>
+
+                <legend class="c-legend c-legend--medium m-b-s">How long have you been in this group?</legend>
+
+                <label class="block-label" for="duration1">
+                  <input id="duration1" type="radio" name="duration" value="duration1">
+                  More than 1 year
+                </label>
+
+                <label class="block-label" for="duration2">
+                  <input id="duration2" type="radio" name="duration" value="duration2" >
+                  Less than 1 year
+                </label>
+
+                <label class="block-label" for="duration3">
+                  <input id="duration3" type="radio" name="duration" value="duration3" >
+                  Don&rsquo;t know
+                </label>
+
+              </fieldset>
+
+            </div>{# / income-related-panel #}
+
+            <label class="block-label" for="option1">
+              <input id="option1" type="radio" name="type" value="option2" >
+              Support group
+            </label>
+
+            <label class="block-label" for="option3">
+              <input id="option3" type="radio" name="type" value="option3" >
+              Don&rsquo;t know
+            </label>
+
+          </fieldset>
+
+        </div>{# / form-group #}
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>{# / form-group #}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

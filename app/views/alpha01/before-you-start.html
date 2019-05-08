@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Budgeting Loans
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/alpha-banner.html" %}
+  
+  <form action="about-partner" method="#" class="form">
+
+  <a href="apply" class="example-back-link">Back</a>
+
+  <h1 class="heading-large">
+    Before you start
+  </h1>
+
+  <div class="text">
+
+    <p>
+      To get a Budgeting Loan:
+    </p>
+
+    <ul class="list-bullet">
+      <li>You must have been getting at least 1 of the following benefits for the past 6 months (Income Support, Income-based Jobseeker's Allowance, Employment and Support Allowance or Pension Credit).</li>
+      <li>You must not be involved in a trade dispute (eg industrial action, a strike, walk out, lock-out or any other dispute about work).</li>
+      <li>You and your partner must not have savings over £1000. If either you or your partner is 62 or over you must not have savings over £2000.</li>
+      <li>You must not be getting Universal Credit.</li>
+    </ul>
+
+    <!-- Primary buttons, secondary links -->
+    <div class="form-group">
+      <input type="submit" class="button" value="I agree - start my application"> <a href="overview">I do not agree - leave now</a>
+    </div>
+
+  </div>
+
+</main><!-- / #page-container -->
+{% endblock %}

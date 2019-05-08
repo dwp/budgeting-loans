@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Error - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large m-b-ml">
+        Something&rsquo;s gone wrong
+      </h1>
+
+      <p>This page can&rsquo;t be found. Check the link you&rsquo;re using and try again.</p>
+
+      <p>Go to <a href="0-start-overview">Apply for a Budgeting Loan</a> to try again.</p>
+
+    </div>{# / column-two-thirds #}
+
+    {% include "includes/help-function-v3.html" %}
+
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

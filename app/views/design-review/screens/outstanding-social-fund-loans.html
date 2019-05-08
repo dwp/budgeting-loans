@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Outstanding Social Fund loans - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="phase-banner">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+    </p>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a href="../" class="link-back">Back</a>
+
+      <form action="/" method="post" class="form">
+
+        <h1 class="heading-large m-b-ml m-t-m">
+          <span class="heading-secondary">Check your eligibility</span>
+          Do you owe the Social Fund more than &pound;1,500 for Crisis Loans and Budgeting&nbsp;Loans?
+        </h1>
+
+        <div class="form-group">
+          <fieldset>
+            <legend class="c-legend c-legend--medium m-b-s visually-hidden">
+              Do you owe the Social Fund more than &pound;1,500 for Crisis Loans and Budgeting Loans?
+            </legend>
+            <label class="block-label" for="radio-inline-1">
+              <input id="radio-inline-1" type="radio" name="choice" value="yes" >
+              Yes
+            </label>
+            <label class="block-label" for="radio-inline-2">
+              <input id="radio-inline-2" type="radio" name="choice" value="no" >
+              No
+            </label>
+            <label class="block-label" for="radio-inline-3">
+              <input id="radio-inline-3" type="radio" name="choice" value="unsure" >
+              Don&rsquo;t know
+            </label>
+          </fieldset>
+        </div>{# / form-group #}
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>{# / form-group #}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

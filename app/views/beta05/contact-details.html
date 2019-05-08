@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+    Apply for a Budgeting Loan
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  {% include "includes/beta-banner.html" %}
+
+  <form action="declaration" method="#" class="form">
+
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+    
+        <a href="personal-details" class="example-back-link">Back</a>
+
+        <ul>
+          <li>
+            <fieldset>
+
+              <h1 class="form-title heading-large">Your address</h1>
+
+              <p class="form-label">If you have no fixed address, put a contact address where we can write to you.</p>
+              
+              
+              <div class="form-group">
+                <label class="form-label"><input type="text" class="form-control" id="address-line1"></label>
+                <label class="form-label"><input type="text" class="form-control" id="address-line2"></label>
+                <label class="form-label"><input type="text" class="form-control" id="address-line3"></label>
+              </div>
+              
+              <div class="form-group">
+                <label class="form-label" for="postcode">Postcode</label>
+                <input type="text" class="form-control-1-4" id="postcode">
+                <p class="font-small">If you have no fixed address, put a contact address where we can write to you.</p>
+              </div>
+              
+            </fieldset>
+          </li>
+         
+          <li class="form-group">
+            <label class="form-label-bold" for="phone">Mobile</label>
+            <p class="form-label">Enter your number to get text message updates on your application.</p>
+            
+            <input type="text" class="form-control" id="phone">
+          </li>
+        </ul>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+
+      </div>
+
+      <div class="column-third">
+        <p>&nbsp;</p>
+      </div>
+    
+    </div>
+
+  </form>
+
+</main><!-- / #page-container -->
+
+{% endblock %}

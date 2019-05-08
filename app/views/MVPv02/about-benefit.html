@@ -1,0 +1,194 @@
+
+
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Apply for a Budgeting Loan
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <form action="about-benefit" method="post" class="form">
+
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+        <a href="social-fund-debt" class="example-back-link">Back</a>
+
+        <fieldset class="form-group" id="benefit-container">
+          <h1 class="form-title heading-large"><legend for="benefit">Which of these benefits do you or your partner get?</legend></h1>
+          <div id="about-benefit-pc-error-container"></div>
+          <label class="block-label" data-target="aboutbenefitpc" for="radio-1">
+            <input id="radio-1" type="radio" name="benefit" value="pc"
+              required
+              data-parsley-errors-container="#about-benefit-pc-error-container"
+              data-parsley-class-handler="#about-benefit-pc-container"
+              data-parsley-error-message="Select from the list which benefit you get"
+              >
+            Pension Credit
+          </label>
+          <label class="block-label" data-target="aboutbenefitis" for="radio-2">
+            <input id="radio-2" type="radio" name="benefit" value="is">
+            Income Support
+          </label>
+          <label class="block-label" data-target="aboutbenefitesa" for="radio-3">
+            <input id="radio-3" type="radio" name="benefit" value="esa">
+            Employment and Support Allowance
+          </label>
+          <label class="block-label" data-target="aboutbenefitjsa" for="radio-4">
+            <input id="radio-4" type="radio" name="benefit" value="jsa">
+            Jobseeker's Allowance
+          </label>
+          <label class="block-label" data-target="aboutbenefitnone" for="radio-5">
+            <input id="radio-5" type="radio" name="benefit" value="none">
+            None of the above
+          </label>
+        </fieldset> 
+
+        <div class="js-hidden panel-indent" id="aboutbenefitpc">
+            <div class="inline form-group">
+              <fieldset class="inline form-group" id="pc-how-long-container">
+                <h1 class="form-label-bold"><legend for="pc-how-long">How long have you or your partner been getting this benefit?</legend>
+                </h1>
+                 <div id="pc-how-long-error-container"></div> 
+                <label class="block-label"  for="pc-how-long-1">
+                  <input id="pc-how-long-1" type="radio" name="pensioncredit6" value="Yes"
+                    
+                  >
+                  More than 6 months
+                </label>
+                <label class="block-label" for="pc-how-long-2">
+                  <input id="pc-how-long-2" type="radio" name="pensioncredit6" value="No">
+                  Less than 6 months
+                </label>
+              </fieldset>
+            </div>
+          </div>
+
+          <div class="js-hidden panel-indent" id="aboutbenefitis">
+            <div class="inline form-group">
+              <fieldset class="inline form-group" id="is-how-long-container">
+                <h1 class="form-label-bold"><legend for="pc-how-long">How long have you or your partner been getting this benefit?</legend>
+                </h1>
+                <div id="is-how-long-error-container"></div>
+                <label class="block-label" for="is-how-long-1">
+                  <input id="is-how-long-1" type="radio" name="incomesupport6" value="Yes"
+                    
+                  >
+                  More than 6 months
+                </label>
+                <label class="block-label" for="is-how-long-2">
+                  <input id="is-how-long-2" type="radio" name="incomesupport6" value="No">
+                  Less than 6 months
+                </label>
+              </fieldset>
+            </div>
+          </div>
+
+          <div class="js-hidden panel-indent" id="aboutbenefitesa">
+            <div class="form-group">
+              <fieldset class="form-group" id="esa-type-container">
+                <h1 class="form-label-bold"><legend for="esa-type">Which type of Employment and Support Allowance do you or your partner get?</legend>
+                </h1>
+                <div id="esa-type-error-container"></div>
+                <label class="block-label" data-target="esa-type" for="esa-type-1">
+                  <input id="esa-type-1" type="radio" name="esatype" value="Income"
+                    
+                  >
+                  Income-related
+                </label>
+                <label class="block-label" for="esa-type-2" data-target="contribution">
+                  <input id="esa-type-2" type="radio" name="esatype" value="Contribution">
+                  Contribution-based
+                </label>
+                <label class="block-label" for="esa-type-3" data-target="unsure">
+                  <input id="esa-type-3" type="radio" name="esatype" value="Unsure">
+                  Don't know
+                </label>
+              </fieldset>
+
+            </div>
+          </div>
+
+          <div class="js-hidden panel-indent" id="esa-type">
+            <div class="form-group">
+              <fieldset class="inline form-group" id="esa-length-container">
+                <h1 class="form-label-bold"><legend for="esa-length">How long have you or your partner been getting this benefit?</legend>
+                </h1>
+                <div id="esa-length-error-container"> </div>
+                <label class="block-label" data-target="esa-length" for="esa-length-1">
+                  <input id="esa-length-1" type="radio" name="esalength" value="Yes"
+                  >
+                  More than 6 months
+                </label>
+                <label class="block-label" for="esa-length-2">
+                  <input id="esa-length-2" type="radio" name="esalength" value="No">
+                  Less than 6 months
+                </label>
+               </fieldset>
+            </div>
+          </div>
+        
+          <div class="js-hidden panel-indent" id="aboutbenefitjsa">
+              <div class="form-group">
+                <fieldset class="form-group" id="typejsa">
+                  <h1 class="form-label-bold"><legend>Which type of Jobseeker's Allowance do you or your partner get?</legend>
+                  </h1>
+                  <div id="jsa-type-error-container"> </div>
+                  <label class="block-label" data-target="jsa-type" for="jsa-type-1">
+                    <input id="jsa-type-1" type="radio" name="jsatype" value="Income"
+                      
+                    >
+                    Income-based
+                  </label>
+                  <label class="block-label" for="jsa-type-2" data-target="contribution">
+                    <input id="jsa-type-2" type="radio" name="jsatype" value="Contribution">
+                    Contribution-based
+                  </label>
+                  <label class="block-label" for="jsa-type-3" data-target="unsure">
+                    <input id="jsa-type-3" type="radio" name="jsatype" value="Unsure">
+                    Don't know
+                  </label>
+                </fieldset>
+              </div>
+            </div>
+
+          <div class="js-hidden panel-indent" id="jsa-type">
+            <div class="form-group">
+              <fieldset class="inline form-group" id="jsa-length-container">
+                <h1 class="form-label-bold"><legend for="jsa-length">How long have you or your partner been getting this benefit?</legend>
+                </h1>
+                <div id="jsa-length-error-container"> </div>
+                <label class="block-label" data-target="jsa-length" for="jsa-length-1">
+                  <input id="jsa-length-1" type="radio" name="jsalength" value="Yes"
+                    
+                  >
+                  More than 6 months
+                </label>
+                <label class="block-label" for="jsa-length-2">
+                  <input id="jsa-length-2" type="radio" name="jsalength" value="No">
+                  Less than 6 motnhs
+                </label>
+              </fieldset>
+              </div>
+            </div>
+
+        <div class=" form-group" id="benefit-yes">
+          <input type="submit" class="button" value="Continue">
+        </div>        
+      </div>
+
+      <div class="column-third">
+        <p>&nbsp;</p>
+      </div>
+
+    </div>
+  </form>  
+  
+
+</main><!-- / #page-container -->
+{% endblock %}

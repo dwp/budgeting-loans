@@ -1,0 +1,130 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  How much you can borrow - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {% if edit %}
+      {% else %}
+        {# Back link #}
+          {% import "includes/back-link.html" as back %}
+          {{ back.url('0-start-apply') }}
+        {# Back link #}
+      {% endif %}
+
+      <form method="post" class="form">
+
+        <h1 class="heading-large m-b-ml">
+          How much you can apply for
+        </h1>
+
+{#         <p class="lede">The amount you can apply for depends on whether you have a partner or get Child Benefit.</p>
+
+        <hr> #}
+
+        <h2 class="heading-medium">Do you have a partner?</h2>
+
+        <p>A partner is someone over the age of 16 who you&rsquo;re married to or live with as if you&rsquo;re married to them.</p>
+
+        <div class="form-group m-b-l inline">
+          <label class="block-label" for="answer1" data-target="panel-child-benefit-group-partner">
+            <input id="answer1" type="radio" name="choice1" value="yes" >
+            Yes{# , I have a partner #}
+          </label>
+          <label class="block-label" for="answer2" data-target="panel-child-benefit-group-single">
+            <input id="answer2" type="radio" name="choice1" value="no">
+            No{# , I don’t have a partner #}
+          </label>
+        </div>{# / form-group #}
+
+        {# Child benefit panel single #}
+        <div id="panel-child-benefit-group-single">
+
+          <h2 class="heading-medium">Do you get Child Benefit?</h2>
+          <div class="form-group m-b-l inline">
+            <label class="block-label" for="answer3" data-target="panel-child-benefit">
+              <input id="answer3" type="radio" name="choice2" value="yes">
+              Yes{# , I get Child Benefit #}
+            </label>
+            <label class="block-label" for="answer4" data-target="panel-single-no-child-benefit">
+              <input id="answer4" type="radio" name="choice2" value="no">
+              No{# , I don&rsquo;t get Child Benefit #}
+            </label>
+          </div>{# / form-group #}
+
+        </div>{# /panel-child-benefit-group-single #}
+        {# / Child benefit panel single #}
+
+        {# Child benefit panel single #}
+        <div id="panel-child-benefit-group-partner" class="js-hidden">
+
+          <h2 class="heading-medium">Do you get Child Benefit?</h2>
+          <div class="form-group m-b-l inline">
+            <label class="block-label" for="answer5" data-target="panel-child-benefit">
+              <input id="answer5" type="radio" name="choice3" value="yes">
+              Yes{# , I get Child Benefit #}
+            </label>
+            <label class="block-label" for="answer6" data-target="panel-partner-no-child-benefit">
+              <input id="answer6" type="radio" name="choice3" value="no">
+              No{# , I don&rsquo;t get Child Benefit #}
+            </label>
+          </div>{# / form-group #}
+
+        </div>{# /panel-child-benefit-group-single #}
+        {# / Child benefit panel single #}
+
+
+        <div id="panel-single-no-child-benefit" class="js-hidden">
+            <h2 class="heading-medium m-b-s">You can apply for between £100 and £348 - how much do you need?</h2>
+            <div class="form-group">
+              <div class="u-1/4-lap-and-up">
+                <span class="c-form-input-denote">&pound;</span>
+                <input class="c-form-input-denote__input form-control form-control-1-4" id="regpay01" type="text" name="regpay01" value="">
+              </div>
+            </div>{# / form-group #}
+          </div>{# /panel-single-no-child-benefit #}
+
+          <div id="panel-partner-no-child-benefit" class="js-hidden">
+            <h2 class="heading-medium m-b-s">You can apply for between £100 and £464 - how much do you need?</h2>
+            <div class="form-group">
+              <div class="u-1/4-lap-and-up">
+                <span class="c-form-input-denote">&pound;</span>
+                <input class="c-form-input-denote__input form-control form-control-1-4" id="regpay01" type="text" name="regpay01" value="">
+              </div>
+            </div>{# / form-group #}
+          </div>{# /panel-partner-no-child-benefit #}
+
+          <div id="panel-child-benefit" class="js-hidden">
+            <h2 class="heading-medium m-b-s">You can apply for between £100 and £812 - how much do you need?</h2>
+            <div class="form-group">
+              <div class="u-1/4-lap-and-up">
+                <span class="c-form-input-denote">&pound;</span>
+                <input class="c-form-input-denote__input form-control form-control-1-4" id="regpay01" type="text" name="regpay01" value="">
+              </div>
+            </div>{# / form-group #}
+          </div>{# /panel-child-benefit #}
+
+
+        {% include "includes/continue-save.html" %}
+
+{#         <p><a href="2-benefit" class="button">Continue</a></p> #}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+
+    {% include "includes/help-function-v3.html" %}
+
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

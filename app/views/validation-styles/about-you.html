@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  About you - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {# Back link #}
+  {% import "includes/back-link.html" as back %}
+  {{ back.url('#') }}
+{# Back link #}
+
+      <form method="post" class="form">
+
+        <div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
+
+          <h1 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">There&rsquo;s a problem</h1>
+          <p>Check your form. You must:</p>
+          <ul class="error-summary-list">
+            <li><a href="#question-full-name">Enter your full name</a></li>
+            <li><a href="#question-dob">Enter your date of birth in this format: DD / MM / YYYY</a></li>
+          </ul>
+
+        </div>
+
+        <h1 class="form-title heading-large m-b-ml">
+          About you
+        </h1>
+
+        <!-- Full name -->
+
+        <div class="form-group m-b-l error" id="question-full-name">
+          <label class="form-label-bold m-b-xs" for="full-name">Your full name</label>
+          <span class="error-message">Enter your answer</span>
+          <input type="text" class="form-control" id="full-name">
+        </div>
+
+        <!-- Date of birth -->
+        <div class="form-group m-b-ml error">
+          <fieldset>
+            <legend class="form-label-bold m-b-xs" id="question-dob">Date of birth</legend>
+
+            <span class="error-message">Enter your answer</span>
+
+            <div class="form-date">
+
+              <div class="form-group form-group-day">
+                <label for="dob-day">Day</label>
+                <input class="form-control" id="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+              </div>
+
+              <div class="form-group form-group-month">
+                <label for="dob-month">Month</label>
+                <input class="form-control" id="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+              </div>
+
+              <div class="form-group form-group-year">
+                <label for="dob-year">Year</label>
+                <input class="form-control" id="dob-year" type="number" pattern="[0-9]*" min="0" max="2014">
+              </div>
+            </div>
+
+          </fieldset>
+
+        </div>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

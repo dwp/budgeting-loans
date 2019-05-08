@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Apply for a Budgeting Loan
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <form action="#" class="form">
+
+      <div class="grid-row">
+
+        <div class="column-two-thirds">
+
+          <h1 class="form-title heading-large">You are not eligible for a Budgeting Loan</h1>
+            
+         <!--<p>The answers you have provided mean you are not eligible for a Budgeting Loan.</p>
+          -->
+         
+          <div class="application-notice help-notice">
+            <p>The answers you have provided mean that you do not meet the eligibility to apply for a Budgeting Loan</p>
+          </div> 
+
+
+          <!--<ul class="list-bullet">
+            <li>you are not on a qualfying benefit</li>
+            <li>you have not been on a qualifying benefit for over 6 motnhs</li>
+            
+          </ul> 
+          
+
+          <h2 class="heading-medium">You can only apply for a Budgeting Loan if you meet the eligiblity.</h2> -->
+          
+          <p><a href="https://www.gov.uk/find-your-local-council">Contact your local council</a> for information about emergency loans.</p>
+
+         <!-- <div class="form-group">
+            <input type="submit" class="button" value="I agree - send my application">
+          </div> -->
+
+        </div>
+
+        <div class="column-third">
+          <p>&nbsp;</p>
+        </div>
+
+      </div>
+
+  </form>
+      
+</main><!-- / #page-container -->
+{% endblock %}

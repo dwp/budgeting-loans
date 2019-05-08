@@ -1,0 +1,65 @@
+
+
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Apply for a Budgeting Loan
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <form action="less-than-100" method="post" class="form">
+
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+        <a href="about-benefit" class="example-back-link">Back</a>
+        <h1 class="form-title heading-large">Check your eligibility</h1>
+
+        <fieldset class="inline form-group" id="less-than-100">
+          <h1 class="form-label-bold">
+            <legend for="less-than-100">Do you need to borrow £100 or more?<legend> 
+          </h1>
+          <div ="less-than-100-error-container"> </div>
+          <label class="block-label" data-target="less-than-yes" for="radio-inline-1">
+            <input id="radio-inline-1" type="radio" name="lt100" value="Yes"
+            required=""
+            data-parsley-errors-container="#less-than-100-error-container"
+            data-parsley-class-handler="#less-than-100"
+            data-parsley-error-message="Select ‘Yes’ or ‘No’ whether you need to borrow £100 or more"
+            >
+            Yes
+          </label>
+          <label class="block-label" data-target="less-than-no" for="radio-inline-2">
+            <input id="radio-inline-2" type="radio" name="lt100" value="No">
+            No
+          </label>
+        </fieldset>
+
+       <!-- <div class="form-group js-hidden warning" id="less-than-no">
+
+          <h2 class="heading-small">You can't borrow less than £100 with a Budgeting Loan</h2>
+          <p><a href="https://www.gov.uk/find-your-local-council">Contact your local council</a> for information about emergency loans.</p>
+
+        </div> -->
+
+        <div class=" form-group" >
+          <input type="submit" class="button" value="Continue">
+        </div>        
+      </div>
+
+      <div class="column-third">
+        <p>&nbsp;</p>
+      </div>
+
+    </div>
+  </form>  
+  
+
+</main><!-- / #page-container -->
+{% endblock %}
+

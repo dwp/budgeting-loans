@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Your contact preferences - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {# Back link #}
+        {% import "includes/back-link.html" as back %}
+        {{ back.url('your-address') }}
+      {# Back link #}
+
+      <form method="post" class="form">
+
+        <h1 class="form-title heading-large m-b-ml">
+          How do you want to be contacted?
+        </h1>
+
+        <p>You can select more than one option.</p>
+
+        <fieldset class="form-group js-error-container">
+
+          <legend class="c-legend c-legend--medium visuallyhidden">Which of these benefits do you get?</legend>
+
+          <label class="block-label" for="email" data-target="email-panel">
+            <input id="email" type="checkbox" name="email" value="email">
+            Email
+          </label>
+          <div class="panel js-hidden m-b-l" id="email-panel">
+            <fieldset>
+              <legend class="m-b-xs"><label for="email-address">Your email address</label></legend>
+              <input type="text" class="form-control" id="email-address" name="email-address" value="">
+            </fieldset>
+          </div>{# / email-panel #}
+
+          <label class="block-label" for="letter">
+            <input id="letter" type="checkbox" name="email" value="letter">
+            Letter
+          </label>
+
+        </fieldset>
+
+{#         <!-- Your mobile -->
+        <div class="form-group m-b-ml">
+          <fieldset>
+            <legend class="c-legend c-legend--large form-label-bold">Your mobile (optional)</legend>
+            <label for="phone" class="form-label">Receive text message updates about your application.</label>
+            <input type="text" class="form-control" id="phone" name="phone" value="">
+          </fieldset>
+        </div> #}
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

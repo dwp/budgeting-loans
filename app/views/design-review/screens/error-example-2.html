@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Outstanding Social Fund loans - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="phase-banner">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+    </p>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a href="../" class="link-back">Back</a>
+
+      <div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+        <h1 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">
+          Message to alert the user to a problem goes here
+        </h1>
+        <p>
+          Optional description of the errors and how to correct them
+        </p>
+        <ul class="error-summary-list">
+          <li><a href="#example-personal-details">Descriptive link to the question with an error</a></li>
+        </ul>
+      </div>{# /error-summary #}
+
+      
+      <form action="/" method="post" class="form">
+
+        <h1 class="heading-large m-b-ml m-t-m">
+          <span class="heading-secondary">Check your eligibility</span>
+          Oustanding Social Fund loans
+        </h1>
+
+        <div class="form-group error m-b-ml">
+          <fieldset>
+          <legend class="c-legend c-legend--medium m-b-s">
+            Do you owe the Social Fund more than &pound;1,500 for Crisis Loans and Budgeting Loans?
+          </legend>
+          <legend id="example-personal-details">
+            <span class="visually-hidden">Do you owe the Social Fund more than £1,500 for Crisis Loans and Budgeting Loans?</span>
+            <span class="error-message">Select &lsquo;Yes&rsquo;, &lsquo;No&rsquo; or &lsquo;Don&rsquo;t know&rsquo; to confirm whether you owe the Social Fund more than £1,500</span>
+          </legend>
+
+{#             <legend class="c-legend c-legend--medium m-b-m">Do you owe the Social Fund more than &pound;1,500 for Crisis Loans and Budgeting Loans?</legend> #}
+
+            <label class="block-label" for="radio-inline-1">
+              <input id="radio-inline-1" type="radio" name="choice" value="yes" >
+              Yes
+            </label>
+            <label class="block-label" for="radio-inline-2">
+              <input id="radio-inline-2" type="radio" name="choice" value="no" >
+              No
+            </label>
+            <label class="block-label" for="radio-inline-3">
+              <input id="radio-inline-3" type="radio" name="choice" value="unsure" >
+              Don&rsquo;t know
+            </label>
+
+          </fieldset>
+        </div>{# / form-group #}
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>{# / form-group #}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

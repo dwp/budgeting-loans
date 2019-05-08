@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Debt repayments - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {# Back link #}
+  {% import "includes/back-link.html" as back %}
+  {{ back.url('#') }}
+{# Back link #}
+
+      <form method="post" class="form">
+
+        <h1 class="form-title heading-large m-b-ml">
+{#         <span class="heading-secondary">
+          Your regular outgoings
+        </span> #}
+        Do you have a mobile phone contract?
+        </h1>
+
+        <p>This doesn&rsquo;t include pay-as-you-go sim cards.</p>
+
+        <div class="form-group">
+          <fieldset class="inline">
+
+            <legend class="visuallyhidden">
+              Do you have a mobile phone contract?
+            </legend>
+
+            <label class="block-label" for="radio-home-address" data-target="debt-details">
+              <input id="radio-home-address" type="radio" name="radio-indent-group" value="Yes">
+              Yes
+            </label>
+
+            <label class="block-label" for="radio-other-address">
+              <input id="radio-other-address" type="radio" name="radio-indent-group" value="No">
+              No
+            </label>
+
+            <div class="panel panel-border-narrow js-hidden" id="debt-details">
+
+              <div class="form-group m-b-ml">
+                <label class="form-label m-b-xs" for="regpay01">How much is your mobile phone bill each month?</label>
+                <div class="u-1/4-lap-and-up">
+                  <span class="c-form-input-denote">&pound;</span>
+                  <input class="c-form-input-denote__input form-control form-control-1-4" id="regpay01" type="text" name="regpay01" value="">
+                </div>
+              </div>
+
+            </div>{# /debt-details #}
+
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>{# / form-group #}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

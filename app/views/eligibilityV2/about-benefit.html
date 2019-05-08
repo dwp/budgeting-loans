@@ -1,0 +1,119 @@
+
+
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Apply for a Budgeting Loan
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <form action="about-benefit" method="post" class="form">
+
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+        <a href="less-than-100" class="example-back-link">Back</a>
+
+
+
+        <!-- <fieldset class="inline form-group" id="benefit-container">
+          <h1 class="form-title heading-large"><legend for="benefit">Which of these benefits do you get?</legend></h1>
+          
+
+
+          <label class="block-label" data-target="about-benefit" for="radio-inline-1">
+            <input id="radio-inline-1" type="radio" name="benefit" value="pc"
+              required
+              data-parsley-errors-container="#about-benefit-container"
+              data-parsley-class-handler="#about-benefit-container"
+              data-parsley-error-message="Select form the list which benefit you get"
+              >
+            Pension Credit
+          </label>
+          <label class="block-label" data-target="is" for="radio-inline-2">
+            <input id="radio-inline-2" type="radio" name="benefit" value="is">
+            Income Support
+          </label>
+          <label class="block-label" data-target="esa" for="radio-inline-3">
+            <input id="radio-inline-3" type="radio" name="benefit" value="esa">
+            Employment and Support Allowance
+          </label>
+          <label class="block-label" data-target="jsa" for="radio-inline-2">
+            <input id="radio-inline-2" type="radio" name="benefit" value="jsa">
+            Jobseeekers Allowance
+          </label>
+          <label class="block-label" data-target="none" for="radio-inline-2">
+            <input id="radio-inline-2" type="radio" name="benefit" value="none">
+            None of the above
+          </label>
+        </fieldset> -->
+
+        <div class="form-group">
+          <fieldset>
+
+            <h1 class="form-title heading-large"><legend for="benefit">Which of these benefits do you get?</legend></h1>
+
+            <label for="about-beneift-is" class="block-label">
+              <input type="checkbox" name="about-benefit-is" value="is" id="about-benefit-is">
+              Income Support
+            </label>
+
+            <label for="about-benefit-pc" class="block-label">
+              <input type="checkbox" name="about-benefit-pc" value="pc" id="about-benefit-pc">
+              Pension Credit
+            </label>
+
+            <label for="about-benefit-jsa" class="block-label" data-target="jsa">
+              <input type="checkbox" name="about-benefit-jsa" value="Wales" id="about-benefit-jsa">
+              Jobseeker's Allowance
+            </label>
+
+            <label for="about-benefit-esa" class="block-label" data-target="esa">
+              <input type="checkbox" name="about-benefit-esa" value="Wales" id="about-benefit-esa">
+              Employment and Support Allowance
+            </label>
+
+            <label for="about-benefit-none" class="block-label" data-target="none">
+              <input type="checkbox" name="about-benefit-none" value="Wales" id="about-benefit-none">
+              None of the above
+            </label>
+
+            <div class="panel panel-border-narrow js-hidden" id="example_nationality_other">
+              <label for="nationality_other_countries" class="form-label">
+                Country name
+              </label>
+              <input class="form-control" type="text" id="nationality_other_countries">
+            </div>
+
+          </fieldset>
+        </div>
+
+        <div class="form-group js-hidden warning" id="benefit-no">
+
+          <h2 class="heading-small">If you have not been getting one of the benefits listed you will not be eligible to apply for a Budgeting Loan</h2>
+          <p><a href="https://www.gov.uk/find-your-local-council">Contact your local council</a> for information about emergency loans.</p>
+
+        </div>
+
+        
+
+        <div class=" form-group" id="benefit-yes">
+          <input type="submit" class="button" value="Continue">
+        </div>        
+      </div>
+
+      <div class="column-third">
+        <p>&nbsp;</p>
+      </div>
+
+    </div>
+  </form>  
+  
+
+</main><!-- / #page-container -->
+{% endblock %}

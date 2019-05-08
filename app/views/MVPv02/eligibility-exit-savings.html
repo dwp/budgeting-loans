@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Apply for a Budgeting Loan
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <form action="#" class="form">
+
+      <div class="grid-row">
+
+        <div class="column-two-thirds">
+
+          <h1 class="form-title heading-large">You're not eligible for a Budgeting Loan</h1>
+            
+         
+          
+          <div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
+
+             <h1 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">You and your partner must not have combined savings of more than £1,000 (£2,000 if either of you are over 61)</h1>
+              
+            <p><a href="https://www.gov.uk/find-your-local-council">Contact your local council</a> for information about emergency loans.</p>
+
+          </div> 
+
+
+        </div>
+
+        <div class="column-third">
+          <p>&nbsp;</p>
+        </div>
+
+      </div>
+
+  </form>
+      
+</main><!-- / #page-container -->
+{% endblock %}

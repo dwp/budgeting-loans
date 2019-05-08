@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Budgeting Loans
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/alpha-banner.html" %}
+  
+  <form action="loan-amount" method="#" class="form">
+
+  <a href="about-partner" class="example-back-link">Back</a>
+
+  <h1 class="form-title heading-large">
+    Young children and young persons
+  </h1>
+
+  <ul>
+    <li>
+      <fieldset class="inline form-group">
+        <legend class="form-label-bold" for="young-person">Are you or you partner getting Child Benefit or Child Tax Credit for someone 19 or younger?</legend>
+        <label class="block-label" data-target="yes-children" for="young-person-1">
+          <input id="young-person-1" type="radio" name="young-person" value="Yes">
+          Yes
+        </label>
+        <label class="block-label" for="young-person-2">
+          <input id="young-person-2" type="radio" name="young-person" value="No">
+          No
+        </label>
+      </fieldset>
+    </li>
+  </ul>
+
+  <div class="js-hidden form-group panel-indent" id="yes-children">
+    <label class="form-label-bold" for="full-name">
+      How many children do you have?
+    </label>
+    <input type="text" class="form-control" id="full-name" name="full-name">
+  </div>
+  
+  <div class="form-group">
+    <input type="submit" class="button" value="Continue">
+  </div>
+
+
+</main><!-- / #page-container -->
+{% endblock %}

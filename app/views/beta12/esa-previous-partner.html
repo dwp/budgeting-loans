@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Employment and Support Allowance - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {% if edit %}
+      {% else %}
+        {# Back link #}
+          {% import "includes/back-link.html" as back %}
+          {{ back.url('esa') }}
+        {# Back link #}
+      {% endif %}
+
+      <form method="post" class="form">
+
+      <h1 class="heading-large m-b-ml m-t-m">
+        <span class="heading-secondary">
+          Check your eligibility
+        </span>
+        Were you recently claiming Employment and Support Allowance with a previous partner?
+      </h1>
+
+      <fieldset class="form-group inline">
+
+        <legend class="visually-hidden c-legend c-legend--medium m-b-s"></legend>
+
+        <label class="block-label" for="answer1">
+          <input id="answer1" type="radio" name="answers" value="answer1">
+          Yes, I was part of a joint claim in the past 6 months
+        </label>
+
+        <label class="block-label" for="answer2">
+          <input id="answer2" type="radio" name="answers" value="answer2" >
+          No, not in the last 6 months
+        </label>
+
+      </fieldset>
+
+      {% include "includes/continue-save.html" %}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+
+  {% include "includes/help-function-v2.html" %}
+
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

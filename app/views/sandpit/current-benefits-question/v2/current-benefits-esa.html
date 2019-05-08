@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Outstanding Social Fund loans - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {# Back link #}
+  {% import "includes/back-link.html" as back %}
+  {{ back.url('#') }}
+{# Back link #}
+
+      <form method="post" class="form">
+
+        <h1 class="heading-large m-b-ml m-t-m">
+          <span class="heading-secondary">
+            Check your eligibility
+          </span>
+          Which type of Employment and Support Allowance do you get?
+        </h1>
+
+        <p>Helper text explaining where they can find this - letter etc</p>
+
+        <div class="form-group">
+
+          <fieldset>
+
+            <legend class="c-legend c-legend--medium m-b-s visually-hidden">Which type of Employment and Support Allowance do you get?</legend>
+
+            <label class="block-label" for="option2" data-target="income-related-panel">
+              <input id="option2" type="radio" name="type" value="option2">
+              <span class="heading-small">Income-related <abbr title="Employment and Support Allowance">ESA</abbr></span><br>
+              Usually you get this on its own or on top of contribution-based <abbr title="Employment and Support Allowance">ESA</abbr>, if you&rsquo;re on a low income
+            </label>
+
+            <div class="panel js-hidden m-b-l" id="income-related-panel">
+
+              <fieldset>
+
+                <legend class="c-legend c-legend--medium m-b-s">How long have you been getting this benefit?</legend>
+
+                <label class="block-label" for="duration1">
+                  <input id="duration1" type="radio" name="duration" value="duration1">
+                  More than 6 months
+                </label>
+
+                <label class="block-label" for="duration2">
+                  <input id="duration2" type="radio" name="duration" value="duration2" >
+                  Less than 6 months
+                </label>
+
+              </fieldset>
+
+            </div>{# / income-related-panel #}
+
+            <label class="block-label" for="option1">
+              <input id="option1" type="radio" name="type" value="option1" >
+              <span class="heading-small">Contribution-based <abbr title="Employment and Support Allowance">ESA</abbr></span><br>
+              Usually you get this if you&rsquo;ve got enough National Insurance contributions
+            </label>
+
+            <label class="block-label" for="option3">
+              <input id="option3" type="radio" name="type" value="option3" >
+              Don&rsquo;t know
+            </label>
+
+          </fieldset>
+
+        </div>{# / form-group #}
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>{# / form-group #}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

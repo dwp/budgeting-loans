@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Work history - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {% if edit %}
+      {% else %}
+        {# Back link #}
+          {% import "includes/back-link.html" as back %}
+          {{ back.url('esa-partner') }}
+        {# Back link #}
+      {% endif %}
+
+      <form method="post" class="form">
+
+        <h1 class="heading-large m-b-ml m-t-m">
+          <span class="heading-secondary">
+            Check your eligibility
+          </span>
+          Did you do any work you were paid for between 6 April 2013 and 5 April 2015?
+        </h1>
+
+        <div class="form-group m-b-xs">
+          <fieldset class="inline">
+
+            <legend class="visually-hidden">Did you do any work you were paid for between 6 April 2013 and 5 April 2015?</legend>
+
+            <label class="block-label" for="choice-yes" data-target="pay">
+              <input id="choice-yes" type="radio" name="choice" value="yes" >
+              Yes
+            </label>
+            <label class="block-label" for="choice-no">
+              <input id="choice-no" type="radio" name="choice" value="no" >
+              No
+            </label>
+
+          </fieldset>
+
+        </div>{# / form-group #}
+
+        <div class="panel js-hidden panel-border-narrow" id="pay">
+
+          <fieldset class="inline">
+
+            <legend class="m-b-s">Were you paid &pound;153 or more for a week&rsquo;s work?</legend>
+
+            <label class="block-label" for="choice2-yes" data-target="time">
+              <input id="choice2-yes" type="radio" name="choice2" value="yes" >
+              Yes
+            </label>
+            <label class="block-label" for="choice2-no">
+              <input id="choice2-no" type="radio" name="choice2" value="no" >
+              No
+            </label>
+
+          </fieldset>
+
+          <div class="panel js-hidden panel-border-none" id="time">
+
+            <fieldset>
+
+              <legend class="m-b-s">How often did you earn &pound;153 or more?</legend>
+
+              <label class="block-label" for="choice3morethan">
+                <input id="choice3morethan" type="radio" name="choice3" value="more" >
+                26 weeks or more
+              </label>
+              <label class="block-label" for="choice3lessthan">
+                <input id="choice3lessthan" type="radio" name="choice3" value="less">
+                Less than 26 weeks
+              </label>
+
+            </fieldset>
+
+          </div>{# / panel #}
+
+        </div>{# / panel #}
+
+        {% include "includes/continue-save.html" %}
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+
+  {% include "includes/help-function-v3.html" %}
+
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

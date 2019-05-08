@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Work Capability Assessment - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {# Back link #}
+        {% import "includes/back-link.html" as back %}
+        {{ back.url('javascript:history.back()') }}
+      {# Back link #}
+
+      <form method="post" class="form">
+
+        <h1 class="heading-large m-b-ml m-t-m">
+          <span class="heading-secondary">
+          Check your eligibility
+          </span>
+          Have you or your partner had your Work Capability&nbsp;Assessment?
+        </h1>
+
+        <div class="form-group inline">
+          <fieldset>
+            <label class="block-label" for="option1">
+              <input id="option1" type="radio" name="option" value="yes">
+              Yes
+            </label>
+            <label class="block-label" for="option2">
+              <input id="option2" type="radio" name="option" value="no" >
+              No
+            </label>
+          </fieldset>
+        </div>{# / form-group #}
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>{# / form-group #}
+
+        </form>
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

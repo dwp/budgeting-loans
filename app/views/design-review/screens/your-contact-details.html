@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Your contact details - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="phase-banner">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+    </p>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a href="../" class="link-back">Back</a>
+      
+      <form action="/" method="post" class="form">
+
+        <h1 class="form-title heading-large m-b-ml">
+          Your contact details
+        </h1>
+
+        <!-- Your address -->
+        <div class="form-group">
+          <label class="form-label-bold" for="full-name">Your address</label>
+          <p class="form-hint">If you have no fixed address, enter an address where you can be contacted</p>
+          <textarea class="form-control" id="full-name"></textarea>
+        </div>
+
+        <div class="form-group m-b-ml">
+          <label class="form-label" for="postcode">Postcode</label>
+          <input type="text" class="form-control form-control-1-4" id="postcode" name="postcode" value="">
+        </div>
+
+        <!-- Your mobile -->
+        <div class="form-group m-b-ml">
+          <fieldset>
+            <legend class="c-legend c-legend--large form-label-bold"><label for="phone">Your mobile (optional)</label></legend>
+            <p class="form-hint">Receive text message updates about your application</p>
+            <input type="text" class="form-control" id="phone" name="phone" value="">
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+
+      </form>
+
+    </div>{# / column-two-thirds #}
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

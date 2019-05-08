@@ -1,0 +1,79 @@
+
+
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Apply for a Budgeting Loan
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <form method="post" class="form">
+
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+        <a href="less-than-100" class="example-back-link">Back</a>
+
+        <ul>
+            <li>
+              <fieldset class="inline form-group" id="pension-credit-container">
+                <h1 class="form-title heading-large"><legend for="pension-credit">Do you get Pension Credit?</legend>
+                </h1>
+                <label class="block-label" data-target="pension-credit" for="pension-credit-1">
+                  <input id="pension-credit-1" type="radio" name="pension-credit" value="Yes"
+                    required
+                    data-parsley-errors-container="#pension-credit-container"
+                    data-parsley-class-handler="#pension-credit-container"
+                    data-parsley-error-message="Select ‘Yes’ or ‘No’ to confirm whether you get Pension Credit"
+                  >
+                  Yes
+                </label>
+                <label class="block-label" for="pension-credit-2">
+                  <input id="pension-credit-2" type="radio" name="pension-credit" value="No">
+                  No
+                </label>
+              </fieldset>
+            </li>
+          </ul>
+
+          <div class="js-hidden panel-indent" id="pension-credit">
+            <div class="form-group">
+              <fieldset class="inline form-group" id="pc-how-long-container">
+                <h1 class="form-title heading-medium"><legend for="pc-how-long">Have you been getting Pension Credit for the past 6 months?</legend>
+                </h1>
+                <label class="block-label" data-target="pc-how-long" for="pc-how-long-1">
+                  <input id="pc-how-long-1" type="radio" name="pc-how-long" value="Yes"
+                    data-parsley-errors-container="#pc-how-long-container"
+                    data-parsley-class-handler="#pc-how-long-container"
+                    data-parsley-error-message="Select ‘Yes’ or ‘No’ to confirm whether you have been getting Pension Credit for over 6 months"
+                  >
+                  Yes
+                </label>
+                <label class="block-label" for="pc-how-long-2">
+                  <input id="pc-how-long-2" type="radio" name="pc-how-long" value="No">
+                  No
+                </label>
+              </fieldset>
+            </div>
+          </div>
+
+         <div class="form-group">
+            <input type="submit" class="button" value="Continue">
+          </div>
+      </div>
+
+      <div class="column-third">
+        <p>&nbsp;</p>
+      </div>
+
+    </div>
+  </form>
+
+
+</main><!-- / #page-container -->
+{% endblock %}

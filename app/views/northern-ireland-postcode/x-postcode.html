@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Eligibility - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">You&rsquo;re not eligible for a Budgeting Loan through this service
+</h1>
+
+      <div class="panel panel-border-wide style1">
+        <p>This service is for people who live in England, Scotland and Wales.</p>
+        <p>Your postcode is in Northern Ireland, where there are different rules for Budgeting Loans.</p>
+        
+      </div>
+
+      <h2 class="heading-medium">If you made a mistake</h2>
+
+      <p>Make sure you have the correct postcode and <a href="/northern-ireland-postcode/contact-address">enter it again</a>.
+
+      <h2 class="heading-medium">If your postcode correct</h2>
+
+      <p><a href="https://www.nidirect.gov.uk/articles/budgeting-loans">Visit NI Direct</a> for a Budgeting Loan.</p>
+
+    </div>{# / column-two-thirds #}
+
+   
+    
+  </div>{# / grid-row #}
+</main>
+
+{% endblock %}

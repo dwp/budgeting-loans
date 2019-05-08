@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Budgeting Loans
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/alpha-banner.html" %}
+  
+  <form action="your-children02" method="#" class="form">
+
+  <a href="about-partner" class="example-back-link">Back</a>
+
+  <h1 class="form-title heading-large">
+    Young children and young persons
+  </h1>
+
+  <ul>
+    <li>
+      <fieldset class="inline form-group">
+        <legend class="form-label-bold add-padding" for="children">Do you have any children 15 or younger who live with you?</legend>
+        <label class="block-label" for="children-1">
+          <input id="children-1" type="radio" name="children" value="Yes">
+          Yes
+        </label>
+        <label class="block-label" for="children-2">
+          <input id="children-2" type="radio" name="children" value="No">
+          No
+        </label>
+      </fieldset>
+    </li>
+  </ul>
+  
+  <div class="form-group">
+    <input type="submit" class="button" value="Continue">
+  </div>
+
+
+</main><!-- / #page-container -->
+{% endblock %}

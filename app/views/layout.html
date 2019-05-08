@@ -1,0 +1,41 @@
+{% extends "govuk_template.html" %}
+
+{% block head %}
+  {% include "includes/head.html" %}
+{% endblock %}
+
+{% block cookie_message %}
+  <p>{{cookieText | safe }}</p>
+{% endblock %}
+
+{% block proposition_header %}
+  {% include "includes/propositional_navigation.html" %}
+{% endblock %}
+
+{% block header_class %}
+  with-proposition
+{% endblock %}
+
+{% block body_end %}
+  {% include "includes/scripts.html" %}
+  <!-- GOV.UK Prototype kit {{releaseVersion}} -->
+{% endblock %}
+
+{% block footer_support_links %}
+  <div class="footer-detail">
+
+    <h4 class="heading-small">Get help</h4>
+    <div class="font-xsmall">  
+      <p>Telephone 0345 601 8040<br />
+         Textphone 0345 607 8039<br />
+         Available weekdays, 8am to 6pm. Closed public holidays. <a href ="https://www.gov.uk/call-charges">Call charges apply</a></p>
+    </div>    
+
+    <ul>
+      <li><a href="/cookies/cookie-policy">Cookie policy</a></li>
+      <li><a href="https://www.gov.uk/government/organisations/department-for-work-pensions/about/personal-information-charter" target="privacyLink">Privacy policy</a></li>
+    </ul>
+    
+    <p class="font-xsmall">Made in Leeds by Department for Work &amp; Pensions</p>         
+  </div>  
+{% endblock %}

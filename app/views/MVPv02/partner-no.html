@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Apply for a Budgeting Loan
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+{% include "includes/beta-banner.html" %}
+  
+  <form action="children-no-partner" method="#" class="form">
+
+    <a href="partner" class="example-back-link">Back</a>
+
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+        <fieldset class="inline form-group" id="partner-no-container">
+          <h1 class="form-title heading-large">
+            <legend for="partner">Have you had a partner in the last 6 months?</legend>
+          </h1>
+        <!--  <p>A partner is a person you are married to or a person you live with as if you are married to them.</p> -->
+          <label class="block-label" for="radio-inline-1">
+            <input id="radio-inline-1" type="radio" name="partner" value="Yes"
+              required
+              data-parsley-errors-container="#partner-no-container"
+              data-parsley-class-handler="#partner-no-container"
+              data-parsley-error-message="Select ‘Yes’ or ‘No’ to confirm whether you have had a partner in the last 6 months"
+              >
+            Yes
+          </label>
+          <label class="block-label" for="radio-inline-2">
+            <input id="radio-inline-2" type="radio" name="partner" value="No">
+            No
+          </label>
+        </fieldset>
+
+        <div class="form-group" id="partner-yes01">
+          <input type="submit" class="button" value="Continue">
+        </div>   
+
+      </div>
+
+        <div class="column-third">
+        <p>&nbsp;</p>
+        </div>
+
+    </div>
+
+  </form>  
+  
+
+</main><!-- / #page-container -->
+{% endblock %}
